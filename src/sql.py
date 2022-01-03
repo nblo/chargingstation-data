@@ -5,7 +5,20 @@ import dataclasses
 config = configparser.ConfigParser()
 config.read('../config.cfg')
 
-
+SQL_CONSTRAINTS = """ select tco.constraint_schema,
+       tco.constraint_name,
+       kcu.ordinal_position as position,
+       kcu.column_name as key_column,
+       kcu.table_schema || '.' || kcu.table_name as table
+from information_schema.table_constraints tco
+join information_schema.key_column_usage kcu 
+     on kcu.constraint_name = tco.constraint_name
+     and kcu.constraint_schema = tco.constraint_schema
+     and kcu.constraint_name = tco.constraint_name
+where tco.constraint_type = 'PRIMARY KEY'
+order by tco.constraint_schema,
+         tco.constraint_name,
+         kcu.ordinal_position;"""
 
 DROP_TABLE_STAGING_STATUS_CHARGING_POINTS = """DROP TABLE IF EXISTS staging_status_cp"""
 
@@ -14,7 +27,7 @@ CREATE_TABLE_STAGING_STATUS_CHARGING_POINTS = """
                              (
                               id_cp                      VARCHAR       NOT NULL, 
                               status_cp                  TEXT          NOT NULL, 
-                              --parkingsensor_status     TEXT, 
+                              parkingsensor_status       TEXT, 
                               ts                         TIMESTAMPTZ   NOT NULL
                              )
 """
@@ -142,26 +155,53 @@ CREATE_TABLE_STATUS_CHARGING_POINTS = """CREATE TABLE IF NOT EXISTS status_charg
                                          id_chargingpoint           VARCHAR NOT NULL, 
                                          query_time                 TIMESTAMPTZ NOT NULL, 
                                          status_cp                  VARCHAR, 
-                                         status_parkingsensor       VARCHAR
+                                         status_parkingsensor       VARCHAR, 
+                                         CONSTRAINT status_chargingpoints_pkey PRIMARY KEY (id_status_cp)
                                         ) 
 """
 
+DROP_STATUS_CP_PKEY = "ALTER TABLE public.status_chargingpoints DROP CONSTRAINT status_chargingpoints_pkey"
+
+INSERT_TABLE_STATUS_CHARGING_POINTS = """INSERT INTO status_chargingpoints (
+                                                SELECT 
+                                                    md5(id_cp || ts) id_status_cp,
+                                                    id_cp as id_chargingpoint, 
+                                                    ts as query_time, 
+                                                    status_cp, 
+                                                    parkingsensor_status as status_parkingsensor 
+                                                FROM staging_status_cp)
+""" 
+
 
 DROP_TABLE_STATUS_CONNECTORS = "DROP TABLE IF EXISTS status_connectors"
+DROP_STATUS_CONN_PKEY = "ALTER TABLE public.status_connectors DROP CONSTRAINT status_connectors_pkey"
 
-CREATE_TABLE_STATUS_CONNECTORS = """CREATE TABLE IF NOT EXISTS status_chargingpoints
+CREATE_TABLE_STATUS_CONNECTORS = """CREATE TABLE IF NOT EXISTS status_connectors
                                     (
                                      id_status_connector                VARCHAR NOT NULL, 
                                      id_connector                       VARCHAR NOT NULL, 
                                      query_time                         TIMESTAMPTZ NOT NULL, 
-                                     status_connector                   VARCHAR
+                                     status_connector                   VARCHAR, 
+                                     CONSTRAINT status_connectors_pkey PRIMARY KEY (id_status_connector)
                                     ) 
 """
 
+INSERT_TABLE_STATUS_CONNECTORS = """INSERT INTO status_connectors (
+                                                SELECT 
+                                                    md5(id_connector || ts) id_status_cp,
+                                                    id_connector, 
+                                                    ts as query_time, 
+                                                    status_connector
+                                                FROM staging_status_connectors)
+""" 
+
+
 DROP_TABLE_CHARGING_STATION = "DROP TABLE IF EXISTS charging_station"
+DROP_CS_PKEY = "ALTER TABLE public.charging_station DROP CONSTRAINT charging_station_pkey"
+
 
 CREATE_TABLE_CHARGING_STATION = """
-                                CREATE TABLE IF NOT EXISTS charging_stations
+                                CREATE TABLE IF NOT EXISTS charging_station
                                 (
                                  id_cs                      INTEGER, 
                                  name                       TEXT, 
@@ -182,12 +222,34 @@ CREATE_TABLE_CHARGING_STATION = """
 """
 
 
+
+INSERT_TABLE_CHARGING_STATION = """INSERT INTO  charging_station (
+                                                SELECT 
+                                                    id as id_cs, 
+                                                    name, 
+                                                    address, 
+                                                    city, 
+                                                    postal_code, 
+                                                    country, 
+                                                    distance_in_m, 
+                                                    owner, 
+                                                    roaming, 
+                                                    latitude, 
+                                                    longitude, 
+                                                    operator_name, 
+                                                    operator_hotline, 
+                                                    open_24_7
+                                                FROM staging_charging_stations
+)
+"""
+
 DROP_TABLE_CHARGING_POINT = "DROP TABLE IF EXISTS charging_point"
+DROP_CP_PKEY = "ALTER TABLE public.charging_point DROP CONSTRAINT charging_point_pkey"
 
 CREATE_TABLE_CHARGING_POINT = """ 
                                 CREATE TABLE IF NOT EXISTS charging_point
                                 (
-                                 id_cp                          TEXT, 
+                                 id_cp                          TEXT NOT NULL, 
                                  id_cs                          INTEGER NOT NULL,
                                  charging_station_position      TEXT,
                                  roaming                        BOOLEAN, 
@@ -201,10 +263,28 @@ CREATE_TABLE_CHARGING_POINT = """
                                 )
 """
 
+
+INSERT_TABLE_CHARGING_POINT = """INSERT INTO  charging_point (
+                                                SELECT 
+                                                    id as id_cp,
+                                                    id_cs,
+                                                    charging_station_position,
+                                                    roaming,
+                                                    physical_reference,       
+                                                    cp_parking_space_numbers, 
+                                                    cp_position,              
+                                                    cp_public_comment,        
+                                                    vehicle_type,             
+                                                    floor_level            
+                                                FROM staging_charging_points
+)
+"""
+
 DROP_TABLE_CONNECTOR = "DROP TABLE IF EXISTS connector"
+DROP_CONN_PKEY = "ALTER TABLE public.connector DROP CONSTRAINT connector_pkey"
 
 CREATE_TABLE_CONNECTOR = """ 
-                         CREATE TABLE IF NOT EXISTS staging_connectors 
+                         CREATE TABLE IF NOT EXISTS connector 
                         (
                          id_connector               TEXT, 
                          id_cp                      TEXT NOT NULL,          
@@ -219,7 +299,23 @@ CREATE_TABLE_CONNECTOR = """
                         )
 """
 
+INSERT_TABLE_CONNECTOR = """INSERT INTO connector (
+                                SELECT 
+                                    id as id_connector, 
+                                    id_cp as id_cp, 
+                                    format, 
+                                    power_type, 
+                                    tariff_id, 
+                                    ampere, 
+                                    max_power, 
+                                    voltage, 
+                                    standard
+                            FROM staging_connectors
+)
+"""
+
 DROP_TABLE_TIME = "DROP TABLE IF EXISTS time"
+DROP_TIME_PKEY = """ALTER TABLE public."time" DROP CONSTRAINT time_pkey"""
 
 CREATE_TABLE_TIME = """CREATE TABLE IF NOT EXISTS "time" (
                         query_time                  timestamptz NOT NULL,
@@ -233,11 +329,20 @@ CREATE_TABLE_TIME = """CREATE TABLE IF NOT EXISTS "time" (
                      )
 """
 
-time_table_insert = ("""
-        SELECT start_time, extract(hour from start_time), extract(day from start_time), extract(week from start_time), 
-               extract(month from start_time), extract(year from start_time), extract(dayofweek from start_time)
-        FROM songplays
-    """)
+INSERT_TABLE_TIME  = """ INSERT INTO "time"  (  
+                                    SELECT 
+                                        ts as query_time, 
+                                        extract(hour from ts),
+                                        extract(day from ts),
+                                        extract(week from ts), 
+                                        extract(month from ts),
+                                        extract(year from ts),
+                                        extract(dayofweek from ts)
+                            FROM staging_status_cp 
+)
+"""
+
+
 
 drop_table_queries = [DROP_TABLE_STAGING_STATUS_CHARGING_POINTS,
                       DROP_TABLE_STAGING_STATUS_CONNECTORS,
@@ -251,6 +356,12 @@ drop_table_queries = [DROP_TABLE_STAGING_STATUS_CHARGING_POINTS,
                       DROP_TABLE_CONNECTOR, 
                       DROP_TABLE_TIME]
 
+drop_constraints_queries = [DROP_CONN_PKEY, 
+                            DROP_CP_PKEY, 
+                            DROP_CS_PKEY, 
+                            DROP_STATUS_CONN_PKEY, 
+                            DROP_STATUS_CP_PKEY, 
+                            DROP_TIME_PKEY]
 
 create_table_queries = [CREATE_TABLE_STAGING_CHARGING_POINTS, 
                         CREATE_TABLE_STAGING_STATUS_CONNECTORS, 
@@ -272,6 +383,8 @@ copy_table_queries = [COPY_TABLE_STAGING_STATUS_CHARGING_POINTS,
                       COPY_TABLE_STAGING_CONNECTORS]
 
 
-insert_table_queries = []
-
-#insert_table_queries = [songplay_table_insert, user_table_insert, song_table_insert, artist_table_insert, time_table_insert]
+insert_table_queries = [INSERT_TABLE_STATUS_CHARGING_POINTS, 
+                        INSERT_TABLE_CONNECTOR, 
+                        INSERT_TABLE_CHARGING_STATION, 
+                        INSERT_TABLE_CHARGING_POINT, 
+                        INSERT_TABLE_TIME]

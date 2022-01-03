@@ -1,7 +1,12 @@
-
+import pandas as pd
 import logging 
 
-from sql import drop_table_queries, create_table_queries, copy_table_queries, insert_table_queries
+from sql import (drop_table_queries,
+                 drop_constraints_queries, 
+                 create_table_queries,
+                 copy_table_queries,
+                 insert_table_queries,
+                 SQL_CONSTRAINTS)
 
 logger = logging.getLogger(__name__)
 
@@ -17,6 +22,23 @@ def drop_tables(cur, conn):
         print(query)
         cur.execute(query)
         conn.commit()
+
+
+def drop_constraints(cur, conn):
+    """Drop staging, fact and dimension tables from AWS Redshift
+
+    Args:
+        cur: AWS Redshift cursor object
+        conn: AWS Redshift connection object
+    """ 
+    existing_constraints = set(pd.read_sql(con=conn, sql=SQL_CONSTRAINTS)["constraint_name"])
+    for query in drop_constraints_queries:
+        constraint_name = query.split("CONSTRAINT")[1].strip()
+        if constraint_name in existing_constraints: 
+            print(query)
+            cur.execute(query)
+            conn.commit()      
+     
 
 
 def create_tables(cur, conn):
