@@ -26,8 +26,8 @@ CREATE_TABLE_STAGING_STATUS_CHARGING_POINTS = """
                              CREATE TABLE IF NOT EXISTS staging_status_cp 
                              (
                               id_cp                      VARCHAR       NOT NULL, 
-                              status_cp                  TEXT          NOT NULL, 
-                              parkingsensor_status       TEXT, 
+                              status_cp                  VARCHAR          NOT NULL, 
+                              parkingsensor_status       VARCHAR, 
                               ts                         TIMESTAMPTZ   NOT NULL
                              )
 """
@@ -48,7 +48,7 @@ CREATE_TABLE_STAGING_STATUS_CONNECTORS = """
                              CREATE TABLE IF NOT EXISTS staging_status_connectors
                              (
                               id_connector              VARCHAR       NOT NULL, 
-                              status_connector          TEXT          NOT NULL, 
+                              status_connector          VARCHAR          NOT NULL, 
                               ts                        TIMESTAMPTZ   NOT NULL
                              )
 """
@@ -68,18 +68,18 @@ CREATE_TABLE_STAGING_CHARGING_STATIONS = """
                                 CREATE TABLE IF NOT EXISTS staging_charging_stations
                                 (
                                  id                      INTEGER, 
-                                 name                    TEXT, 
-                                 address                 TEXT, 
-                                 city                    TEXT, 
-                                 postal_code             TEXT, 
-                                 country                 TEXT,
+                                 name                    VARCHAR, 
+                                 address                 VARCHAR, 
+                                 city                    VARCHAR, 
+                                 postal_code             VARCHAR, 
+                                 country                 VARCHAR,
                                  distance_in_m           FLOAT, 
-                                 owner                   TEXT, 
+                                 owner                   VARCHAR, 
                                  roaming                 BOOLEAN, 
                                  latitude                FLOAT, 
                                  longitude               FLOAT, 
-                                 operator_name           TEXT, 
-                                 operator_hotline        TEXT, 
+                                 operator_name           VARCHAR, 
+                                 operator_hotline        VARCHAR, 
                                  open_24_7               BOOLEAN
                                  )
 """
@@ -100,15 +100,15 @@ CREATE_TABLE_STAGING_CHARGING_POINTS = """
                                 CREATE TABLE IF NOT EXISTS staging_charging_points 
                                 (
                                  id_cs                      INTEGER NOT NULL,
-                                 charging_station_position  TEXT,
+                                 charging_station_position  VARCHAR,
                                  roaming                    BOOLEAN, 
-                                 physical_reference         TEXT, 
-                                 cp_parking_space_numbers   TEXT,
-                                 cp_position                TEXT, 
-                                 cp_public_comment          TEXT, 
-                                 id                         TEXT, 
-                                 vehicle_type               TEXT,
-                                 floor_level                TEXT, 
+                                 physical_reference         VARCHAR, 
+                                 cp_parking_space_numbers   VARCHAR,
+                                 cp_position                VARCHAR, 
+                                 cp_public_comment          VARCHAR, 
+                                 id                         VARCHAR, 
+                                 vehicle_type               VARCHAR,
+                                 floor_level                VARCHAR, 
                                  uid                        INTEGER NOT NULL
                                 )
 """
@@ -127,15 +127,15 @@ DROP_TABLE_STAGING_CONNECTORS = """DROP TABLE IF EXISTS staging_connectors"""
 CREATE_TABLE_STAGING_CONNECTORS = """ 
                                 CREATE TABLE IF NOT EXISTS staging_connectors 
                                 (
-                                 id_cp          TEXT NOT NULL,          
-                                 format         TEXT,
-                                 power_type     TEXT, 
-                                 id             TEXT, 
-                                 tariff_id      TEXT, 
+                                 id_cp          VARCHAR NOT NULL,          
+                                 format         VARCHAR,
+                                 power_type     VARCHAR, 
+                                 id             VARCHAR, 
+                                 tariff_id      VARCHAR, 
                                  ampere         INTEGER, 
                                  max_power      INTEGER,
                                  voltage        INTEGER, 
-                                 standard       TEXT
+                                 standard       VARCHAR
                                 )
 """
 
@@ -204,18 +204,18 @@ CREATE_TABLE_CHARGING_STATION = """
                                 CREATE TABLE IF NOT EXISTS charging_station
                                 (
                                  id_cs                      INTEGER, 
-                                 name                       TEXT, 
-                                 address                    TEXT, 
-                                 city                       TEXT, 
-                                 postal_code                TEXT, 
-                                 country                    TEXT,
+                                 name                       VARCHAR, 
+                                 address                    VARCHAR, 
+                                 city                       VARCHAR, 
+                                 postal_code                VARCHAR, 
+                                 country                    VARCHAR,
                                  distance_in_m              FLOAT, 
-                                 owner                      TEXT, 
+                                 owner                      VARCHAR, 
                                  roaming                    BOOLEAN, 
                                  latitude                   FLOAT, 
                                  longitude                  FLOAT, 
-                                 operator_name              TEXT, 
-                                 operator_hotline           TEXT, 
+                                 operator_name              VARCHAR, 
+                                 operator_hotline           VARCHAR, 
                                  open_24_7                  BOOLEAN,
                                  CONSTRAINT charging_station_pkey PRIMARY KEY (id_cs)
                                  )
@@ -249,16 +249,16 @@ DROP_CP_PKEY = "ALTER TABLE public.charging_point DROP CONSTRAINT charging_point
 CREATE_TABLE_CHARGING_POINT = """ 
                                 CREATE TABLE IF NOT EXISTS charging_point
                                 (
-                                 id_cp                          TEXT NOT NULL, 
+                                 id_cp                          VARCHAR NOT NULL, 
                                  id_cs                          INTEGER NOT NULL,
-                                 charging_station_position      TEXT,
+                                 charging_station_position      VARCHAR,
                                  roaming                        BOOLEAN, 
-                                 physical_reference             TEXT, 
-                                 cp_parking_space_numbers       TEXT,
-                                 cp_position                    TEXT, 
-                                 cp_public_comment              TEXT, 
-                                 vehicle_type                   TEXT,
-                                 floor_level                    TEXT,
+                                 physical_reference             VARCHAR, 
+                                 cp_parking_space_numbers       VARCHAR,
+                                 cp_position                    VARCHAR, 
+                                 cp_public_comment              VARCHAR, 
+                                 vehicle_type                   VARCHAR,
+                                 floor_level                    VARCHAR,
                                  CONSTRAINT charging_point_pkey PRIMARY KEY (id_cp)
                                 )
 """
@@ -286,15 +286,15 @@ DROP_CONN_PKEY = "ALTER TABLE public.connector DROP CONSTRAINT connector_pkey"
 CREATE_TABLE_CONNECTOR = """ 
                          CREATE TABLE IF NOT EXISTS connector 
                         (
-                         id_connector               TEXT, 
-                         id_cp                      TEXT NOT NULL,          
-                         format                     TEXT,
-                         power_type                 TEXT, 
-                         tariff_id                  TEXT, 
+                         id_connector               VARCHAR NOT NULL, 
+                         id_cp                      VARCHAR NOT NULL,          
+                         format                     VARCHAR,
+                         power_type                 VARCHAR, 
+                         tariff_id                  VARCHAR, 
                          ampere                     INTEGER, 
                          max_power                  INTEGER,
                          voltage                    INTEGER, 
-                         standard                   TEXT,
+                         standard                   VARCHAR,
                          CONSTRAINT connector_pkey PRIMARY KEY (id_connector)
                         )
 """
@@ -322,9 +322,9 @@ CREATE_TABLE_TIME = """CREATE TABLE IF NOT EXISTS "time" (
                         "hour"                      int4,
 	                    "day"                       int4,
 	                    week                        int4,
-	                    "month"                     varchar(256),
+	                    "month"                     int4,
 	                    "year"                      int4,
-	                    weekday                     varchar(256),
+	                    weekday                     int4,
 	                    CONSTRAINT time_pkey PRIMARY KEY (query_time)
                      )
 """
