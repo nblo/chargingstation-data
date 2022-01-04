@@ -1,5 +1,7 @@
 import pandas as pd
 import logging 
+import configparser
+import psycopg2
 
 from sql import (drop_table_queries,
                  drop_constraints_queries, 
@@ -78,3 +80,27 @@ def insert_tables(cur, conn):
         print(query)
         cur.execute(query)
         conn.commit()
+        
+
+def main(config_file):
+    config = configparser.ConfigParser()
+    config.read(config_file)
+
+    conn = psycopg2.connect("host={} dbname={} user={} password={} port={}".format(*config['CLUSTER'].values()))
+    cur = conn.cursor()
+
+    drop_tables(cur, conn)
+    
+    drop_constraints(cur, conn)
+    
+    create_tables(cur, conn)
+    
+    load_staging_tables(cur, conn) 
+    
+    insert_tables(cur, conn)
+    
+    conn.close()
+    
+
+if __name__ == '__main__': 
+    main()
