@@ -29,6 +29,7 @@ def scrape_cp_cities(cities: typing.List[str],
     Args:
         cities (typing.List[str], optional): list of cities to scrape.
         dir_save (str, optional): directory for saving scraped cities. Defaults to "../data/scraped_data".
+        save_raw (bool, optional): whether to save API result as raw json (True) or pickle file (False). Defaults to False.
     """    
     data_cities = {}
     now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")        
@@ -43,8 +44,10 @@ def scrape_cp_cities(cities: typing.List[str],
             logger.error(f"Error occured while scraping '{city}' at {now}.")
 
     if save_raw: 
-        #TODO: Implement saving raw jsons
-        pass 
+        fname = now + "_cp_data_cities.json"
+        path_save = os.path.join(dir_save, fname)
+        with open(path_save, 'w', encoding='utf-8') as f:
+            json.dump(data, f)
     else: 
         fname = now + "_cp_data_cities.pkl"
         path_save = os.path.join(dir_save, fname)
