@@ -1,0 +1,64 @@
+Table status_chargingpoints {
+  id_status_cp varchar [pk]
+  id_chargingpoint varchar [ref: > charging_point.id_cp]
+  query_time timestamptz [ref: > time.query_time]
+  status_cp varchar
+  status_parkingsensor varchar
+}
+
+Table status_connectors {
+  id_status_connector varchar [pk]
+  id_connector varchar [ref: > connector.id_connector]
+  query_time timestamptz [ref: > time.query_time]
+  status_connector varchar
+}
+
+
+Table charging_station {
+  id_cs int [pk]
+  name varchar
+  address varchar
+  city varchar
+  postal_code varchar
+  country varchar
+  distance_in_m float 
+  owner varchar 
+  roaming boolean
+  longitude float
+  latitude float
+  operator_name varchar
+  operator_hotline varchar
+  open_24_7 boolean
+}
+
+Table charging_point {
+  id_cp varchar [pk]
+  id_cs int [not null, ref: > charging_station.id_cs]
+  charging_station_position varchar
+  cp_position varchar
+  cp_public_comment varchar
+  vehicle_type varchar
+  floor_level varchar
+ }
+
+Table connector {
+  id_connector varchar
+  id_cp varchar [ref: > charging_point.id_cp]
+  format varchar
+  power_type varchar 
+  tariff_id varchar 
+  ampere int 
+  max_power int 
+  voltage int 
+  standard varchar
+}
+
+Table time {
+  query_time timestamptz [pk]
+  hour int4
+  day int4
+  week int4
+  month int4 
+  year int4 
+  weekday int4
+}
