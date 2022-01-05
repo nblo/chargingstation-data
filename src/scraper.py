@@ -47,7 +47,7 @@ def scrape_cp_cities(cities: typing.List[str],
         fname = now + "_cp_data_cities.json"
         path_save = os.path.join(dir_save, fname)
         with open(path_save, 'w', encoding='utf-8') as f:
-            json.dump(data, f)
+            json.dump(data_cities, f)
     else: 
         fname = now + "_cp_data_cities.pkl"
         path_save = os.path.join(dir_save, fname)
@@ -68,6 +68,6 @@ def scraper(scraping_interval: typing.Union[int, float] = SCRAPING_INTERVAL,
         logger.info(info_msg)
         print(info_msg)
         
-        scrape_cp_cities(cities=cities)
+        scrape_cp_cities(cities=cities, save_raw=True)
         
         time.sleep(scraping_interval*60 - 15)
