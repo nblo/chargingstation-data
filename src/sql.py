@@ -332,13 +332,14 @@ CREATE_TABLE_TIME = """CREATE TABLE IF NOT EXISTS "time" (
 INSERT_TABLE_TIME  = """ INSERT INTO "time"  (  
                                     SELECT 
                                         ts as query_time, 
-                                        extract(hour from ts),
-                                        extract(day from ts),
-                                        extract(week from ts), 
-                                        extract(month from ts),
-                                        extract(year from ts),
-                                        extract(dayofweek from ts)
+                                        min(extract(hour from ts)) as  "hour",
+                                        min(extract(day from ts)) as "day",
+                                        min(extract(week from ts)) as week, 
+                                        min(extract(month from ts)) as "month",
+                                        min(extract(year from ts)) as "year",
+                                        min(extract(dayofweek from ts)) as weekday
                             FROM staging_status_cp 
+                            GROUP BY query_time
 )
 """
 
