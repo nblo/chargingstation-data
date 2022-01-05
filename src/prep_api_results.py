@@ -16,27 +16,27 @@ def expand_df_dicts(df: DataFrame,
                     index_col: str, 
                     index_new_df: str,
                     col_dicts: str, 
-                    fill_value: str = "-", 
+                    fill_value: typing.Union[str, dict] = "-", 
                     drop_col_dicts: bool = True,
                     drop_col_status: str = True, 
                     append_timestamp: bool = False,
                     cols_return: list = None
                     ) -> DataFrame: 
-    """[summary]
+    """Flatten DataFrame containing JSON/dictionary structure of ChargeCloud API request
 
     Args:
-        df (DataFrame): [description]
-        index_col (str): [description]
-        index_new_df (str): [description]
-        col_dicts (str): [description]
-        fill_value (str, optional): [description]. Defaults to "-".
-        drop_col_dicts (bool, optional): [description]. Defaults to True.
-        drop_col_status (str, optional): [description]. Defaults to True.
-        append_timestamp (bool, optional): [description]. Defaults to False.
-        cols_return (list, optional): [description]. Defaults to None.
+        df (DataFrame): DataFrame with JSON structure as column
+        index_col (str): name of index column
+        index_new_df (str): name of column of flattened DataFrame
+        col_dicts (str): column containing dictionary structure
+        fill_value (typing.Union[str, dict], optional): fill value for missing values in dictionary structure. Either a string as fill value or dictionary containing column name as key and respective fill value as value. Defaults to "-".
+        drop_col_dicts (bool, optional): whether to drop column containing dictionary structure. Defaults to True.
+        drop_col_status (str, optional): whether to drop column containing status information. Defaults to True.
+        append_timestamp (bool, optional): whether to append timestamp of API request. Defaults to False.
+        cols_return (list, optional): column(s) of returned DataFrame. If not specified all columns are returned. Defaults to None.
 
     Returns:
-        DataFrame: [description]
+        DataFrame: flattened DataFrame
     """    
     df_unstacked = pd.DataFrame.from_dict(df.set_index(index_col)[col_dicts].to_dict(), 
                                           orient="index")
@@ -73,13 +73,13 @@ def expand_df_dicts(df: DataFrame,
 
 
 def _construct_df_from_json(data: dict) -> DataFrame:
-    """[summary]
+    """Construct DataFrame from JSON ChargeCloud API result
 
     Args:
-        data (dict): [description]
+        data (dict): mapping containing city as key and ChargeCloud API result for city as value
 
     Returns:
-        DataFrame: [description]
+        DataFrame: DataFrame of API results
     """    
     return pd.DataFrame.from_dict([{key: val for key, val in cs.items()} 
                                    for city in data for cs in data[city]["data"]])
@@ -88,14 +88,14 @@ def _construct_df_from_json(data: dict) -> DataFrame:
 def _construct_df_from_json_with_ts(data: dict, 
                                     cols_return: list = ["id", "timestamp", "evses"]
                                     )-> DataFrame: 
-    """[summary]
+    """Construct DataFrame from JSON ChargeCloud API result with timestamp of API request
 
     Args:
-        data (dict): [description]
-        cols_return (list, optional): [description]. Defaults to ["id", "timestamp", "evses"].
+        data (dict): mapping containing city as key and ChargeCloud API result for city as value
+        cols_return (list, optional): columns of returned DataFrame. If not specified all columns are returned. Defaults to ["id", "timestamp", "evses"].
 
     Returns:
-        DataFrame: [description]
+        DataFrame: DataFrame of API results
     """    
     list_df_cities = list()
     for city in data: 
@@ -112,13 +112,13 @@ def _construct_df_from_json_with_ts(data: dict,
 
 
 def extract_master_data_cs(data: dict) -> DataFrame:
-    """[summary]
+    """Extract charging station master data from API result
 
     Args:
-        data (dict): [description]
+        data (dict): mapping containing city as key and ChargeCloud API result for city as value
 
     Returns:
-        DataFrame: [description]
+        DataFrame: master data of charging stations
     """    
     df_cs = _construct_df_from_json(data)
     df_cs["latitude"] = df_cs["coordinates"].map(lambda d: float(d.get("latitude", np.nan)))
@@ -135,39 +135,39 @@ def extract_master_data_cs(data: dict) -> DataFrame:
     return df_cs
 
 
-def _read_api_results(fname_result: str) -> typing.Union[DataFrame, list]: 
-    """[summary]
+def _read_api_results(fullpath_query_result: str) -> dict:
+    """Read ChargeCloud API result of one query interval
 
     Args:
-        fname_result (str): [description]
+        fullpath_query_result (str): path to file of ChargeCloud API result
 
     Returns:
-        typing.Union[DataFrame, list]: [description]
+        dict: dictionary containing cities as keys and ChargeCloud API results as values
     """        
-    _, file_extension = os.path.splitext(fname_result)
+    _, file_extension = os.path.splitext(fullpath_query_result)
     
     if file_extension == ".pkl": 
-        return pd.read_pickle(fname_result)
+        return pd.read_pickle(fullpath_query_result)
     elif file_extension == ".json": 
-        with open(fname_result, 'r') as f: 
+        with open(fullpath_query_result, 'r') as f: 
             return json.load(f)
         
 
-def extract_master_data(fname_api_result: str, 
+def extract_master_data(fullpath_query_result: str, 
                         drop_col_status: bool = True,
                         flatten_results: bool = True
-                        )-> typing.Tuple[DataFrame, DataFrame, DataFrame]: 
-    """[summary]
+                        ) -> typing.Tuple[DataFrame, DataFrame, DataFrame]: 
+    """Extract charging station, charging point and connector master data from API result
 
     Args:
-        fname_api_result (str): [description]
-        drop_col_status (bool, optional): [description]. Defaults to True.
-        flatten_results (bool, optional): [description]. Defaults to True.
+        fullpath_query_result (str): path to file of ChargeCloud API result
+        drop_col_status (bool, optional): whether to drop status column from API result. Defaults to True.
+        flatten_results (bool, optional): whether to drop columns containing non-flat datastructures (list, dicts). Defaults to True.
 
     Returns:
         typing.Tuple[DataFrame, DataFrame, DataFrame]: [description]
     """    
-    data = _read_api_results(fname_result=fname_api_result)
+    data = _read_api_results(fullpath_query_result=fullpath_query_result)
 
     df_md_cs = extract_master_data_cs(data)
     
@@ -192,21 +192,22 @@ def extract_master_data(fname_api_result: str,
     return df_md_cs, df_md_cp, df_md_conn
 
 
-def extract_status(fname_api_result: str,
-                   return_type: str = "both"): 
-    """[summary]
+def extract_status(fullpath_query_result: str,
+                   return_type: str = "both"
+                   )-> typing.Union[DataFrame, typing.Tuple[DataFrame, DataFrame, DataFrame]]: 
+    """Extract status information from charging points and connectors
 
     Args:
-        fname_api_result (str): [description]
-        return_type (str, optional): [description]. Defaults to "both".
+        fullpath_query_result (str): path to result of ChargeCloud API result
+        return_type (str, optional): Any of {'status_cps', 'status_connectors', 'both'}. Whether to return status of chargingpoints, status of connectors or both. Defaults to "both".
 
     Raises:
-        ValueError: [description]
+        ValueError: Raised if return_type is none of {'status_cps', 'status_connectors', 'both'}
 
     Returns:
-        [type]: [description]
+        typing.Union[DataFrame, typing.Tuple[DataFrame, DataFrame, DataFrame]]: Status of chargingpoints, status of connectors or both
     """    
-    data = _read_api_results(fname_result=fname_api_result)
+    data = _read_api_results(fullpath_query_result=fullpath_query_result)
     
     if data: 
         df_cs = _construct_df_from_json_with_ts(data)
@@ -245,19 +246,20 @@ def extract_status(fname_api_result: str,
 
 
 
-def _postprocess_master_data(files_results: str, 
+def _postprocess_master_data(files_results: list, 
                              dir_master_data: str, 
                              output_format: str = "csv"): 
-    """[summary]
+    """Postprocess master data of chargingstations, chargingpoints and connectors from API results
 
     Args:
-        files_results (str): [description]
-        dir_master_data (str): [description]
-        output_format (str, optional): [description]. Defaults to "csv".
+        files_results (list): list of paths of ChargeCloud API results
+        dir_master_data (str): directory to save master data results to
+        output_format (str, optional): output format for master data. Defaults to "csv".
 
     Raises:
-        NotImplementedError: [description]
+        NotImplementedError: Raised if invalid output format is provided.
     """    
+    # as results are sorted by date take the latest API result for most recent master data
     df_md_cs, df_md_cp, df_md_conn = extract_master_data(files_results[-1])
     
     if output_format == "csv": 
@@ -276,12 +278,12 @@ def _postprocess_master_data(files_results: str,
 def _postprocess_status_data(files_results: str, 
                              dir_status_cps: str, 
                              dir_status_connectors: str): 
-    """[summary]
+    """Postprocess status data of chargingpoints and connectors from API results
 
     Args:
-        files_results (str): [description]
-        dir_status_cps (str): [description]
-        dir_status_connectors (str): [description]
+        files_results (list): list of paths of ChargeCloud API results
+        dir_status_cps (str): directory to save chargingpoint status data
+        dir_status_connectors (str): directory to save connector status data
     """    
     status_cps = []
     status_connectors = []
@@ -302,13 +304,14 @@ def _postprocess_status_data(files_results: str,
     df_status_conns.to_csv(fullpath_status_conn, index=False, sep=";")
 
 
-def _archive_raw_results(files_result: str, path_zip: str, name_zipfile: str = None, compression=zipfile.ZIP_BZIP2): 
-    """[summary]
+def _archive_raw_results(files_result: str, dir_zip: str, name_zipfile: str = None, compression=zipfile.ZIP_BZIP2): 
+    """Convert raw results to ZIP-file for archieval purposes
 
     Args:
-        files_result (str): [description]
-        path_zip (str): [description]
-        name_zipfile (str, optional): [description]. Defaults to None.
+        files_results (list): list of paths of ChargeCloud API results
+        dir_zip (str): directory to save zip archive 
+        name_zipfile (str, optional): name of zipfile. If not provided date of last API result is incorporated in ZIP file. Defaults to None.
+        compression (int, optional): ZIPfile compression type. Defaults to zipfile.ZIP_BZIP2
     """    
     
     #https://thispointer.com/python-how-to-create-a-zip-archive-from-multiple-files-or-directory/
@@ -317,7 +320,7 @@ def _archive_raw_results(files_result: str, path_zip: str, name_zipfile: str = N
        query_datetime = basename(files_result[-1]).split("_cp_data_cities", maxsplit=1)[0]
        name_zipfile = "archive_cp_data_cities_" + query_datetime + ".zip"
     
-    fullpath_zip = os.path.join(path_zip, name_zipfile)
+    fullpath_zip = os.path.join(dir_zip, name_zipfile)
     
     with ZipFile(fullpath_zip, 'w', compression=compression) as zip_obj:
         for f in files_result: 
@@ -329,13 +332,16 @@ def postprocess_api_results(dir_api_results: str,
                             dir_status_connectors: str, 
                             dir_master_data: str, 
                             dir_zip_file: str):
-    """[summary]
+    """Postprocess ChargeCloud API result. Extract master data (chargingstations, chargingpoints and connectors) and 
+    status information (chargingpoints, connectors) and archive raw API results. 
 
     Args:
-        dir_api_results (str): [description]
-        dir_status_cps (str): [description]
-        dir_status_connectors (str): [description]
-        dir_master_data (str): [description]
+        dir_api_results (str): directory containing API results.
+        dir_status_cps (str): directory to save chargingpoint status data
+        dir_status_connectors (str): directory to save connector status data
+        dir_master_data (str): directory to save master data results to
+        dir_zip (str): directory to save zip archive 
+        
     """    
     files_results = glob.glob(dir_api_results)
     files_results.sort()
