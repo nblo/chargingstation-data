@@ -248,13 +248,16 @@ def extract_status(fullpath_query_result: str,
 
 def _postprocess_master_data(files_results: list, 
                              dir_master_data: str, 
-                             output_format: str = "csv"): 
+                             output_format: str = "csv", 
+                             storage_options: dict = None): 
     """Postprocess master data of chargingstations, chargingpoints and connectors from API results
 
     Args:
         files_results (list): list of paths of ChargeCloud API results
         dir_master_data (str): directory to save master data results to
         output_format (str, optional): output format for master data. Defaults to "csv".
+        storage_options (dict, optional): storage options when writing to S3. 
+
 
     Raises:
         NotImplementedError: Raised if invalid output format is provided.
@@ -264,26 +267,29 @@ def _postprocess_master_data(files_results: list,
     
     if output_format == "csv": 
         fullpath_cs = os.path.join(dir_master_data, "charging_stations.csv")
-        df_md_cs.to_csv(fullpath_cs, sep=";", index=False)
+        df_md_cs.to_csv(fullpath_cs, sep=";", index=False, storage_options=storage_options)
         
         fullpath_cp = os.path.join(dir_master_data, "charging_points.csv")
-        df_md_cp.to_csv(fullpath_cp, sep=";", index=False)
+        df_md_cp.to_csv(fullpath_cp, sep=";", index=False,  storage_options=storage_options)
         
         fullpath_conn = os.path.join(dir_master_data, "connectors.csv")
-        df_md_conn.to_csv(fullpath_conn, sep=";", index=False)
+        df_md_conn.to_csv(fullpath_conn, sep=";", index=False, storage_options=storage_options)
     else: 
         raise NotImplementedError("Other output formats other '.csv' are not yet implemented.")
 
 
 def _postprocess_status_data(files_results: str, 
                              dir_status_cps: str, 
-                             dir_status_connectors: str): 
+                             dir_status_connectors: str, 
+                             storage_options: dict = None): 
     """Postprocess status data of chargingpoints and connectors from API results
 
     Args:
         files_results (list): list of paths of ChargeCloud API results
         dir_status_cps (str): directory to save chargingpoint status data
         dir_status_connectors (str): directory to save connector status data
+        storage_options (dict, optional): storage options when writing to S3. 
+    
     """    
     status_cps = []
     status_connectors = []
@@ -298,10 +304,10 @@ def _postprocess_status_data(files_results: str,
     df_status_conns = pd.concat(status_connectors)    
     
     fullpath_status_cps = os.path.join(dir_status_cps, "status_cps.csv")
-    df_status_cps.to_csv(fullpath_status_cps, index=False, sep=";")
+    df_status_cps.to_csv(fullpath_status_cps, index=False, sep=";", storage_options=storage_options)
     
     fullpath_status_conn = os.path.join(dir_status_connectors, "status_connectors.csv")
-    df_status_conns.to_csv(fullpath_status_conn, index=False, sep=";")
+    df_status_conns.to_csv(fullpath_status_conn, index=False, sep=";", storage_options=storage_options)
 
 
 def _archive_raw_results(files_result: str, dir_zip: str, name_zipfile: str = None, compression=zipfile.ZIP_BZIP2): 
@@ -331,7 +337,7 @@ def postprocess_api_results(dir_api_results: str,
                             dir_status_cps: str, 
                             dir_status_connectors: str, 
                             dir_master_data: str, 
-                            dir_zip_file: str):
+                            dir_zip_file: str = None):
     """Postprocess ChargeCloud API result. Extract master data (chargingstations, chargingpoints and connectors) and 
     status information (chargingpoints, connectors) and archive raw API results. 
 
@@ -340,7 +346,7 @@ def postprocess_api_results(dir_api_results: str,
         dir_status_cps (str): directory to save chargingpoint status data
         dir_status_connectors (str): directory to save connector status data
         dir_master_data (str): directory to save master data results to
-        dir_zip (str): directory to save zip archive 
+        dir_zip (str, optional): directory to save zip archive. If not specified raw files will not be archived. Defaults to None. 
         
     """    
     files_results = glob.glob(dir_api_results)
