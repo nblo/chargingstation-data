@@ -1,5 +1,14 @@
 import configparser
-import dataclasses
+from dataclasses import dataclass
+
+@dataclass
+class DataIngester: 
+    table_name: str
+    drop_table: str
+    create_table: str
+    populate_table: str
+    drop_constraints: str = None
+    
 
 # CONFIG
 config = configparser.ConfigParser()
@@ -42,14 +51,21 @@ COPY_TABLE_STAGING_STATUS_CHARGING_POINTS = """COPY staging_status_cp
            ROLE_ARN=config["IAM_ROLE"]["ARN"])
 
 
+staging_status_charging_points = DataIngester(table_name="staging_status_cp", 
+                                              drop_table=DROP_TABLE_STAGING_STATUS_CHARGING_POINTS, 
+                                              create_table=CREATE_TABLE_STAGING_STATUS_CHARGING_POINTS, 
+                                              populate_table=COPY_TABLE_STAGING_STATUS_CHARGING_POINTS
+                                              )
+
+
 DROP_TABLE_STAGING_STATUS_CONNECTORS = """DROP TABLE IF EXISTS staging_status_connectors"""
 
 CREATE_TABLE_STAGING_STATUS_CONNECTORS = """ 
                              CREATE TABLE IF NOT EXISTS staging_status_connectors
                              (
-                              id_connector              VARCHAR       NOT NULL, 
-                              status_connector          VARCHAR          NOT NULL, 
-                              ts                        TIMESTAMPTZ   NOT NULL
+                              id_connector      VARCHAR       NOT NULL, 
+                              status_connector  VARCHAR       NOT NULL, 
+                              ts                TIMESTAMPTZ   NOT NULL
                              )
 """
 
@@ -60,6 +76,13 @@ COPY_TABLE_STAGIGING_STATUS_CONNECTORS =  """COPY staging_status_connectors
                                              DELIMITER ';' IGNOREHEADER 1;
 """.format(STATUS_DATA_CHARGING_CONNECTORS=config["S3"]["STATUS_DATA_CHARGING_CONNECTORS"], 
            ROLE_ARN=config["IAM_ROLE"]["ARN"])
+
+
+staging_status_connectors = DataIngester(table_name="staging_status_connectors", 
+                                         drop_table=DROP_TABLE_STAGING_STATUS_CONNECTORS, 
+                                         create_table=CREATE_TABLE_STAGING_STATUS_CONNECTORS, 
+                                         populate_table=COPY_TABLE_STAGIGING_STATUS_CONNECTORS
+                                         )
 
 
 DROP_TABLE_STAGING_CHARGING_STATIONS = """DROP TABLE IF EXISTS staging_charging_stations"""
@@ -94,6 +117,12 @@ COPY_TABLE_STAGING_CHARGING_STATIONS = """COPY staging_charging_stations
            ROLE_ARN=config["IAM_ROLE"]["ARN"])
 
 
+staging_charging_stations = DataIngester(table_name="staging_charging_stations", 
+                                         drop_table=DROP_TABLE_STAGING_CHARGING_STATIONS, 
+                                         create_table=CREATE_TABLE_STAGING_CHARGING_STATIONS, 
+                                         populate_table=COPY_TABLE_STAGING_CHARGING_STATIONS
+                                         )
+
 DROP_TABLE_STAGING_CHARGING_POINTS = """DROP TABLE IF EXISTS staging_charging_points"""
 
 CREATE_TABLE_STAGING_CHARGING_POINTS = """ 
@@ -122,6 +151,12 @@ COPY_TABLE_STAGING_CHARGING_POINTS = """COPY staging_charging_points
 """.format(MASTER_DATA_CHARGING_POINTS=config["S3"]["MASTER_DATA_CHARGING_POINTS"], 
            ROLE_ARN=config["IAM_ROLE"]["ARN"])
 
+staging_charging_points = DataIngester(table_name="staging_charging_points", 
+                                       drop_table=DROP_TABLE_STAGING_CHARGING_POINTS, 
+                                       create_table=CREATE_TABLE_STAGING_CHARGING_POINTS, 
+                                       populate_table=COPY_TABLE_STAGING_CHARGING_POINTS
+                                       )
+
 DROP_TABLE_STAGING_CONNECTORS = """DROP TABLE IF EXISTS staging_connectors"""
 
 CREATE_TABLE_STAGING_CONNECTORS = """ 
@@ -139,13 +174,19 @@ CREATE_TABLE_STAGING_CONNECTORS = """
                                 )
 """
 
-COPY_TABLE_STAGING_CONNECTORS = """COPY staging_connectors FROM '{MASTER_DATA_CONNECTORS}' 
+COPY_TABLE_STAGING_CONNECTORS = """COPY staging_connectors 
+                                   FROM '{MASTER_DATA_CONNECTORS}' 
                                    CREDENTIALS 'aws_iam_role={ROLE_ARN}'
                                    REGION 'us-east-2' 
                                    DELIMITER ';' IGNOREHEADER 1;   
 """.format(MASTER_DATA_CONNECTORS=config["S3"]["MASTER_DATA_CONNECTORS"], 
            ROLE_ARN=config["IAM_ROLE"]["ARN"])
 
+staging_charging_connectors = DataIngester(table_name="staging_connectors", 
+                                           drop_table=DROP_TABLE_STAGING_CONNECTORS, 
+                                           create_table=CREATE_TABLE_STAGING_CONNECTORS, 
+                                           populate_table=COPY_TABLE_STAGING_CONNECTORS
+                                           )
 
 DROP_TABLE_STATUS_CHARGING_POINTS = "DROP TABLE IF EXISTS status_chargingpoints"
 
@@ -172,6 +213,12 @@ INSERT_TABLE_STATUS_CHARGING_POINTS = """INSERT INTO status_chargingpoints (
                                                 FROM staging_status_cp)
 """ 
 
+status_chargingpoints = DataIngester(table_name="status_chargingpoints", 
+                                     drop_table=DROP_TABLE_STATUS_CHARGING_POINTS, 
+                                     create_table=CREATE_TABLE_STATUS_CHARGING_POINTS, 
+                                     populate_table=INSERT_TABLE_STATUS_CHARGING_POINTS, 
+                                     drop_constraints=DROP_STATUS_CP_PKEY
+                                     )
 
 DROP_TABLE_STATUS_CONNECTORS = "DROP TABLE IF EXISTS status_connectors"
 DROP_STATUS_CONN_PKEY = "ALTER TABLE public.status_connectors DROP CONSTRAINT status_connectors_pkey"
@@ -195,6 +242,13 @@ INSERT_TABLE_STATUS_CONNECTORS = """INSERT INTO status_connectors (
                                                 FROM staging_status_connectors)
 """ 
 
+status_connectors = DataIngester(table_name="status_connectors", 
+                                 drop_table=DROP_TABLE_STATUS_CONNECTORS, 
+                                 create_table=CREATE_TABLE_STATUS_CONNECTORS, 
+                                 populate_table=INSERT_TABLE_STATUS_CONNECTORS, 
+                                 drop_constraints=DROP_STATUS_CONN_PKEY
+                                 )
+
 
 DROP_TABLE_CHARGING_STATION = "DROP TABLE IF EXISTS charging_station"
 DROP_CS_PKEY = "ALTER TABLE public.charging_station DROP CONSTRAINT charging_station_pkey"
@@ -209,7 +263,6 @@ CREATE_TABLE_CHARGING_STATION = """
                                  city                       VARCHAR, 
                                  postal_code                VARCHAR, 
                                  country                    VARCHAR,
-                                 distance_in_m              FLOAT, 
                                  owner                      VARCHAR, 
                                  roaming                    BOOLEAN, 
                                  latitude                   FLOAT, 
@@ -221,8 +274,6 @@ CREATE_TABLE_CHARGING_STATION = """
                                  )
 """
 
-
-
 INSERT_TABLE_CHARGING_STATION = """INSERT INTO  charging_station (
                                                 SELECT 
                                                     id as id_cs, 
@@ -231,7 +282,6 @@ INSERT_TABLE_CHARGING_STATION = """INSERT INTO  charging_station (
                                                     city, 
                                                     postal_code, 
                                                     country, 
-                                                    distance_in_m, 
                                                     owner, 
                                                     roaming, 
                                                     latitude, 
@@ -242,6 +292,13 @@ INSERT_TABLE_CHARGING_STATION = """INSERT INTO  charging_station (
                                                 FROM staging_charging_stations
 )
 """
+charging_station = DataIngester(table_name="charging_station", 
+                                drop_table=DROP_TABLE_CHARGING_STATION, 
+                                create_table=CREATE_TABLE_CHARGING_STATION, 
+                                populate_table=INSERT_TABLE_CHARGING_STATION, 
+                                drop_constraints=DROP_CS_PKEY
+                                )
+
 
 DROP_TABLE_CHARGING_POINT = "DROP TABLE IF EXISTS charging_point"
 DROP_CP_PKEY = "ALTER TABLE public.charging_point DROP CONSTRAINT charging_point_pkey"
@@ -256,7 +313,6 @@ CREATE_TABLE_CHARGING_POINT = """
                                  physical_reference             VARCHAR, 
                                  cp_parking_space_numbers       VARCHAR,
                                  cp_position                    VARCHAR, 
-                                 cp_public_comment              VARCHAR, 
                                  vehicle_type                   VARCHAR,
                                  floor_level                    VARCHAR,
                                  CONSTRAINT charging_point_pkey PRIMARY KEY (id_cp)
@@ -273,12 +329,19 @@ INSERT_TABLE_CHARGING_POINT = """INSERT INTO  charging_point (
                                                     physical_reference,       
                                                     cp_parking_space_numbers, 
                                                     cp_position,              
-                                                    cp_public_comment,        
                                                     vehicle_type,             
                                                     floor_level            
                                                 FROM staging_charging_points
 )
 """
+
+charging_point = DataIngester(table_name="charging_point", 
+                              drop_table=DROP_TABLE_CHARGING_POINT, 
+                              create_table=CREATE_TABLE_CHARGING_POINT, 
+                              populate_table=INSERT_TABLE_CHARGING_POINT, 
+                              drop_constraints=DROP_CP_PKEY
+                              )
+
 
 DROP_TABLE_CONNECTOR = "DROP TABLE IF EXISTS connector"
 DROP_CONN_PKEY = "ALTER TABLE public.connector DROP CONSTRAINT connector_pkey"
@@ -290,7 +353,6 @@ CREATE_TABLE_CONNECTOR = """
                          id_cp                      VARCHAR NOT NULL,          
                          format                     VARCHAR,
                          power_type                 VARCHAR, 
-                         tariff_id                  VARCHAR, 
                          ampere                     INTEGER, 
                          max_power                  INTEGER,
                          voltage                    INTEGER, 
@@ -305,7 +367,6 @@ INSERT_TABLE_CONNECTOR = """INSERT INTO connector (
                                     id_cp as id_cp, 
                                     format, 
                                     power_type, 
-                                    tariff_id, 
                                     ampere, 
                                     max_power, 
                                     voltage, 
@@ -313,6 +374,14 @@ INSERT_TABLE_CONNECTOR = """INSERT INTO connector (
                             FROM staging_connectors
 )
 """
+
+connector = DataIngester(table_name="connector", 
+                         drop_table=DROP_TABLE_CONNECTOR, 
+                         create_table=CREATE_TABLE_CONNECTOR, 
+                         populate_table=INSERT_TABLE_CONNECTOR, 
+                         drop_constraints=DROP_CONN_PKEY
+                         )
+
 
 DROP_TABLE_TIME = "DROP TABLE IF EXISTS time"
 DROP_TIME_PKEY = """ALTER TABLE public."time" DROP CONSTRAINT time_pkey"""
@@ -343,7 +412,12 @@ INSERT_TABLE_TIME  = """ INSERT INTO "time"  (
 )
 """
 
-
+time = DataIngester(table_name="time", 
+                    drop_table=DROP_TABLE_TIME, 
+                    create_table=CREATE_TABLE_TIME, 
+                    populate_table=INSERT_TABLE_TIME, 
+                    drop_constraints=DROP_TIME_PKEY
+                    )
 
 drop_table_queries = [DROP_TABLE_STAGING_STATUS_CHARGING_POINTS,
                       DROP_TABLE_STAGING_STATUS_CONNECTORS,
@@ -385,6 +459,7 @@ copy_table_queries = [COPY_TABLE_STAGING_STATUS_CHARGING_POINTS,
 
 
 insert_table_queries = [INSERT_TABLE_STATUS_CHARGING_POINTS, 
+                        INSERT_TABLE_STATUS_CONNECTORS,
                         INSERT_TABLE_CONNECTOR, 
                         INSERT_TABLE_CHARGING_STATION, 
                         INSERT_TABLE_CHARGING_POINT, 
