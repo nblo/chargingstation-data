@@ -3,12 +3,18 @@
 The goal of 
 
 
-The project was the Capstone project for the Udacity Data Engineering Nanodegree Course. 
+The project was the Capstone Project for the Udacity Data Engineering Nanodegree Course. 
 
 
 ## Overview
 
 Here you want to write a short overview of the goals of your project and how it works at a high level. If possible, include one or two images of the end product and architecture diagram (see examples below). diagrams.net is a great tool for creating architecture diagrams.
+
+The goal of the project is to set up a maintainable and easy to extend data architecture and ETL-process for charging-data. Some example use cases for data model: 
+- business reporting: generate utilization reports for single charging stations, cities or operators
+- BI-dashboards: Generate interactive visualizations for visualizing charging station usage
+- Predictive modelling: Use utilization data to predict usage development or determine optimal charging point locations 
+
 
 The project consist of the following steps: 
 1. Data Acquisition: Calling Chargecloud API in regular time intervals and storing raw results
@@ -26,15 +32,16 @@ Each charging station consists of one or more *charging points (abbrev. cp)* (bl
 
 Each charging point has one or more *connectors (abbrev. conn)* (green boxes) in order to satisfy different charging standards (e.g. Chademo, CCS, Type 2) or varying charging power levels (e.g. normal charging, fast-charging, ultra-fast charging). 
 
-![Charging Station](chargingstation.png)
+<img src="chargingstation.png" alt="Charging Station" width="400"/>
 
+---
 Each charging station with its charging points and connectors has static/semi-static master data. Examples of master data are the charging stations' location, address, operator, or the connectors maximum power level or connector type. 
 
 
 Each chargingpoint and connector also has dynamic occupancy or status data, e.g. if the chargingpoint is occupied, reserved, 
 free or out of order. 
 
-The combination of statis and dynamic data is used by car infotainment systems and apps to navigate the user to the nearest  
+The combination of static and dynamic data is used by car infotainment systems and apps to navigate the user to the nearest  
 free and functional charging station. 
 
 
@@ -74,11 +81,11 @@ Replace the example step-by-step instructions with your own.
 ## Design Choices 
 
 - use of data warehouse (Redshift) instead of data lake as data is (mostly) structured
-- use of batch processing instead of streaming: the use case for this project is analyzing trends in user behaviour or occupancy with 
+- use of batch processing instead of streaming: the use case for this project is analyzing trends in user behavior or occupancy with 
 descriptive statistics or as a basis for a machine learning model for predicting optimal charging station locations. Thus, daily batch updates
 suffice and the use case does not justify extra complexity of streaming service like Kafka
 
-- ingesting raw data into Redshift allows for flexible refactoring of data modell 
+- ingesting raw data into Redshift allows for flexible refactoring of data model
 - separation each step of ETL process (Data Acquisition, Data Cleaning, Data Modelling and Loading) allows some or all 
 of those steps can be moved to Airflow or AWS
 
