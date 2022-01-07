@@ -28,12 +28,12 @@ LOGGING_CONFIG = {
         },
     },
     "loggers": {
-        "eprognosis": {
+        "test": {
             "level": "INFO",
             "handlers": [
                 "verbose_output",
             ],
         },
     },
-    "root": {"level": "INFO", "handlers": ["logfile"]},
+    "root": {"level": "INFO", "handlers": ["logfile", "verbose_output"]},
 }
