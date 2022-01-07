@@ -21,7 +21,7 @@ def drop_tables(cur, conn):
         conn: AWS Redshift connection object
     """ 
     for query in drop_table_queries:
-        print(query)
+        logger.info(f"Executing query: {query}")
         cur.execute(query)
         conn.commit()
 
@@ -37,10 +37,9 @@ def drop_constraints(cur, conn):
     for query in drop_constraints_queries:
         constraint_name = query.split("CONSTRAINT")[1].strip()
         if constraint_name in existing_constraints: 
-            print(query)
+            logger.info(f"Executing query: {query}")
             cur.execute(query)
             conn.commit()      
-     
 
 
 def create_tables(cur, conn):
@@ -51,7 +50,7 @@ def create_tables(cur, conn):
         conn: AWS Redshift connection object
     """ 
     for query in create_table_queries:
-        print(query)
+        logger.info(f"Executing query: {query}")
         cur.execute(query)
         conn.commit()
         
@@ -64,7 +63,7 @@ def load_staging_tables(cur, conn):
         conn: AWS Redshift connection object
     """    
     for query in copy_table_queries:
-        print(query)
+        logger.info(f"Executing query: {query}")
         cur.execute(query)
         conn.commit()
 
@@ -77,10 +76,10 @@ def insert_tables(cur, conn):
         conn: AWS Redshift connection object
     """    
     for query in insert_table_queries:
-        print(query)
+        logger.info(f"Executing query: {query}")
         cur.execute(query)
         conn.commit()
-        
+
 
 def main(config_file):
     config = configparser.ConfigParser()
@@ -89,14 +88,20 @@ def main(config_file):
     conn = psycopg2.connect("host={} dbname={} user={} password={} port={}".format(*config['CLUSTER'].values()))
     cur = conn.cursor()
 
+    logger.info(f"Dropping tables.")
     drop_tables(cur, conn)
     
+    logger.info(f"Dropping constraints.")
     drop_constraints(cur, conn)
     
+    logger.info(f"Creating tables.")
     create_tables(cur, conn)
     
+    logger.info(f"Loading staging tables.")
     load_staging_tables(cur, conn) 
     
+    
+    logger.info(f"Ingesting data from staging tables.")
     insert_tables(cur, conn)
     
     conn.close()
