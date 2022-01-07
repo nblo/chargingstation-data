@@ -7,6 +7,12 @@ import typing
 import os
 import pandas as pd
 
+
+import logging.config
+from settings import LOGGING_CONFIG
+logging.config.dictConfig(LOGGING_CONFIG)
+
+
 logger = logging.getLogger(__name__)
 
 BASE_URL_CHARGECLOUD = "https://new-poi.chargecloud.de"
@@ -41,7 +47,7 @@ def scrape_cp_cities(cities: typing.List[str],
             data_cities[city] = data
             logger.debug(f"Successfully scraped '{city}' at {now}.")
         except: 
-            logger.error(f"Error occured while scraping '{city}' at {now}.")
+            logger.error(f"Error occurred while scraping '{city}' at {now}.")
 
     if save_raw: 
         fname = now + "_cp_data_cities.json"
@@ -59,15 +65,22 @@ def scraper(scraping_interval: typing.Union[int, float] = SCRAPING_INTERVAL,
     """Scrape a given list of cities from chargecloud API in a given interval.
 
     Args:
-        scraping_interval (typing.Union[int, float], optional): Interval in minutes between API lookups. Defaults to SCRAPING_INTERVAL.
+        scraping_interval (typing.Union[int, float], optional): interval in minutes between API lookups. Defaults to SCRAPING_INTERVAL.
+        cities (typing.List[str], optional): list of cities to scrape
     """    
     while True: 
         
         now = datetime.datetime.now().strftime("%Y/%m/%d_%H:%M:%S")
         info_msg = f"Scraping cities: {now}"
         logger.info(info_msg)
-        print(info_msg)
         
         scrape_cp_cities(cities=cities, save_raw=True)
         
-        time.sleep(scraping_interval*60 - 15)
+        # API call of all cities takes approx. 15 seconds, therefore subtract it from specified interval
+        sleep = max(scraping_interval*60 - 15, 0)
+        time.sleep(sleep)
+        
+
+if __name__ == '__main__': 
+    
+    scraper()
