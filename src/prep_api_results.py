@@ -2,6 +2,7 @@ import pandas as pd
 from pandas import DataFrame
 import numpy as np
 from functools import reduce
+import logging
 import glob
 import os 
 from os.path import basename
@@ -9,6 +10,13 @@ import json
 import typing 
 import zipfile
 from zipfile import ZipFile
+
+
+import logging.config
+from settings import LOGGING_CONFIG
+logging.config.dictConfig(LOGGING_CONFIG)
+
+logger = logging.getLogger(__name__)
 
 
 def expand_df_dicts(df: DataFrame, 
@@ -22,7 +30,7 @@ def expand_df_dicts(df: DataFrame,
                     append_timestamp: bool = False,
                     cols_return: list = None
                     ) -> DataFrame: 
-    """Flatten DataFrame containing JSON/dictionary structure of ChargeCloud API request
+    """Flatten DataFrame containing JSON/dictionary structure of chargecloud API request
 
     Args:
         df (DataFrame): DataFrame with JSON structure as column
@@ -73,10 +81,10 @@ def expand_df_dicts(df: DataFrame,
 
 
 def _construct_df_from_json(data: dict) -> DataFrame:
-    """Construct DataFrame from JSON ChargeCloud API result
+    """Construct DataFrame from JSON chargecloud API result
 
     Args:
-        data (dict): mapping containing city as key and ChargeCloud API result for city as value
+        data (dict): mapping containing city as key and chargecloud API result for city as value
 
     Returns:
         DataFrame: DataFrame of API results
@@ -88,10 +96,10 @@ def _construct_df_from_json(data: dict) -> DataFrame:
 def _construct_df_from_json_with_ts(data: dict, 
                                     cols_return: list = ["id", "timestamp", "evses"]
                                     )-> DataFrame: 
-    """Construct DataFrame from JSON ChargeCloud API result with timestamp of API request
+    """Construct DataFrame from JSON chargecloud API result with timestamp of API request
 
     Args:
-        data (dict): mapping containing city as key and ChargeCloud API result for city as value
+        data (dict): mapping containing city as key and chargecloud API result for city as value
         cols_return (list, optional): columns of returned DataFrame. If not specified all columns are returned. Defaults to ["id", "timestamp", "evses"].
 
     Returns:
@@ -115,7 +123,7 @@ def extract_master_data_cs(data: dict) -> DataFrame:
     """Extract charging station master data from API result
 
     Args:
-        data (dict): mapping containing city as key and ChargeCloud API result for city as value
+        data (dict): mapping containing city as key and chargecloud API result for city as value
 
     Returns:
         DataFrame: master data of charging stations
@@ -136,13 +144,13 @@ def extract_master_data_cs(data: dict) -> DataFrame:
 
 
 def _read_api_results(fullpath_query_result: str) -> dict:
-    """Read ChargeCloud API result of one query interval
+    """Read chargecloud API result of one query interval
 
     Args:
-        fullpath_query_result (str): path to file of ChargeCloud API result
+        fullpath_query_result (str): path to file of chargecloud API result
 
     Returns:
-        dict: dictionary containing cities as keys and ChargeCloud API results as values
+        dict: dictionary containing cities as keys and chargecloud API results as values
     """        
     _, file_extension = os.path.splitext(fullpath_query_result)
     
@@ -160,7 +168,7 @@ def extract_master_data(fullpath_query_result: str,
     """Extract charging station, charging point and connector master data from API result
 
     Args:
-        fullpath_query_result (str): path to file of ChargeCloud API result
+        fullpath_query_result (str): path to file of chargecloud API result
         drop_col_status (bool, optional): whether to drop status column from API result. Defaults to True.
         flatten_results (bool, optional): whether to drop columns containing non-flat datastructures (list, dicts). Defaults to True.
 
@@ -198,7 +206,7 @@ def extract_status(fullpath_query_result: str,
     """Extract status information from charging points and connectors
 
     Args:
-        fullpath_query_result (str): path to result of ChargeCloud API result
+        fullpath_query_result (str): path to result of chargecloud API result
         return_type (str, optional): Any of {'status_cps', 'status_connectors', 'both'}. Whether to return status of chargingpoints, status of connectors or both. Defaults to "both".
 
     Raises:
@@ -245,7 +253,6 @@ def extract_status(fullpath_query_result: str,
             raise ValueError(err_msg)
 
 
-
 def _postprocess_master_data(files_results: list, 
                              dir_master_data: str, 
                              output_format: str = "csv", 
@@ -253,7 +260,7 @@ def _postprocess_master_data(files_results: list,
     """Postprocess master data of chargingstations, chargingpoints and connectors from API results
 
     Args:
-        files_results (list): list of paths of ChargeCloud API results
+        files_results (list): list of paths of chargecloud API results
         dir_master_data (str): directory to save master data results to
         output_format (str, optional): output format for master data. Defaults to "csv".
         storage_options (dict, optional): storage options when writing to S3. 
@@ -265,14 +272,22 @@ def _postprocess_master_data(files_results: list,
     # as results are sorted by date take the latest API result for most recent master data
     df_md_cs, df_md_cp, df_md_conn = extract_master_data(files_results[-1])
     
+    logger.debug(f"Shape master data charging stations: {df_md_cs.shape}")
+    logger.debug(f"Shape master data charging points: {df_md_cp.shape}")
+    logger.debug(f"Shape master data connectors: {df_md_conn.shape}")
+
+    
     if output_format == "csv": 
         fullpath_cs = os.path.join(dir_master_data, "charging_stations.csv")
+        logger.info(f"Saving master data charging stations to '{fullpath_cs}'")
         df_md_cs.to_csv(fullpath_cs, sep=";", index=False, storage_options=storage_options)
         
         fullpath_cp = os.path.join(dir_master_data, "charging_points.csv")
+        logger.info(f"Saving master data charging points stations to '{fullpath_cp}'")
         df_md_cp.to_csv(fullpath_cp, sep=";", index=False,  storage_options=storage_options)
         
         fullpath_conn = os.path.join(dir_master_data, "connectors.csv")
+        logger.info(f"Saving master data connectors to '{fullpath_conn}'")
         df_md_conn.to_csv(fullpath_conn, sep=";", index=False, storage_options=storage_options)
     else: 
         raise NotImplementedError("Other output formats other '.csv' are not yet implemented.")
@@ -285,7 +300,7 @@ def _postprocess_status_data(files_results: str,
     """Postprocess status data of chargingpoints and connectors from API results
 
     Args:
-        files_results (list): list of paths of ChargeCloud API results
+        files_results (list): list of paths of chargecloud API results
         dir_status_cps (str): directory to save chargingpoint status data
         dir_status_connectors (str): directory to save connector status data
         storage_options (dict, optional): storage options when writing to S3. 
@@ -303,10 +318,16 @@ def _postprocess_status_data(files_results: str,
     df_status_cps = pd.concat(status_cps)
     df_status_conns = pd.concat(status_connectors)    
     
+    logger.debug(f"Shape status information chargingpoints: {df_status_cps.shape}")
+    logger.debug(f"Shape status information connectors: {df_status_conns.shape}")
+
     fullpath_status_cps = os.path.join(dir_status_cps, "status_cps.csv")
+    
+    logger.info(f"Saving status information charging points to '{fullpath_status_cps}'")
     df_status_cps.to_csv(fullpath_status_cps, index=False, sep=";", storage_options=storage_options)
     
     fullpath_status_conn = os.path.join(dir_status_connectors, "status_connectors.csv")
+    logger.info(f"Saving status information connectors to '{fullpath_status_conn}'")
     df_status_conns.to_csv(fullpath_status_conn, index=False, sep=";", storage_options=storage_options)
 
 
@@ -314,7 +335,7 @@ def _archive_raw_results(files_result: str, dir_zip: str, name_zipfile: str = No
     """Convert raw results to ZIP-file for archieval purposes
 
     Args:
-        files_results (list): list of paths of ChargeCloud API results
+        files_results (list): list of paths of chargecloud API results
         dir_zip (str): directory to save zip archive 
         name_zipfile (str, optional): name of zipfile. If not provided date of last API result is incorporated in ZIP file. Defaults to None.
         compression (int, optional): ZIPfile compression type. Defaults to zipfile.ZIP_BZIP2
@@ -338,7 +359,7 @@ def postprocess_api_results(dir_api_results: str,
                             dir_status_connectors: str, 
                             dir_master_data: str, 
                             dir_zip_file: str = None):
-    """Postprocess ChargeCloud API result. Extract master data (chargingstations, chargingpoints and connectors) and 
+    """Postprocess chargecloud API result. Extract master data (chargingstations, chargingpoints and connectors) and 
     status information (chargingpoints, connectors) and archive raw API results. 
 
     Args:
@@ -351,11 +372,20 @@ def postprocess_api_results(dir_api_results: str,
     """    
     files_results = glob.glob(dir_api_results)
     files_results.sort()
+    logger.debug(f"Number of API results: {len(files_results)}")
     
+    logger.info("Postprocessing master data.")
     _postprocess_master_data(files_results=files_results, dir_master_data=dir_master_data)
     
+    logger.info("Postprocessing status data.")
     _postprocess_status_data(files_results=files_results, 
                              dir_status_cps=dir_status_cps, 
                              dir_status_connectors=dir_status_connectors)
     
-    _archive_raw_results(files_result=files_results, dir_zip_file=dir_zip_file)
+    if dir_zip_file is not None: 
+        logger.info("Archiving raw results.")
+        _archive_raw_results(files_result=files_results, dir_zip_file=dir_zip_file)
+        
+
+if __name__ == '__main__': 
+    postprocess_api_results()
