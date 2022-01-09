@@ -131,12 +131,14 @@ COPY_TABLE_STAGING_CHARGING_STATIONS = """COPY {SCHEMA}.staging_charging_station
                                           EMPTYASNULL;                             
 """
 
+DATA_TEST_CASES_STAGING_CHARGING_STATIONS = [DataTestCase(name="row_count_staging_charging_stations", 
+                                                          sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
 
 staging_charging_stations = DataIngester(table_name="staging_charging_stations", 
                                          drop_table=DROP_TABLE_STAGING_CHARGING_STATIONS, 
                                          create_table=CREATE_TABLE_STAGING_CHARGING_STATIONS, 
-                                         populate_table=COPY_TABLE_STAGING_CHARGING_STATIONS
-                                         )
+                                         populate_table=COPY_TABLE_STAGING_CHARGING_STATIONS,
+                                         data_test_cases=DATA_TEST_CASES_STAGING_CHARGING_STATIONS)
 
 DROP_TABLE_STAGING_CHARGING_POINTS = """DROP TABLE IF EXISTS {SCHEMA}.staging_charging_points"""
 
@@ -165,11 +167,15 @@ COPY_TABLE_STAGING_CHARGING_POINTS = """COPY {SCHEMA}.staging_charging_points
                                         EMPTYASNULL 
 """
 
+DATA_TEST_CASES_STAGING_CHARGING_POINTS = [DataTestCase(name="row_count_staging_charging_points", 
+                                                          sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
+
 staging_charging_points = DataIngester(table_name="staging_charging_points", 
                                        drop_table=DROP_TABLE_STAGING_CHARGING_POINTS, 
                                        create_table=CREATE_TABLE_STAGING_CHARGING_POINTS, 
-                                       populate_table=COPY_TABLE_STAGING_CHARGING_POINTS
-                                       )
+                                       populate_table=COPY_TABLE_STAGING_CHARGING_POINTS,
+                                       data_test_cases=DATA_TEST_CASES_STAGING_CHARGING_POINTS)
+
 
 DROP_TABLE_STAGING_CONNECTORS = """DROP TABLE IF EXISTS {SCHEMA}.staging_connectors"""
 
@@ -195,11 +201,14 @@ COPY_TABLE_STAGING_CONNECTORS = """COPY {SCHEMA}.staging_connectors
                                    DELIMITER ';' IGNOREHEADER 1;   
 """
 
+DATA_TEST_CASES_STAGING_CONNECTORS = [DataTestCase(name="row_count_staging_connectors", 
+                                                   sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
+
 staging_charging_connectors = DataIngester(table_name="staging_connectors", 
                                            drop_table=DROP_TABLE_STAGING_CONNECTORS, 
                                            create_table=CREATE_TABLE_STAGING_CONNECTORS, 
-                                           populate_table=COPY_TABLE_STAGING_CONNECTORS
-                                           )
+                                           populate_table=COPY_TABLE_STAGING_CONNECTORS,
+                                           data_test_cases=DATA_TEST_CASES_STAGING_CONNECTORS)
 
 DROP_TABLE_STATUS_CHARGING_POINTS = "DROP TABLE IF EXISTS {SCHEMA}.status_chargingpoints"
 
@@ -226,12 +235,19 @@ INSERT_TABLE_STATUS_CHARGING_POINTS = """INSERT INTO {SCHEMA}.status_chargingpoi
                                                 FROM staging_status_cp)
 """ 
 
+
+DATA_TEST_CASES_STATUS_CP = [DataTestCase(name="row_count_status_cp", 
+                                          sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
+
+
 status_chargingpoints = DataIngester(table_name="status_chargingpoints", 
                                      drop_table=DROP_TABLE_STATUS_CHARGING_POINTS, 
                                      create_table=CREATE_TABLE_STATUS_CHARGING_POINTS, 
                                      populate_table=INSERT_TABLE_STATUS_CHARGING_POINTS, 
-                                     drop_constraints=DROP_STATUS_CP_PKEY
+                                     drop_constraints=DROP_STATUS_CP_PKEY, 
+                                     data_test_cases=DATA_TEST_CASES_STATUS_CP
                                      )
+
 
 DROP_TABLE_STATUS_CONNECTORS = "DROP TABLE IF EXISTS {SCHEMA}.status_connectors"
 DROP_STATUS_CONN_PKEY = "ALTER TABLE {SCHEMA}.status_connectors DROP CONSTRAINT status_connectors_pkey"
@@ -255,11 +271,15 @@ INSERT_TABLE_STATUS_CONNECTORS = """INSERT INTO {SCHEMA}.status_connectors (
                                                 FROM staging_status_connectors)
 """ 
 
+DATA_TEST_CASES_STATUS_CONN = [DataTestCase(name="row_count_status_conn", 
+                                            sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
+
 status_connectors = DataIngester(table_name="status_connectors", 
                                  drop_table=DROP_TABLE_STATUS_CONNECTORS, 
                                  create_table=CREATE_TABLE_STATUS_CONNECTORS, 
                                  populate_table=INSERT_TABLE_STATUS_CONNECTORS, 
-                                 drop_constraints=DROP_STATUS_CONN_PKEY
+                                 drop_constraints=DROP_STATUS_CONN_PKEY, 
+                                 data_test_cases=DATA_TEST_CASES_STATUS_CONN
                                  )
 
 
@@ -305,11 +325,18 @@ INSERT_TABLE_CHARGING_STATION = """INSERT INTO  {SCHEMA}.charging_station (
                                                 FROM staging_charging_stations
 )
 """
+
+DATA_TEST_CASES_CHARGING_STATIONS = [DataTestCase(name="row_count_charging_stations", 
+                                                  sql=TEMPLATE_TEST_CASE_ROW_COUNT), 
+                                     DataTestCase(name="postal_code_length", 
+                                                  sql="select len(postal_code) == 5 from {SCHEMA}.charging_station")]
+
 charging_station = DataIngester(table_name="charging_station", 
                                 drop_table=DROP_TABLE_CHARGING_STATION, 
                                 create_table=CREATE_TABLE_CHARGING_STATION, 
                                 populate_table=INSERT_TABLE_CHARGING_STATION, 
-                                drop_constraints=DROP_CS_PKEY
+                                drop_constraints=DROP_CS_PKEY, 
+                                data_test_cases=DATA_TEST_CASES_CHARGING_STATIONS
                                 )
 
 
@@ -348,11 +375,15 @@ INSERT_TABLE_CHARGING_POINT = """INSERT INTO {SCHEMA}.charging_point (
 )
 """
 
+DATA_TEST_CASES_CHARGING_POINTS= [DataTestCase(name="row_count_charging_points", 
+                                               sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
+
 charging_point = DataIngester(table_name="charging_point", 
                               drop_table=DROP_TABLE_CHARGING_POINT, 
                               create_table=CREATE_TABLE_CHARGING_POINT, 
                               populate_table=INSERT_TABLE_CHARGING_POINT, 
-                              drop_constraints=DROP_CP_PKEY
+                              drop_constraints=DROP_CP_PKEY, 
+                              data_test_cases=DATA_TEST_CASES_CHARGING_POINTS
                               )
 
 
@@ -366,6 +397,7 @@ CREATE_TABLE_CONNECTOR = """
                          id_cp                      VARCHAR NOT NULL,          
                          format                     VARCHAR,
                          power_type                 VARCHAR, 
+                         tariff_id                  VARCHAR,
                          ampere                     INTEGER, 
                          max_power                  INTEGER,
                          voltage                    INTEGER, 
@@ -388,11 +420,18 @@ INSERT_TABLE_CONNECTOR = """INSERT INTO {SCHEMA}.connector (
 )
 """
 
+DATA_TEST_CASES_CONNECTORS = [DataTestCase(name="row_count_connectors", 
+                                           sql=TEMPLATE_TEST_CASE_ROW_COUNT), 
+                              DataTestCase(name="power_limits_connectors", 
+                                           sql="select (max_power > 2 and max_power < 400) from {SCHEMA}.connector")
+                              ]
+
 connector = DataIngester(table_name="connector", 
                          drop_table=DROP_TABLE_CONNECTOR, 
                          create_table=CREATE_TABLE_CONNECTOR, 
                          populate_table=INSERT_TABLE_CONNECTOR, 
-                         drop_constraints=DROP_CONN_PKEY
+                         drop_constraints=DROP_CONN_PKEY, 
+                         data_test_cases=DATA_TEST_CASES_CONNECTORS
                          )
 
 
@@ -425,68 +464,100 @@ INSERT_TABLE_TIME  = """ INSERT INTO {SCHEMA}."time"  (
 )
 """
 
+DATA_TEST_CASES_TIME = [DataTestCase(name="row_count_time", 
+                                     sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
+
 time = DataIngester(table_name="time", 
                     drop_table=DROP_TABLE_TIME, 
                     create_table=CREATE_TABLE_TIME, 
                     populate_table=INSERT_TABLE_TIME, 
-                    drop_constraints=DROP_TIME_PKEY
+                    drop_constraints=DROP_TIME_PKEY, 
+                    data_test_cases=DATA_TEST_CASES_TIME
                     )
 
-data_objects_staging = [staging_charging_connectors, 
-                        staging_charging_points,
-                        staging_charging_stations, 
-                        staging_status_charging_points, 
-                        staging_status_connectors]
-
-data_objects = [status_chargingpoints, 
-                status_connectors, 
-                charging_station,
-                charging_point,
-                connector 
-                ]
-
-drop_table_queries = [DROP_TABLE_STAGING_STATUS_CHARGING_POINTS,
-                      DROP_TABLE_STAGING_STATUS_CONNECTORS,
-                      DROP_TABLE_STAGING_CHARGING_STATIONS, 
-                      DROP_TABLE_STAGING_CHARGING_POINTS, 
-                      DROP_TABLE_STAGING_CONNECTORS, 
-                      DROP_TABLE_STATUS_CHARGING_POINTS, 
-                      DROP_TABLE_STATUS_CONNECTORS, 
-                      DROP_TABLE_CHARGING_STATION, 
-                      DROP_TABLE_CHARGING_POINT, 
-                      DROP_TABLE_CONNECTOR, 
-                      DROP_TABLE_TIME]
-
-drop_constraints_queries = [DROP_CONN_PKEY, 
-                            DROP_CP_PKEY, 
-                            DROP_CS_PKEY, 
-                            DROP_STATUS_CONN_PKEY, 
-                            DROP_STATUS_CP_PKEY, 
-                            DROP_TIME_PKEY]
-
-create_table_queries = [CREATE_TABLE_STAGING_CHARGING_POINTS, 
-                        CREATE_TABLE_STAGING_STATUS_CONNECTORS, 
-                        CREATE_TABLE_STAGING_STATUS_CHARGING_POINTS,
-                        CREATE_TABLE_STAGING_CHARGING_STATIONS, 
-                        CREATE_TABLE_STAGING_CHARGING_POINTS, 
-                        CREATE_TABLE_STAGING_CONNECTORS, 
-                        CREATE_TABLE_STATUS_CHARGING_POINTS, 
-                        CREATE_TABLE_STATUS_CONNECTORS, 
-                        CREATE_TABLE_CHARGING_STATION, 
-                        CREATE_TABLE_CHARGING_POINT, 
-                        CREATE_TABLE_CONNECTOR, 
-                        CREATE_TABLE_TIME]
-
-copy_table_queries = [COPY_TABLE_STAGING_STATUS_CHARGING_POINTS, 
-                      COPY_TABLE_STAGIGING_STATUS_CONNECTORS, 
-                      COPY_TABLE_STAGING_CHARGING_STATIONS, 
-                      COPY_TABLE_STAGING_CHARGING_POINTS, 
-                      COPY_TABLE_STAGING_CONNECTORS]
+DROP_TABLE_MAPPING_POIS_CS = "DROP TABLE IF EXISTS {SCHEMA}.mapping_poi_cs"
 
 
-insert_table_queries = [INSERT_TABLE_STATUS_CHARGING_POINTS, 
-                        INSERT_TABLE_STATUS_CONNECTORS,
-                        INSERT_TABLE_CONNECTOR, 
-                        INSERT_TABLE_CHARGING_STATION, 
-                        INSERT_TABLE_CHARGING_POINT, 
-                        INSERT_TABLE_TIME]
+CREATE_TABLE_MAPPING_POIS = """CREATE TABLE IF NOT EXISTS {SCHEMA}.mapping_poi_cs (
+                                id_poi          VARCHAR NOT NULL, 
+                                id_cs           INTEGER NOT NULL, 
+                                poi_category    VARCHAR NOT NULL
+                                )
+"""
+
+COPY_TABLE_MAPPING_POIS = """COPY {SCHEMA}.mapping_poi_cs 
+                             FROM '{MAPPING_POI_CS}' 
+                             CREDENTIALS 'aws_iam_role={ROLE_ARN}'
+                             REGION 'us-east-2' 
+                             DELIMITER ';' IGNOREHEADER 1;   
+"""
+
+DATA_TEST_CASES_MAPPING_POIS_CS = [DataTestCase(name="row_count_mapping_poi_cs", 
+                                                sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
+
+mapping_poi_cs = DataIngester(table_name="mapping_poi_cs", 
+                              drop_table=DROP_TABLE_MAPPING_POIS_CS, 
+                              create_table=CREATE_TABLE_MAPPING_POIS, 
+                              populate_table=COPY_TABLE_MAPPING_POIS, 
+                              data_test_cases=DATA_TEST_CASES_MAPPING_POIS_CS
+                              )
+
+
+DROP_TABLE_POIS = "DROP TABLE IF EXISTS {SCHEMA}.poi"
+
+DROP_POI_PKEY = "ALTER TABLE {SCHEMA}.poi DROP CONSTRAINT poi_pkey"
+
+CREATE_TABLE_POIS = """CREATE TABLE IF NOT EXISTS {SCHEMA}.poi (
+                        geom                Geometry, 
+                        longitude FLOAT     NOT NULL, 
+                        latitude FLOAT      NOT NULL,
+                        id_poi VARCHAR      NOT NULL, 
+                        poi_category        VARCHAR NOT NULL, 
+                        CONSTRAINT poi_pkey PRIMARY KEY (id_poi)
+                        )
+"""
+
+COPY_TABLE_POIS = """COPY {SCHEMA}.poi 
+                     FROM '{SHAPEFILE_POI_POINTS}' 
+                     CREDENTIALS 'aws_iam_role={ROLE_ARN}'
+                     REGION 'us-east-2' 
+                     SHAPEFILE; 
+                     COPY {SCHEMA}.poi 
+                     FROM '{SHAPEFILE_POI_POLYGONS}' 
+                     CREDENTIALS 'aws_iam_role={ROLE_ARN}'
+                     REGION 'us-east-2' 
+                     SHAPEFILE; 
+                     COPY {SCHEMA}.poi 
+                     FROM '{SHAPEFILE_POI_MULTIPOLYGONS}' 
+                     CREDENTIALS 'aws_iam_role={ROLE_ARN}'
+                     REGION 'us-east-2' 
+                     SHAPEFILE; 
+"""
+
+DATA_TEST_CASES_POIS = [DataTestCase(name="row_count_pois", 
+                                     sql=TEMPLATE_TEST_CASE_ROW_COUNT)]
+
+poi = DataIngester(table_name="poi", 
+                    drop_table=DROP_TABLE_POIS, 
+                    create_table=CREATE_TABLE_POIS, 
+                    populate_table=COPY_TABLE_POIS, 
+                    data_test_cases=DATA_TEST_CASES_POIS
+                    )
+
+
+data_ingestions_staging = [staging_charging_connectors, 
+                           staging_charging_points,
+                           staging_charging_stations, 
+                           staging_status_charging_points, 
+                           staging_status_connectors, 
+                           ]
+
+data_ingestions_main = [status_chargingpoints, 
+                        status_connectors, 
+                        charging_station,
+                        charging_point,
+                        connector, 
+                        mapping_poi_cs, 
+                        poi]
+
+
