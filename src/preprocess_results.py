@@ -207,7 +207,7 @@ def extract_master_data(fullpath_query_result: str,
 
 def extract_status(fullpath_query_result: str,
                    return_type: str = "both"
-                   )-> typing.Union[DataFrame, typing.Tuple[DataFrame, DataFrame, DataFrame]]: 
+                   ) -> typing.Union[DataFrame, typing.Tuple[DataFrame, DataFrame, DataFrame]]: 
     """Extract status information from charging points and connectors
 
     Args:
@@ -269,7 +269,6 @@ def _postprocess_master_data(files_results: list,
         dir_master_data (str): directory to save master data results to
         output_format (str, optional): output format for master data. Defaults to "csv".
         storage_options (dict, optional): storage options when writing to S3. 
-
 
     Raises:
         NotImplementedError: Raised if invalid output format is provided.
@@ -394,12 +393,31 @@ def postprocess_api_results(dir_api_results: str,
 
 def _distance_matching_pois_cs(gdf_poi: GeoDataFrame, 
                                gdf_cs: GeoDataFrame,
-                               distances_poi_categories: dict = DISTANCES_BUFFER, 
-                               cols_relevant: list = ["id_poi", "id_cs", "poi_category"]):
-    buffer_poi_cats = gdf_poi["poi_category"].map(distances_poi_categories).fillna(30)
+                               distances_poi_categories: typing.Dict[str, float], 
+                               cols_relevant: typing.List[str] = ["id_poi", "id_cs"], 
+                               default_distance: float = 30.0
+                               ) -> DataFrame:
+    """Compute spatial matching between POI locations and charging station locations based on distances specified for POI 
+    categories.
+
+    Args:
+        gdf_poi (GeoDataFrame): OSM POI locations
+        gdf_cs (GeoDataFrame): charging station locations
+        distances_poi_categories (typing.Dict[str, float], optional): Distance in m between POI and charging station to spatially match the two locations together.. Defaults to DISTANCES_BUFFER.
+        cols_relevant (typing.List[str], optional): relevant columns for mapping table. If not specified all columns are returned. Defaults to ["id_poi", "id_cs"].
+
+    Returns:
+        DataFrame: Mapping table between POI locations and charging station locations
+        
+    """    
+    buffer_poi_cats = gdf_poi["poi_cat"].map(distances_poi_categories).fillna(default_distance)
     gdf_poi["geometry"] = gdf_poi["geometry"].buffer(buffer_poi_cats)
     
+    logger.info("Computing Spatial Join between charging stations and POIs.")
     mapping_poi_cs = gpd.sjoin(gdf_cs, gdf_poi, op="intersects", how="inner").reset_index()
+    
+    logger.debug(f"Compute mapping table is of shape: {mapping_poi_cs.shape}")
+
     if cols_relevant is None: 
         cols_relevant = mapping_poi_cs.columns 
     
@@ -409,23 +427,46 @@ def _distance_matching_pois_cs(gdf_poi: GeoDataFrame,
 
 def match_cs_to_poi(dir_charging_stations: str = "../data", 
                     dir_osm_poi: str = "../data/osm",
-                    dir_save_mapping_table: str = "../data/"): 
+                    dir_save_mapping_table: str = "../data/", 
+                    distances_poi_categories: typing.Dict[str, float] = DISTANCES_BUFFER):
+     
+    """Compute distance mapping table between charging station locations and POI locations
+
+    Args:
+        dir_charging_stations (str, optional): directory containing chargecloud charging station locations. Defaults to "../data".
+        dir_osm_poi (str, optional): directory containing OSM POI locations. Defaults to "../data/osm".
+        dir_save_mapping_table (str, optional): directory to save mapping table to. Defaults to "../data/".
+        distances_poi_categories (typing.Dict[str, float], optional): Distance in m between POI and charging station to spatially match the two locations together.
+        POI category as key and distance in metres as value. Defaults to DISTANCES_BUFFER.
+
+        
+    """    
+    logger.info("Reading OSM POI locations.")
+    fullpaths_osm_poi = glob.glob(dir_osm_poi + "/**/*.shp", recursive=True)
+    gdf_poi_osm = pd.concat([gpd.read_file(path_osm_poi) for path_osm_poi in fullpaths_osm_poi])
+    logger.debug(f"Read OSM POI locations of shape: {gdf_poi_osm.shape}")
     
-    fullpath_osm_poi = os.path.join(dir_osm_poi, "poi_osm.shp")
-    gdf_poi_osm = gpd.read_file(fullpath_osm_poi)
-    
+    logger.info("Reading chargecloud charging station locations.")
     fullpath_cs = os.path.join(dir_charging_stations, "charging_stations.csv")
     df_cs = pd.read_csv(fullpath_cs, sep=";").rename(columns={"id": "id_cs"})
+    logger.debug(f"Read chargecloud locations of shape: {df_cs.shape}")
+    
+    # Transform DataFrame to GeoDataFrame and cast to planar projection system
     gdf_cs = gpd.GeoDataFrame(df_cs, 
                               geometry=gpd.points_from_xy(df_cs["longitude"], df_cs["latitude"], crs="EPSG:4326"))
     gdf_cs.to_crs("EPSG:25832", inplace=True)
-    
-    mapping_poi_cs = _distance_matching_pois_cs(gdf_poi=gdf_poi_osm, gdf_cs=gdf_cs)
+ 
+    logger.info("Compute distance mapping between charging stations and OSM locations.")
+    mapping_poi_cs = _distance_matching_pois_cs(gdf_poi=gdf_poi_osm, 
+                                                gdf_cs=gdf_cs,
+                                                distances_poi_categories=distances_poi_categories)
     
     fullpath_mapping_table = os.path.join(dir_save_mapping_table, "mapping_poi_cs.csv")
+    logger.info(f"Writing mapping table to directory '{fullpath_mapping_table}'")
     mapping_poi_cs.to_csv(fullpath_mapping_table, sep=";", index=False)
     
-
+    
 
 if __name__ == '__main__': 
     postprocess_api_results()
+    match_cs_to_poi()
