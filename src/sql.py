@@ -329,7 +329,7 @@ INSERT_TABLE_CHARGING_STATION = """INSERT INTO  {SCHEMA}.charging_station (
 DATA_TEST_CASES_CHARGING_STATIONS = [DataTestCase(name="row_count_charging_stations", 
                                                   sql=TEMPLATE_TEST_CASE_ROW_COUNT), 
                                      DataTestCase(name="postal_code_length", 
-                                                  sql="select len(postal_code) == 5 from {SCHEMA}.charging_station")]
+                                                  sql="select len(postal_code) = 5 from {SCHEMA}.charging_station")]
 
 charging_station = DataIngester(table_name="charging_station", 
                                 drop_table=DROP_TABLE_CHARGING_STATION, 
@@ -481,7 +481,6 @@ DROP_TABLE_MAPPING_POIS_CS = "DROP TABLE IF EXISTS {SCHEMA}.mapping_poi_cs"
 CREATE_TABLE_MAPPING_POIS = """CREATE TABLE IF NOT EXISTS {SCHEMA}.mapping_poi_cs (
                                 id_poi          VARCHAR NOT NULL, 
                                 id_cs           INTEGER NOT NULL, 
-                                poi_category    VARCHAR NOT NULL
                                 )
 """
 
