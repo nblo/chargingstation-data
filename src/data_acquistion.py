@@ -28,6 +28,7 @@ CITIES_CC = ['koeln','dortmund','bonn','muenster','kiel',
             'bretten','buehl','zirndorf','roth','calw','herzogenaurach','wertheim',
             'kitzingen','lichtenfels']
 
+# deal with city names containing Umlaute for Nominatim geocoder
 CITIES_OSM = {**{city_cc: city_cc for city_cc in CITIES_CC}, 
               **{"koeln": "köln", "muenster": "Münster", 
                  "tuebingen": "Tübingen", "buehl": "Bühl", "goettingen": "Göttingen"}}
@@ -92,7 +93,20 @@ def call_chargecloud_api(scraping_interval: typing.Union[int, float] = SCRAPING_
         sleep = max(scraping_interval*60 - 15, 0)
         time.sleep(sleep)
 
-def _get_poi_category(gdf_poi, tags: dict, col_poi_id: str ="id_poi"): 
+def _append_poi_category(gdf_poi: GeoDataFrame,
+                         tags: typing.Dict[str, list], 
+                         col_poi_id: str = "id_poi"
+                         ) -> GeoDataFrame: 
+    """Append poi category from tag search to POI locations
+
+    Args:
+        gdf_poi (GeoDataFrame): POI locations
+        tags (typing.Dict[str, list]): mapping containing osm key as key and list of osm values as value
+        col_poi_id (str, optional): name of column uniquely identifying each POI. Defaults to "id_poi".
+
+    Returns:
+        GeoDataFrame: POI locations with POI category appended
+    """    
     for key in tags: 
         if key not in set(gdf_poi.columns): 
             gdf_poi[key] = [None] * gdf_poi.shape[0]
@@ -107,13 +121,30 @@ def _get_poi_category(gdf_poi, tags: dict, col_poi_id: str ="id_poi"):
     return gdf_poi
 
 
-def _postprocess_osm_data(gdf_poi: GeoDataFrame, city_osm: str, tags: dict, cols_relevant: list = None): 
+def _postprocess_osm_data(gdf_poi: GeoDataFrame, 
+                          city_osm: str,
+                          tags: typing.Dict[str, list],
+                          cols_relevant: typing.List[str] = None
+                          )  -> GeoDataFrame: 
+    """Postprocess OSM POI locations: appending poi id and poi category, appending lat/lon coordinates, transform POI to 
+    EPSG:25832
+    
+    Args:
+        gdf_poi (GeoDataFrame): POI locations
+        city_osm (str): name of city used for Nominatim Geocoding
+        tags (typing.Dict[str, list]): mapping containing osm key as key and list of osm values as value
+        cols_relevant (typing.List[str], optional): list of relevant columns. If not specified all columns are returned. Defaults to None.
+
+    Returns:
+        GeoDataFrame: [description]
+    """    
     gdf_poi["city"] = city_osm
     gdf_poi.reset_index(drop=False, inplace=True)
+    
     gdf_poi["id_poi"] = gdf_poi["element_type"] + "/" + gdf_poi["osmid"].astype(str)
     gdf_poi.drop(columns=["ways", "nodes"], errors="ignore", inplace=True)
     
-    gdf_poi = _get_poi_category(gdf_poi=gdf_poi, tags=tags,)
+    gdf_poi = _append_poi_category(gdf_poi=gdf_poi, tags=tags)
     
     if cols_relevant is None: 
         cols_relevant = gdf_poi.columns 
@@ -127,8 +158,7 @@ def _postprocess_osm_data(gdf_poi: GeoDataFrame, city_osm: str, tags: dict, cols
     
     return gdf_poi
 
-    
-    
+
 def get_poi_osm_data(tags: dict = TAGS, 
                      cities: typing.Dict[str, str] = CITIES_OSM, 
                      dir_save: str = "../data/osm", 
@@ -163,14 +193,9 @@ def get_poi_osm_data(tags: dict = TAGS,
     logger.debug(f"Combined POI GeoDataFrame of shape: {gdf_pois_combined.shape}")
     fullpath_shp_file = os.path.join(dir_save, "poi_osm_{geom_type}.zip")
     
+    # shapefile can only consist one geometry type (Point, Polygon)
     for geom_type, gdf_geom_type in gdf_pois_combined.groupby("geom_type"): 
         logger.info(f"Saving combined POI to GeoJSON to '{fullpath_shp_file.format(geom_type=geom_type.lower())}'.")
-        gdf_geom_type[cols_relevant].to_file(fullpath_shp_file.format(geom_type=geom_type.lower()), 
-                                             schema={'geometry': geom_type, 
-                                             'properties': {'longitude': 'float:13.3',
-                                                            'latitude': 'float:13.3',
-                                                            'id_poi': 'str', 
-                                                            'poi_cat': 'str', 
-                                                            }})  
+        gdf_geom_type[cols_relevant].to_file(fullpath_shp_file.format(geom_type=geom_type.lower()))  
     
         
