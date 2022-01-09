@@ -1,3 +1,8 @@
+//// -- LEVEL 1
+//// -- Tables and References
+
+// Creating tables
+
 Table status_chargingpoints {
   id_status_cp varchar [pk]
   id_chargingpoint varchar [ref: > charging_point.id_cp]
@@ -21,11 +26,10 @@ Table charging_station {
   city varchar
   postal_code varchar
   country varchar
-  distance_in_m float 
   owner varchar 
   roaming boolean
-  longitude float
   latitude float
+  longitude float
   operator_name varchar
   operator_hotline varchar
   open_24_7 boolean
@@ -35,8 +39,10 @@ Table charging_point {
   id_cp varchar [pk]
   id_cs int [not null, ref: > charging_station.id_cs]
   charging_station_position varchar
+  roaming boolean
+  physical_reference varchar
+  cp_parking_space_numbers varchar
   cp_position varchar
-  cp_public_comment varchar
   vehicle_type varchar
   floor_level varchar
  }
@@ -61,4 +67,18 @@ Table time {
   month int4 
   year int4 
   weekday int4
+}
+
+Table mapping_poi_cs {
+  id_poi varchar [ref: > poi.id_poi]
+  id_cs int [ref: > charging_station.id_cs]
+  poi_category varchar
+}
+
+Table poi {
+  id_poi varchar [pk]
+  geom geometry
+  poi_category varchar
+  longitude float 
+  latitude float
 }
