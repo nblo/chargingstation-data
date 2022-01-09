@@ -1,13 +1,19 @@
 # Overview
 
 The goal of this project is to dynamically model the occupancy of charging station in Germany. The data is gathered by with the 
-help of the [ChargeCloud API](https://www.chargecloud.de/), a German E-Mobility company providing back-end solutions for Charging Point Operators. 
+help of the [chargecloud API](https://www.chargecloud.de/), a German E-Mobility company providing back-end solutions for Charging Point Operators (CPOs). 
 
+Additionally, to analyze relationship between utilization rate and the charging stations surroundings OpenStreetMap Points-of-Interest locations
+(e.g. food retailers, shopping malls, highway services) is included in the data model.  
 
 The project consist of the following steps: 
-1. Data Acquisition: Calling Chargecloud API in regular time intervals and storing raw results
-2. Data Cleaning: Postprocess API results and transform data into flat files  
-3. Data Modelling and ETL process: Set up data model and ingest charging data into Data Warehouse (Redshift)
+1. Data Acquisition: 
+    - Call chargecloud API in regular time intervals and storing raw results
+    - Retrieve OSM data for the cities where charging stations are placed 
+2. Data Cleaning: 
+    - Postprocess API results and transform data into flat files of master data and utilization data
+    - Match POI locations to charging station locations by spatial distance mapping between the two location datasets
+3. Data Modelling and ETL process: Set up data model and ingest charging data and POI data into Data Warehouse (Redshift)
 
 
 The goal of the project is to set up a maintainable and easy to extend data architecture and ETL-process for charging-data. Some example use cases for data model: 
@@ -16,13 +22,42 @@ The goal of the project is to set up a maintainable and easy to extend data arch
 - Predictive modelling: Use utilization data to predict usage development or determine optimal charging point locations
 with Machine Learning Models
 
+## Basics
+
+The project contains data of electric vehicle charging stations. Here are a few basics to get familiar with charging infrastructure for electric vehicles. 
+
+A *charging station (abbrev. cs)* (red box) is a piece of infrastructure at a single location where electric vehicles` batteries can be recharged. 
+
+Each charging station consists of one or more *charging points (abbrev. cp)* (blue boxes), where a single electric vehicle can recharge at any given time.
+
+Each charging point has one or more *connectors (abbrev. conn)* (green boxes) in order to satisfy different charging standards (e.g. Chademo, CCS, Type 2) or varying charging power levels (e.g. normal charging, fast-charging, ultra-fast charging). 
+
+<img src="chargingstation.png" alt="Charging Station" width="400"/>
+
+---
+Each charging station with its charging points and connectors has static/semi-static master data. Examples of master data are the charging stations' location, address, operator, or the connectors maximum power level or connector type. 
+
+
+Each chargingpoint and connector also has dynamic occupancy or status data, e.g. if the chargingpoint is occupied, reserved, 
+free or out of order. 
+
+The combination of static and dynamic data is used by car infotainment systems and apps to navigate the user to the nearest  
+free and functional charging station. 
+
 # Step 1: Data Acquisition
+Script `data_acquistion.py`
+#TODO
 
 
 # Step 2: Data Cleaning 
+Script `preprocess_results.py`
+#TODO
 
 
 # Step 3: Data Modelling and Ingestion
+Data Modeling: `sql.py` Data Ingestion: `etl.py` 
+#TODO
+
 
 
 # Design Choices 
@@ -42,6 +77,15 @@ n_total * 365 * 24 * 6
 
 # Next Steps 
 
+Here are a few steps to improve the project, but were out of scope of the capstone project 
+- create charging events table for computing number of charging events, charging station availability or approximate energy transfer
+- deal with additional columns not yet implemented in the data model (e.g. `opening_hours` or `capabilities`)
+- deal with slowly changing dimension tables (SCD)
+- implement data acquisition, batch processing and ETL in Airflow or AWS
+- consider advantages and disadvantages of streaming data instead of batch processing
+- develop a dashboard based on data model 
+- expand the number of POI categories considered
+
 
 # Addressing other scenarios 
 
@@ -49,15 +93,20 @@ n_total * 365 * 24 * 6
 If the data volume was to be increased by 100x (28 billion rows per year or 75 million rows per day) Redshift would still be a viable option. As the data is ingested via batch processing at the end of the day, this could still be done in a single job. However, it could be advisable to 
 either ingest data more than once a day or split ingestion into smaller chunks.
 
-If the pipeline would be run every day daily basis by 7 am every day
+If the pipeline would be run on a daily basis by 7 am every day
+- If the pipeline would be run on a daily basis I would consider Airflow as an orchestration tool. 
+There could be different DAGs for ingestion jobs on different scheduling intervals: 
+    - chargecloud API call (e.g. every 10 minutes)
+    - batch data ingestion into status and master data tables (once or twice a day)
+    - batch data ingestion of OSM data (once or twice a month)
 
 The database needed to be accessed by 100+ people.
+#TODO: 
 
 # Data Model 
 
 The data model incorporates two fact tables (status information of charging points and connectors) and 
-four dimension tables (master data for charging stations, charging points, connectors and time metadata). 
-
+six dimension tables. Four dimension tables contain master data of the charging stations and its equipment (charging stations, charging points, connectors and time metadata) and two contain POI location information (POI table and mapping table between charging stations and poi)
 
 ![Data Model](er_diagram.png)
 
@@ -90,7 +139,7 @@ four dimension tables (master data for charging stations, charging points, conne
 
 | column    name   | description           | datatype  |
 | :--|:-------------|:-----|
-| **id_cs** |    unique identifier for charging point  |    int |
+| **id_cs** |    unique identifier for charging station  |    int |
 | name |   charging station name  |    varchar |
 | address | charging station address (street + house number)   |    varchar |
 | city |   charging station city |    varchar |
@@ -147,3 +196,24 @@ four dimension tables (master data for charging stations, charging points, conne
 | year |  timestamp  year |    int4 |
 | weekday |  timestamp day of week  |    int4 |
 
+
+---
+
+- `poi` OSM POI locations
+
+| column    name   | description           | datatype  |
+| :--|:-------------|:-----|
+| **id_poi** |   OSM id (combination of osm-type and osm id) |    varchar |
+| geom |   POI geometry |    geometry |
+| longitude |  POI longitude (EPSG 4326)  |    float |
+| latitude |   POI latitude (EPSG 4326)    |    float |
+| poi_category |   timestamp week of year|    varchar |
+
+---
+
+- `mapping_poi_cs` Mapping table between POIs and charging stations based on distance matching
+
+| column    name   | description           | datatype  |
+| :--|:-------------|:-----|
+| id_poi|   OSM id (combination of osm-type and osm id) |    varchar |
+| id_cs |   unique identifier for charging station  |    int |
