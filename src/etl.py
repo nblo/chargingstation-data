@@ -19,8 +19,19 @@ logger = logging.getLogger(__name__)
 CONFIG_FILE = "../config.cfg"
 
 
-def _execute_query(query_fmt: str, mapping_fmt_query: dict, cur: cursor, conn: connection = None):    
-    query = query_fmt.format(**mapping_fmt_query)
+def _execute_query(query_template: str, 
+                   mapping_fmt_query: typing.List[DataTestCase], 
+                   cur: cursor,
+                   conn: connection = None): 
+    """Execute SQL query template. 
+
+    Args:
+        query_template (str): SQL query template
+        mapping_fmt_query (typing.List[DataTestCase]): mapping containing values for SQL query template placeholders.
+        cur (cursor): Redshift cursor object
+        conn (connection, optional): Redshift connection object. If not specified transaction is not committed. Defaults to None.
+    """       
+    query = query_template.format(**mapping_fmt_query)
     logger.debug(f" Executing query '{query:}'")
     cur.execute(query)
     
@@ -30,18 +41,18 @@ def _execute_query(query_fmt: str, mapping_fmt_query: dict, cur: cursor, conn: c
 
 def _perform_data_unit_test(data_test_cases: typing.List[DataTestCase], 
                             conn: connection,
-                            mapping_fmt_query: dict,
+                            mapping_fmt_query: typing.Dict[str, str],
                             table_name: str): 
     """[summary]
 
     Args:
-        data_test_cases (typing.List[DataTestCase]): [description]
-        conn (connection): [description]
-        mapping_fmt_query (dict): [description]
-        table_name (str): [description]
+        data_test_cases (typing.List[DataTestCase]): collection of data unit test to evaluate
+        conn (connection): Redshift connection object.
+        mapping_fmt_query (typing.Dict[str, str]): mapping containing values for SQL query template placeholders.
+        table_name (str): name of table to perform data unit test on
 
     Raises:
-        ValueError: [description]
+        ValueError: Raised if data unit test fails. 
     """    
     _mapping_fmt_query = {**mapping_fmt_query, "TABLE_NAME": table_name}
     
@@ -62,7 +73,8 @@ def _perform_data_unit_test(data_test_cases: typing.List[DataTestCase],
         if _how(records.iloc[:, 0].to_list()):
             logger.info(f"Data quality check '{dtc.name}' passed.")
         else: 
-            err_msg = f"Data quality check '{dtc.name}' failed. SQL statement '{dtc.sql}' evaluated to False."
+            breakpoint()
+            err_msg = f"Data quality check '{dtc.name}' failed. SQL statement '{query}' evaluated to False."
             logger.error(err_msg)
             raise ValueError(err_msg)
         
@@ -74,8 +86,8 @@ def ingest_data(data_obj: DataIngester, cur: cursor, conn: connection, mapping_f
 
     Args:
         data_obj (DataIngester): [description]
-        cur (cursor): [description]
-        conn (connection): [description]
+        cur (cursor): Redshift cursor object
+        conn (connection): Redshift connection object
         mapping_fmt_queries (dict): [description]
     """      
     # dropping table 
@@ -115,14 +127,14 @@ def ingest_data(data_obj: DataIngester, cur: cursor, conn: connection, mapping_f
 def _create_data_model(cur: cursor,
                        conn: connection,
                        data_objs: typing.List[DataIngester], 
-                       mapping_fmt_queries: dict): 
+                       mapping_fmt_queries: typing.Dict[str, str]): 
     """[summary]
 
     Args:
-        cur (cursor): [description]
-        conn (connection): [description]
+        cur (cursor): Redshift cursor object
+        conn (connection): Redshift connection objects
         data_objs (typing.List[DataIngester]): [description]
-        mapping_fmt_queries (dict): [description]
+        mapping_fmt_queries (typing.Dict[str, str]): [description]
     """    
     for dobj in data_objs: 
         logger.info(f"Ingesting data into table '{dobj.table_name}'")
