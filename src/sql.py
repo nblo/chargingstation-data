@@ -313,7 +313,7 @@ INSERT_TABLE_CHARGING_STATION = """INSERT INTO  {SCHEMA}.charging_station (
                                                     name, 
                                                     address, 
                                                     city, 
-                                                    postal_code, 
+                                                    TRIM(postal_code) as postal_code, 
                                                     country, 
                                                     owner, 
                                                     roaming, 
@@ -397,7 +397,6 @@ CREATE_TABLE_CONNECTOR = """
                          id_cp                      VARCHAR NOT NULL,          
                          format                     VARCHAR,
                          power_type                 VARCHAR, 
-                         tariff_id                  VARCHAR,
                          ampere                     INTEGER, 
                          max_power                  INTEGER,
                          voltage                    INTEGER, 
@@ -480,7 +479,7 @@ DROP_TABLE_MAPPING_POIS_CS = "DROP TABLE IF EXISTS {SCHEMA}.mapping_poi_cs"
 
 CREATE_TABLE_MAPPING_POIS = """CREATE TABLE IF NOT EXISTS {SCHEMA}.mapping_poi_cs (
                                 id_poi          VARCHAR NOT NULL, 
-                                id_cs           INTEGER NOT NULL, 
+                                id_cs           INTEGER NOT NULL
                                 )
 """
 
