@@ -178,7 +178,7 @@ def extract_master_data(fullpath_query_result: str,
         flatten_results (bool, optional): whether to drop columns containing non-flat datastructures (list, dicts). Defaults to True.
 
     Returns:
-        typing.Tuple[DataFrame, DataFrame, DataFrame]: [description]
+        typing.Tuple[DataFrame, DataFrame, DataFrame]: charging station master data, charging point master data, connector master data
     """    
     data = _read_api_results(fullpath_query_result=fullpath_query_result)
 
