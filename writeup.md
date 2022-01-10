@@ -1,32 +1,33 @@
 # Overview
 
-The goal of this project is to dynamically model the occupancy of charging station in Germany. The data is gathered by with the 
-help of the [chargecloud API](https://www.chargecloud.de/), a German E-Mobility company providing back-end solutions for Charging Point Operators (CPOs). 
+The projects' goal is to dynamically model the occupancy of charging stations in Germany. The data is gathered from the [chargecloud API](https://www.chargecloud.de/), a German E-Mobility company providing back-end solutions for Charging Point Operators (CPOs). 
 
-Additionally, to analyze relationship between utilization rate and the charging stations surroundings OpenStreetMap Points-of-Interest locations
-(e.g. food retailers, shopping malls, highway services) is included in the data model.  
+Additionally, to analyze relationship between utilization rate and the charging stations' surroundings [OpenStreetMap](https://www.openstreetmap.org) (*abbrev. OSM*) Points-of-Interest  (*abbrev. POI*) locations like food retailers, shopping malls, and highway services is included in the data model.  
+
+The project serves as a basis for setting up a maintainable and easily extendable data architecture and ETL-process for charging-data. 
 
 The project consist of the following steps: 
-1. Data Acquisition: 
-    - Call chargecloud API in regular time intervals and storing raw results
-    - Retrieve OSM data for the cities where charging stations are placed 
-2. Data Cleaning: 
+1. **Data Acquisition** 
+    - Call chargecloud API in regular time intervals and store raw results
+    - Retrieve OSM Points-of-Interest data for the cities where charging stations are placed 
+2. **Data Cleaning** 
     - Postprocess API results and transform data into flat files of master data and utilization data
     - Match POI locations to charging station locations by spatial distance mapping between the two location datasets
-3. Data Modelling and ETL process: Set up data model and ingest charging data and POI data into Data Warehouse (Redshift)
+3. **Data Modelling and ETL process**
+    - Set up data model 
+    - Ingest charging data and POI data into Data Warehouse (Redshift)
 
 
-The goal of the project is to set up a maintainable and easy to extend data architecture and ETL-process for charging-data. Some example use cases for data model: 
+Some example use cases for data model: 
 - business reporting: generate utilization reports for single charging stations, cities or operators
 - BI-dashboards: Generate interactive visualizations for visualizing charging station usage
-- Predictive modelling: Use utilization data to predict usage development or determine optimal charging point locations
-with Machine Learning Models
+- Utilization analysis and predictive modelling: Use utilization data to examine the relationship between utilization and POIs in the charging station vicinity. Develop a model to predict usage development or determine optimal charging point locations with Machine Learning Models
 
 ## Basics
 
-The project contains data of electric vehicle charging stations. Here are a few basics to get familiar with charging infrastructure for electric vehicles. 
+The project contains data of electric vehicle charging stations and charging events. Here are a few basics to get familiar with charging infrastructure and its terminology. 
 
-A *charging station (abbrev. cs)* (red box) is a piece of infrastructure at a single location where electric vehicles` batteries can be recharged. 
+A *charging station (abbrev. cs)* (red box) is a piece of infrastructure at a single location where an electric vehicle's battery can be recharged. 
 
 Each charging station consists of one or more *charging points (abbrev. cp)* (blue boxes), where a single electric vehicle can recharge at any given time.
 
@@ -35,73 +36,54 @@ Each charging point has one or more *connectors (abbrev. conn)* (green boxes) in
 <img src="chargingstation.png" alt="Charging Station" width="400"/>
 
 ---
-Each charging station with its charging points and connectors has static/semi-static master data. Examples of master data are the charging stations' location, address, operator, or the connectors maximum power level or connector type. 
+Each charging station with its charging points and connectors has static/semi-static master data. Examples of master data are the charging stations' location, address, operator, or the connectors' maximum power level. 
 
 
-Each chargingpoint and connector also has dynamic occupancy or status data, e.g. if the chargingpoint is occupied, reserved, 
-free or out of order. 
+Each charging point and connector also has dynamic occupancy or status data, e.g. if the charging point is occupied, reserved, 
+free or out-of-order. 
 
 The combination of static and dynamic data is used by car infotainment systems and apps to navigate the user to the nearest  
 free and functional charging station. 
 
 # Step 1: Data Acquisition
-Script `data_acquistion.py`
-#TODO
+Script `data_acquisition.py`
+
+1. Call chargecloud API in regular time intervals and save raw results
+- Obtain charging stations in each city by making http request to `https://new-poi.chargecloud.de/<city>`. Result contains dynamic occupancy data and static master data
+- Save raw results 
+
+2. Retrieve OSM POI data in charging stations' vicinity
+- Download POI data in charging stations cities with [osmnx](https://github.com/gboeing/osmnx) library. The POIs are specified with the `TAGS` dictionary containing OSM [tags](https://wiki.openstreetmap.org/wiki/Tags) as key-value pairs. 
+- Save results as shapefiles
 
 
 # Step 2: Data Cleaning 
 Script `preprocess_results.py`
-#TODO
+1. Preprocessing API results: 
+- Extract charging stations' and connectors' dynamic occupancy data from API results. 
+- Extract charging station, charging point and connector master data from API results. 
+
+2. Spatial matching between charging stations and POIs
+- Compute which POIs are in the vicinity of each charging station and create mapping table 
+
 
 
 # Step 3: Data Modelling and Ingestion
-Data Modeling: `sql.py` Data Ingestion: `etl.py` 
-#TODO
+Data Modeling: `sql.py` 
+1. Set up [Data Model](#Data-Model)
+
+- Each table is defined by `DataIngester` object containing the following parameters:
+    - `table_name`: name of database table 
+    - `drop_table`: SQL statement for dropping table
+    - `create_table`: SQL statement for creating table 
+    - `populate_table`: SQL statement for populating table with records (e.g. copy or insert) 
+    - `drop_constraints`: SQL statement for dropping constraints
+    - `data_test_cases`: list of SQL data quality checks that are run after table creation 
+
+2. Data Ingestion: `etl.py` 
+- Executing sequence of data ingestion tasks 
 
 
-
-# Design Choices 
-
-n_cp = 2423
-
-n_conn = 2806
-
-
-n_total = n_cp + n_conn
-
-n_total * 365 * 24 * 6
-
-- Redshift vs. PostGres 
-- Batch Processing vs. Streaming. 
-
-
-# Next Steps 
-
-Here are a few steps to improve the project, but were out of scope of the capstone project 
-- create charging events table for computing number of charging events, charging station availability or approximate energy transfer
-- deal with additional columns not yet implemented in the data model (e.g. `opening_hours` or `capabilities`)
-- deal with slowly changing dimension tables (SCD)
-- implement data acquisition, batch processing and ETL in Airflow or AWS
-- consider advantages and disadvantages of streaming data instead of batch processing
-- develop a dashboard based on data model 
-- expand the number of POI categories considered
-
-
-# Addressing other scenarios 
-
-- Currently the the data gathered results in roughly 275 million rows a year or about 750k rows per day. 
-If the data volume was to be increased by 100x (28 billion rows per year or 75 million rows per day) Redshift would still be a viable option. As the data is ingested via batch processing at the end of the day, this could still be done in a single job. However, it could be advisable to 
-either ingest data more than once a day or split ingestion into smaller chunks.
-
-If the pipeline would be run on a daily basis by 7 am every day
-- If the pipeline would be run on a daily basis I would consider Airflow as an orchestration tool. 
-There could be different DAGs for ingestion jobs on different scheduling intervals: 
-    - chargecloud API call (e.g. every 10 minutes)
-    - batch data ingestion into status and master data tables (once or twice a day)
-    - batch data ingestion of OSM data (once or twice a month)
-
-The database needed to be accessed by 100+ people.
-#TODO: 
 
 # Data Model 
 
@@ -217,3 +199,56 @@ six dimension tables. Four dimension tables contain master data of the charging 
 | :--|:-------------|:-----|
 | id_poi|   OSM id (combination of osm-type and osm id) |    varchar |
 | id_cs |   unique identifier for charging station  |    int |
+
+
+# Design Choices 
+- Data Lake vs. Data Warehouse
+- Redshift vs. PostGres
+
+n_cp = 2423
+
+n_conn = 2806
+
+
+n_total = n_cp + n_conn
+
+n_total * 365 * 24 * 6
+
+
+- Batch Processing vs. Streaming. 
+- 
+
+
+
+
+
+
+# Next Steps 
+
+Here are the next steps which would improve the project, but were out of scope of the capstone project 
+- create charging events table for computing number of charging events, charging station availability or approximate energy transfer
+- deal with additional columns not yet implemented in the data model (e.g. charging stations' `opening_hours` or charging points' `capabilities`)
+- deal with slowly changing dimension tables (SCD)
+- implement data acquisition, batch processing and ETL in Airflow or AWS
+- consider advantages and disadvantages of streaming data instead of batch processing
+- develop a dashboard based on data model 
+- expand the number of POI categories considered
+
+
+# Addressing other scenarios 
+
+- Currently the the data gathered results in roughly 275 million rows a year or about 750k rows per day. 
+If the data volume was to be increased by 100x (28 billion rows per year or 75 million rows per day) Redshift would still be a viable option. Batch ingestion once or twice a day would still be a viable option as this data volume. However, it could be advisable to 
+either ingest data more than once a day or split ingestion into smaller chunks.
+
+- If the pipeline would be run on a daily basis I would consider Airflow as an orchestration tool. 
+There could be different DAGs for ingestion jobs on different scheduling intervals: 
+    - chargecloud API call (e.g. every 10 minutes)
+    - batch data ingestion into status and master data tables (once or twice a day)
+    - batch data ingestion of OSM data (once or twice a month)
+
+    AWS services like AWS step and lambda functions could be a viable alternative. 
+
+- If the database needed to accessed by 100+ people, Redshift allows for sufficient horizontal and vertical scaling with low latency and high concurrency. It could be beneficial to use the API query time as a distribution key, since recent data (last week or last month) is probably more business relevant than historic data. To allow for batch downloading of historic data (last years) building a separate self-service API take load off the main Data Warehouse.    
+ 
+
