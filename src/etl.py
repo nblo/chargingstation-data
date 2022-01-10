@@ -39,11 +39,11 @@ def _execute_query(query_template: str,
         conn.commit()
 
 
-def _perform_data_unit_test(data_test_cases: typing.List[DataTestCase], 
-                            conn: connection,
-                            mapping_fmt_query: typing.Dict[str, str],
-                            table_name: str): 
-    """[summary]
+def _run_data_unit_test(data_test_cases: typing.List[DataTestCase], 
+                        conn: connection,
+                        mapping_fmt_query: typing.Dict[str, str],
+                        table_name: str): 
+    """Execute specified data unit tests.
 
     Args:
         data_test_cases (typing.List[DataTestCase]): collection of data unit test to evaluate
@@ -81,14 +81,14 @@ def _perform_data_unit_test(data_test_cases: typing.List[DataTestCase],
     logger.info(f"All data quality checks passed for table '{table_name}'.")
 
 
-def ingest_data(data_obj: DataIngester, cur: cursor, conn: connection, mapping_fmt_queries: dict): 
-    """[summary]
+def ingest_data(data_obj: DataIngester, cur: cursor, conn: connection, mapping_fmt_queries: typing.Dict[str, str]): 
+    """Ingest data model into redshift by dropping table and constraints, creating table, populating table with data and running data unit tests.  
 
     Args:
-        data_obj (DataIngester): [description]
+        data_obj (DataIngester): data object specifying ingestion process
         cur (cursor): Redshift cursor object
         conn (connection): Redshift connection object
-        mapping_fmt_queries (dict): [description]
+        mapping_fmt_query (typing.Dict[str, str]): mapping containing values for SQL query template placeholders.
     """      
     # dropping table 
     if data_obj.drop_table: 
@@ -118,23 +118,23 @@ def ingest_data(data_obj: DataIngester, cur: cursor, conn: connection, mapping_f
     
     # data quality checks
     if data_obj.data_test_cases: 
-        _perform_data_unit_test(data_obj.data_test_cases, 
-                                conn=conn,
-                                table_name=data_obj.table_name, 
-                                mapping_fmt_query=mapping_fmt_queries)
+        _run_data_unit_test(data_obj.data_test_cases, 
+                            conn=conn,
+                            table_name=data_obj.table_name, 
+                            mapping_fmt_query=mapping_fmt_queries)
     
 
 def _create_data_model(cur: cursor,
                        conn: connection,
                        data_objs: typing.List[DataIngester], 
                        mapping_fmt_queries: typing.Dict[str, str]): 
-    """[summary]
+    """Create Redshift data model, populating tables with records and running data quality checks
 
     Args:
         cur (cursor): Redshift cursor object
         conn (connection): Redshift connection objects
-        data_objs (typing.List[DataIngester]): [description]
-        mapping_fmt_queries (typing.Dict[str, str]): [description]
+        data_objs (typing.List[DataIngester]): sequence of data object specifying ingestion process
+        mapping_fmt_query (typing.Dict[str, str]): mapping containing values for SQL query template placeholders.
     """    
     for dobj in data_objs: 
         logger.info(f"Ingesting data into table '{dobj.table_name}'")
