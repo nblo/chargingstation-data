@@ -167,7 +167,7 @@ def main(config_file: str,
                            "SHAPEFILE_POI_MULTIPOLYGONS": config["S3"]["SHAPEFILE_POI_MULTIPOLYGONS"]
                            }
     
-    logger.info(f"Ingesting data into  tables.")
+    logger.info(f"Ingesting data into tables.")
     for di in data_ingestions:
         _create_data_model(cur=cur, conn=conn, data_objs=di, mapping_fmt_queries=mapping_fmt_queries)
     
