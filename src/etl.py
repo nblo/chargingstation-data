@@ -94,13 +94,16 @@ def ingest_data(data_obj: DataIngester, cur: cursor, conn: connection, mapping_f
     if data_obj.drop_table: 
         logger.info(f"Dropping table '{data_obj.table_name}'.") 
         _execute_query(data_obj.drop_table, cur=cur, mapping_fmt_query=mapping_fmt_queries)
-    
     # dropping constraints 
     if data_obj.drop_constraints: 
-        existing_constraints = set(pd.read_sql(con=conn, sql=SQL_CONSTRAINTS)["constraint_name"])
+        schema = mapping_fmt_queries["SCHEMA"]
+        existing_constraints = (pd.read_sql(con=conn, sql=SQL_CONSTRAINTS)
+                                .query(f"constraint_schema=='{schema}'")
+                                ["constraint_name"]
+                                )
         constraint_name = data_obj.drop_constraints.split("CONSTRAINT")[1].strip()
         
-        if constraint_name in existing_constraints: 
+        if constraint_name in set(existing_constraints): 
             logger.info(f"Dropping constraints in table '{data_obj.table_name}'.") 
             _execute_query(data_obj.drop_constraints, cur=cur, conn=conn, mapping_fmt_query=mapping_fmt_queries)
 
@@ -153,6 +156,7 @@ def main(config_file: str,
     cur = conn.cursor()
     logger.info("Successfully connected to redshift database...")
 
+
     mapping_fmt_queries = {"SCHEMA": config["CLUSTER"]["DB_SCHEMA"], 
                            "ROLE_ARN": config["IAM_ROLE"]["ARN"], 
                            "STATUS_DATA_CHARGING_POINT": config["S3"]["STATUS_DATA_CHARGING_POINT"], 
@@ -167,6 +171,10 @@ def main(config_file: str,
                            "SHAPEFILE_POI_MULTIPOLYGONS": config["S3"]["SHAPEFILE_POI_MULTIPOLYGONS"]
                            }
     
+    logger.info("Create schema if it does not exist")
+    query_create_schema = 'CREATE SCHEMA IF NOT EXISTS {SCHEMA}'
+    _execute_query(query_create_schema, cur=cur, conn=conn, mapping_fmt_query=mapping_fmt_queries)
+
     logger.info(f"Ingesting data into tables.")
     for di in data_ingestions:
         _create_data_model(cur=cur, conn=conn, data_objs=di, mapping_fmt_queries=mapping_fmt_queries)
