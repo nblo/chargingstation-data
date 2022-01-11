@@ -1,7 +1,3 @@
-import requests
-import datetime 
-import json 
-import time 
 import logging
 import typing 
 import os
@@ -37,61 +33,8 @@ TAGS = {"amenity": ["supermarket", "fast_food", "highway_services", "fuel"],
         "shop": ["mall", "doityourself"]}
 
 
-def scrape_cp_cities(cities: typing.List[str], 
-                     dir_save: str, 
-                     save_raw: bool = False): 
-    """Scrape charging point information for a given list of cities
+DIR_SAVE_OSM = "../data/osm"
 
-    Args:
-        cities (typing.List[str], optional): list of cities to scrape.
-        dir_save (str): directory for saving scraped cities. 
-        save_raw (bool, optional): whether to save API result as raw json (True) or pickle file (False). Defaults to False.
-    """    
-    data_cities = {}
-    now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")        
-
-    for city in cities: 
-        r = requests.get(BASE_URL_CHARGECLOUD + "/" + city)
-        try: 
-            data = json.loads(r.text)
-            data_cities[city] = data
-            logger.debug(f"Successfully scraped '{city}' at {now}.")
-        except: 
-            logger.error(f"Error occurred while scraping '{city}' at {now}.")
-
-    if save_raw: 
-        fname = now + "_cp_data_cities.json"
-        path_save = os.path.join(dir_save, fname)
-        with open(path_save, 'w', encoding='utf-8') as f:
-            json.dump(data_cities, f)
-    else: 
-        fname = now + "_cp_data_cities.pkl"
-        path_save = os.path.join(dir_save, fname)
-        pd.to_pickle(data_cities, path_save)
-	
-
-def call_chargecloud_api(scraping_interval: typing.Union[int, float] = SCRAPING_INTERVAL, 
-                         cities: typing.List[str] = CITIES_CC, 
-                         dir_save_api_results: str = "../data/scraped_data"): 
-    """Scrape a given list of cities from chargecloud API in a given interval.
-
-    Args:
-        scraping_interval (typing.Union[int, float], optional): interval in minutes between API lookups. Defaults to SCRAPING_INTERVAL.
-        cities (typing.List[str], optional): list of cities to scrape
-        dir_save (str, optional): directory for saving scraped cities. Defaults to "../data/scraped_data".
-
-    """    
-    while True: 
-        
-        now = datetime.datetime.now().strftime("%Y/%m/%d_%H:%M:%S")
-        info_msg = f"Scraping cities: {now}"
-        logger.info(info_msg)
-        
-        scrape_cp_cities(cities=cities, dir_save=dir_save_api_results, save_raw=True)
-        
-        # API call of all cities takes approx. 15 seconds, therefore subtract it from specified interval
-        sleep = max(scraping_interval*60 - 15, 0)
-        time.sleep(sleep)
 
 def _append_poi_category(gdf_poi: GeoDataFrame,
                          tags: typing.Dict[str, list], 
@@ -161,7 +104,7 @@ def _postprocess_osm_data(gdf_poi: GeoDataFrame,
 
 def get_poi_osm_data(tags: dict = TAGS, 
                      cities: typing.Dict[str, str] = CITIES_OSM, 
-                     dir_save: str = "../data/osm", 
+                     dir_save: str = DIR_SAVE_OSM, 
                      cols_relevant: list = ["geometry", "id_poi", "poi_cat", "longitude", "latitude"]): 
     """Get Points-of-Interest (POI) data from OpenstreetMap (OSM) with specified tags in specified cities 
 
@@ -196,6 +139,4 @@ def get_poi_osm_data(tags: dict = TAGS,
     # shapefile can only consist one geometry type (Point, Polygon)
     for geom_type, gdf_geom_type in gdf_pois_combined.groupby("geom_type"): 
         logger.info(f"Saving combined POI to GeoJSON to '{fullpath_shp_file.format(geom_type=geom_type.lower())}'.")
-        gdf_geom_type[cols_relevant].to_file(fullpath_shp_file.format(geom_type=geom_type.lower()))  
-    
-        
+        gdf_geom_type[cols_relevant].to_file(fullpath_shp_file.format(geom_type=geom_type.lower()))

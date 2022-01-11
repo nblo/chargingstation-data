@@ -1,4 +1,4 @@
-from geopandas.geodataframe import GeoDataFrame
+from geopandas import GeoDataFrame
 import pandas as pd
 from pandas import DataFrame
 import numpy as np
@@ -12,13 +12,16 @@ import json
 import typing 
 import zipfile
 from zipfile import ZipFile
-
-
 import logging.config
-from settings import LOGGING_CONFIG
-logging.config.dictConfig(LOGGING_CONFIG)
-
 logger = logging.getLogger(__name__)
+
+from get_chargecloud_data import DIR_SAVE_API_RESULTS
+from get_osm_data import DIR_SAVE_OSM
+
+from settings import LOGGING_CONFIG
+
+
+DIR_SAVE_RESULTS = "../data"
 
 DISTANCES_BUFFER = {"supermarket": 40, "fast_food": 30, "highway_services": 30, "fuel": 30, 
                     "mall": 40, "doityourself": 40}
@@ -82,7 +85,6 @@ def expand_df_dicts(df: DataFrame,
     df_result = df_expanded[_cols_return]
     
     return df_result
-
 
 
 def _construct_df_from_json(data: dict) -> DataFrame:
@@ -358,10 +360,10 @@ def _archive_raw_results(files_result: str, dir_zip: str, name_zipfile: str = No
             zip_obj.write(f)
 
     
-def postprocess_api_results(dir_api_results: str, 
-                            dir_status_cps: str, 
-                            dir_status_connectors: str, 
-                            dir_master_data: str, 
+def postprocess_api_results(dir_api_results: str = DIR_SAVE_API_RESULTS, 
+                            dir_status_cps: str = DIR_SAVE_RESULTS, 
+                            dir_status_connectors: str = DIR_SAVE_RESULTS, 
+                            dir_master_data: str = DIR_SAVE_RESULTS, 
                             dir_zip_file: str = None):
     """Postprocess chargecloud API result. Extract master data (chargingstations, chargingpoints and connectors) and 
     status information (chargingpoints, connectors) and archive raw API results. 
@@ -374,7 +376,10 @@ def postprocess_api_results(dir_api_results: str,
         dir_zip (str, optional): directory to save zip archive. If not specified raw files will not be archived. Defaults to None. 
         
     """    
-    files_results = glob.glob(dir_api_results)
+    fullpath_api_results = dir_api_results + "/*.json"
+    print(fullpath_api_results)
+    files_results = glob.glob(fullpath_api_results)
+    print(len(files_results))
     files_results.sort()
     logger.debug(f"Number of API results: {len(files_results)}")
     
@@ -424,10 +429,9 @@ def _distance_matching_pois_cs(gdf_poi: GeoDataFrame,
     return mapping_poi_cs[cols_relevant]
 
 
-
-def match_cs_to_poi(dir_charging_stations: str = "../data", 
-                    dir_osm_poi: str = "../data/osm",
-                    dir_save_mapping_table: str = "../data/", 
+def match_cs_to_poi(dir_charging_stations: str = DIR_SAVE_RESULTS,
+                    dir_osm_poi: str = DIR_SAVE_OSM,
+                    dir_save_mapping_table: str = DIR_SAVE_RESULTS, 
                     distances_poi_categories: typing.Dict[str, float] = DISTANCES_BUFFER):
      
     """Compute distance mapping table between charging station locations and POI locations
@@ -468,5 +472,6 @@ def match_cs_to_poi(dir_charging_stations: str = "../data",
     
 
 if __name__ == '__main__': 
+    logging.config.dictConfig(LOGGING_CONFIG)
     postprocess_api_results()
     match_cs_to_poi()
