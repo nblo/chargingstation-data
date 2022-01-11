@@ -143,7 +143,7 @@ staging_charging_stations = DataIngester(table_name="staging_charging_stations",
 DROP_TABLE_STAGING_CHARGING_POINTS = """DROP TABLE IF EXISTS {SCHEMA}.staging_charging_points"""
 
 CREATE_TABLE_STAGING_CHARGING_POINTS = """ 
-                                CREATE TABLE IF NOT EXISTS staging_charging_points 
+                                CREATE TABLE IF NOT EXISTS {SCHEMA}.staging_charging_points 
                                 (
                                  id_cs                      INTEGER NOT NULL,
                                  charging_station_position  VARCHAR,
