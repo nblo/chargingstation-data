@@ -255,6 +255,8 @@ Here are the next steps which would improve the project, but were out of scope o
 - consider advantages and disadvantages of streaming data instead of batch processing
 - develop a dashboard based on data model 
 - expand the number of POI categories considered
+- add visualization of charging station utilization data
+
 
 # Addressing other scenarios 
 
@@ -274,7 +276,7 @@ There could be different DAGs for ingestion jobs on different scheduling interva
  
 
 # Data Visualization
-
+#TODO:
 
 # Lessons Learned
 #TODO: 
