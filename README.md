@@ -29,10 +29,10 @@ Replace the example step-by-step instructions with your own.
 1. Install packages in `requirements.txt`
 2. Provide credentials for Redshift and S3 URLs (optional) in `config.cfg`
 3. [Data Acquisition](#Step-1:-Data-Acquisition): 
-    - Run command `python get_chargecloud_data.py`: Call chargecloud API in regular time intervals
-    - Run command `python get_chargecloud_data.py`: Obtain relevant OSM POI locations
-4. [Data Preprocessing](#Step-2:-Data-Cleaning): Run command `python preprocess_results.py`
-5. [Data Modelling and ETL](#Step-3:-Data-Modelling-and-Ingestion): Run command `python etl.py`
+    - Run command `python get_chargecloud_data.py` inside `.src` folder: Calling chargecloud API in regular time intervals
+    - Run command `python get_chargecloud_data.py` inside `.src` folder: Obtaining relevant OSM POI locations
+4. [Data Preprocessing](#Step-2:-Data-Cleaning): Run command `python preprocess_results.py` inside `.src` folder: Preprocessing of API results and spatial matching with OSM data
+5. [Data Modelling and ETL](#Step-3:-Data-Modelling-and-Ingestion): Run command `python etl.py` inside `.src` folder: Creating data model and ingesting data into redshift
 
 
 Each script can be run independently of each other, as a sample dataset is included in the repository. 
@@ -40,7 +40,6 @@ Each script can be run independently of each other, as a sample dataset is inclu
 The S3-bucket specified in the config-file contains data which was collected over the last months, preprocessed and then manually uploaded to S3. 
 
 If you would like to run the ETL process with a different data set, please upload data to S3-bucket and change URLs in the `config.cfg` file.
-
 
 
 # Contact
@@ -258,7 +257,7 @@ Here are the next steps which would improve the project, but were out of scope o
 - develop a dashboard based on data model 
 - expand the number of POI categories considered
 - add visualization of charging station utilization data
-
+- automatically upload preprocessed data to specified S3 bucket
 
 # Addressing other scenarios 
 
