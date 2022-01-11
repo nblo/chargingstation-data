@@ -28,12 +28,14 @@ Replace the example step-by-step instructions with your own.
 
 1. Install packages in `requirements.txt`
 2. Provide credentials for Redshift and S3 URLs (optional) in `config.cfg`
-3. [Data Acquisition](#Step-1:-Data-Acquisition): Run command `python data_acquisition.py`
+3. [Data Acquisition](#Step-1:-Data-Acquisition): 
+    - Run command `python get_chargecloud_data.py`: Call chargecloud API in regular time intervals
+    - Run command `python get_chargecloud_data.py`: Obtain relevant OSM POI locations
 4. [Data Preprocessing](#Step-2:-Data-Cleaning): Run command `python preprocess_results.py`
 5. [Data Modelling and ETL](#Step-3:-Data-Modelling-and-Ingestion): Run command `python etl.py`
 
 
-Each script can be run independently of each other, as a small sample dataset is included in the repository. 
+Each script can be run independently of each other, as a sample dataset is included in the repository. 
 
 The S3-bucket specified in the config-file contains data which was collected over the last months, preprocessed and then manually uploaded to S3. 
 
