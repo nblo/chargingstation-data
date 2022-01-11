@@ -1,6 +1,6 @@
 # Overview
 
-The projects' goal is to dynamically model the occupancy of charging stations in Germany. The data is gathered from the [chargecloud API](https://www.chargecloud.de/), a German E-Mobility company providing back-end solutions for Charging Point Operators (CPOs). 
+The projects' goal is to dynamically model the occupancy of charging stations in Germany. The data is gathered from the [chargecloud API](https://www.chargecloud.de/), a German E-Mobility company providing back-end solutions for Charging Point Operators (**abrev CPOs). 
 
 Additionally, to analyze relationship between utilization rate and the charging stations' surroundings [OpenStreetMap](https://www.openstreetmap.org) (*abbrev. OSM*) Points-of-Interest  (*abbrev. POI*) locations like food retailers, shopping malls, and highway services is included in the data model.  
 
@@ -32,7 +32,14 @@ Replace the example step-by-step instructions with your own.
 4. [Data Preprocessing](#Step-2:-Data-Cleaning): Run command `python preprocess_results.py`
 5. [Data Modelling and ETL](#Step-3:-Data-Modelling-and-Ingestion): Run command `python etl.py`
 
-#TODO: Explain that each step is independent and what's in S3 
+
+Each script can be run independently of each other, as a small sample dataset is included in the repository. 
+
+The S3-bucket specified in the config-file contains data which was collected over the last months, preprocessed and then manually uploaded to S3. 
+
+If you would like to run the ETL process with a different data set, please upload data to S3-bucket and change URLs in the `config.cfg` file.
+
+
 
 # Contact
 
@@ -217,29 +224,23 @@ six dimension tables. Four dimension tables contain master data of the charging 
 
 
 # Design Choices 
-#TODO: Write Design Choices
-- Data Lake vs. Data Warehouse
-- Redshift vs. PostGres
-
-n_cp = 2423
-
-n_conn = 2806
+Data Lake vs. Data Warehouse
+ - For this project data is modelled a data warehouse in combination with a traditional ETL process. As the data is (mostly) structured
+and both data volume and data variety in big data terms are on the lower end (see next section) this design was chosen. 
 
 
-n_total = n_cp + n_conn
-
-n_total * 365 * 24 * 6
-
-
+Redshift is used as a Data Warehouse technology due to the following reasons: 
+- advanced PostGres features like JSON support or advanced spatial database features (PostGIS) are not essential 
+- due to data volume easily scalable and managed data warehouse was required. 
+ 
 - Batch Processing vs. Streaming. 
-- 
-
-- use of data warehouse (Redshift) instead of data lake as data is (mostly) structured
-- use of batch processing instead of streaming: the use case for this project is analyzing trends in user behavior or occupancy with 
+Possible use cases for this data are analyzing trends in user behavior or occupancy with 
 descriptive statistics or as a basis for a machine learning model for predicting optimal charging station locations. Thus, daily batch updates
-suffice and the use case does not justify extra complexity of streaming service like Kafka
+suffice and the use case does not justify extra complexity of a streaming service like Kafka.
+
 
 - ingesting raw data into Redshift allows for flexible refactoring of data model
+
 - separation each step of ETL process (Data Acquisition, Data Cleaning, Data Modelling and Loading) allows some or all 
 of those steps can be moved to Airflow or AWS
 
