@@ -1,6 +1,6 @@
 # user defined
 
-data/
+exploration/ 
 
 docs/
 
@@ -11,6 +11,8 @@ references/
 reports/
 
 exploration/cache 
+
+data/osm/poi_osm.geojson
 
 # env-file
 
@@ -328,4 +330,4 @@ dmypy.json
 
 .pyre/
 
-exploration/online_report/laternenparker/sql_kandelaber_os/test_sql.sql
+
