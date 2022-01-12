@@ -126,7 +126,7 @@ with col2:
     bar_chart_input.reset_index(drop=False, inplace=True)
     #st.bar_chart(bar_chart_input)
     
-    
+    # inspired by: https://altair-viz.github.io/gallery/radial_chart.html
     base = alt.Chart(bar_chart_input).encode(
     theta=alt.Theta("status_percentage:Q", stack=True),
     radius=alt.Radius("status_percentage", scale=alt.Scale(type="sqrt", zero=True, rangeMin=20)),
