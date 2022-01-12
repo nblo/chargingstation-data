@@ -1,0 +1,1163 @@
+id;name;address;city;postal_code;country;distance_in_m;owner;roaming;latitude;longitude;operator_name;operator_hotline;open_24_7
+2;TankE - ADAC Köln Kalk;Erna-Scheffler-Straße 5;Köln;50679;DE;0;;False;50.940991;6.992267;RheinEnergie AG;+4922134645600;False
+3;TankE - Agrippabad;Agrippastraße 45;Köln;50676;DE;0;KölnBäder GmbH;False;50.933123;6.9523;RheinEnergie AG;+4922134645600;True
+7;TankE - Auto Laukat;Siegburgerstraße  232-238;Köln;51105;DE;0;;False;50.92041;6.984919;RheinEnergie AG;+4922134645600;True
+13;TankE - AXA;Colonia-Allee 10-20;Köln;51067;DE;0;;False;50.963563;7.051716;RheinEnergie AG;+4922134645600;True
+20;TankE - Bornheim;Rathausstraße 2;Bornheim;53332;DE;0;;False;50.757272;7.004436;RheinEnergie AG;+4922134645600;True
+21;TankE - Donnerbachweg - Bornheim;Donnerbachweg 15;Bornheim;53332;DE;0;;False;50.76773;6.948761;RheinEnergie AG;+4922134645600;True
+30;TankE - Flughafen Köln Bonn P2;Kennedystraße -;Köln;51147;DE;0;;False;50.879504;7.118784;RheinEnergie AG;+4922134645600;True
+43;TankE - DLR Hansestraße;Hansestraße  115;Köln;51149;DE;0;;False;50.91278;7.056672;RheinEnergie AG;+4922134645600;True
+49;TankE - ERGO;Scheidtweilerstraße  4;Köln;50933;DE;0;;False;50.938752;6.90726;RheinEnergie AG;+4922134645600;True
+69;TankE - Severinusstraße Hürth;Severinusstraße 3;Hürth;50354;DE;0;;False;50.877908;6.887646;RheinEnergie AG;+4922134645600;True
+73;TankE - HWK Fortbildungszentrum;Köhlstraße 8;Köln;50827;DE;0;;False;50.975525;6.897439;RheinEnergie AG;+4922134645600;True
+76;TankE - Kaufhof Köln-Nippes;Neusser Str. 242;Köln;50733;DE;0;;False;50.963081;6.955304;RheinEnergie AG;+4922134645600;True
+84;TankE - Erlebnisbauernhof Krewelshof;Krewelshof 1;Lohmar;53797;DE;0;;False;50.87327;7.197917;RheinEnergie AG;+4922134645600;True
+89;TankE - KVB Westforum Besucherparkplatz;Scheidtweilerstraße 38;Köln;50933;DE;0;;False;50.938688;6.906852;RheinEnergie AG;+4922134645600;True
+90;TankE - Park & Ride KVB Weiden West;Aachener Straße 1420;Köln;50859;DE;0;;False;50.93951;6.815948;RheinEnergie AG;+4922134645600;True
+95;TankE - Parkhaus Lungengasse ;Lungengasse ggü. 40;Köln;50676;DE;0;;False;50.934986;6.946149;RheinEnergie AG;+4922134645600;True
+100;TankE - Köln Marriott Hotel;Johannisstraße 76-80;Köln;50668;DE;0;;False;50.944661;6.96153;RheinEnergie AG;+4922134645600;True
+102;TankE - Parkhaus Oberpleis;Dollendorfer Str. 4;Königswinter;53639;DE;0;;False;50.710012;7.276724;RheinEnergie AG;+4922134645600;True
+112;TankE - RheinEnergie Kundenparkplatz;Parkgürtel 24;Köln;50823;DE;0;;False;50.960564;6.931107;RheinEnergie AG;+4922134645600;True
+116;TankE - REWE Richrath;Zum Komarhof 1;Hürth;50354;DE;0;;False;50.894986;6.903955;RheinEnergie AG;+4922134645600;False
+119;TankE - RTL Köln;Picassoplatz 1;Köln;50679;DE;0;;False;50.943511;6.973142;RheinEnergie AG;+4922134645600;True
+120;Solar-TankE - RVK Meckenheim;Kalkofenstraße 2;Meckenheim;53340;DE;0;;False;50.627538;7.011032;RheinEnergie AG;+4922134645600;True
+123;TankE - Schloss Miel;Schlossallee 1;Swisttal;53913;DE;0;;False;50.668921;6.915035;RheinEnergie AG;+4922134645600;True
+125;TankE - StEB Köln;Ostmerheimer Str. 555;Köln;51109;DE;0;;False;50.957514;7.048832;RheinEnergie AG;+4922134645600;True
+141;TankE - Frouardplatz Lohmar;Frouardplatz -;Lohmar;53797;DE;0;;False;50.841507;7.211454;RheinEnergie AG;+4922134645600;True
+142;TankE - SoccerWorld Lövenich;Ottostraße 7;Köln;50859;DE;0;;False;50.949679;6.840067;RheinEnergie AG;+4922134645600;True
+146;TankE - TÜV Rheinland;Konstantin-Wille-Straße ggü. 1;Köln;51105;DE;0;;False;50.923715;6.991864;RheinEnergie AG;+4922134645600;True
+148;TankE - Uni Duisburg-Essen - Duisburg;Lotharstraße 53;Duisburg;47057;DE;0;;False;51.430348;6.799609;RheinEnergie AG;+4922134645600;True
+155;TankE - Volkswagen Zentrum Europaplatz Aachen;Europaplatz 10;Aachen;52068;DE;0;;False;50.779498;6.106563;RheinEnergie AG;+4922134645600;False
+167;TankE - Bertrandt Köln 2;Oskar-Schindler-Straße 4;Köln;50769;DE;0;;False;51.033628;6.918907;RheinEnergie AG;+4922134645600;True
+172;TankE - Segmüller;Segmüller-Allee 1;Pulheim;50259;DE;0;;False;50.987169;6.814869;RheinEnergie AG;+4922134645600;False
+177;TankE - Charles-de-Gaulle-Platz;Charles-de-Gaulle-Platz 1-3;Köln;50679;DE;0;;False;50.941859;6.972245;RheinEnergie AG;+4922134645600;True
+337;TankE - Parkhaus Koelnmesse P22;Pfälzischer Ring .105;Köln;50679;DE;0;;False;50.944395;6.987993;RheinEnergie AG;+4922134645600;True
+351;TankE - Adam-Stegerwald-Str. 19;Adam-Stegerwald-Str. 19;Köln;51063;DE;0;;False;50.949945;6.992169;RheinEnergie AG;+4922134645600;True
+360;TankE - Wilhelm-Mauser-Str. 41-43;Wilhelm-Mauser-Str. 41-43;Köln;50827;DE;0;;False;50.956495;6.893651;RheinEnergie AG;+4922134645600;True
+10124;TankE - Neusser Str. 216 (Mast 28C);Neusser Str. 216;Köln;50733;DE;0;;False;50.961831;6.954461;RheinEnergie AG;+4922134645600;True
+10175;TankE - Neusser Str. 230 (Mast 30);Neusser Str. 230;Köln;50733;DE;0;;False;50.962449;6.9543;RheinEnergie AG;+4922134645600;True
+10177;TankE - Neusser Str. 310 (Mast 32B);Neusser Str. 310;Köln;50733;DE;0;;False;50.96621;6.95357;RheinEnergie AG;+4922134645600;True
+10269;TankE - Robert-Bosch-Str. 2-4;Robert-Bosch-Straße 2-4;Köln;50769;DE;0;;False;51.032743;6.920468;RheinEnergie AG;+4922134645600;True
+15950;TankE - Miltzstraße 14;Miltzstraße 14;Köln;51061;DE;0;;False;51.002995;6.974744;RheinEnergie AG;+4922134645600;True
+15952;TankE - Geestemünderstraße 18;Geestemünderstraße 18;Köln;50735;DE;0;;False;50.998684;6.939453;RheinEnergie AG;+4922134645600;True
+22314;TankE Von-Hünefeld-Str. 100;Von-Hünefeld-Str.  100;Köln;50829;DE;0;;False;50.989158;6.892736;Rhein Energie AG;+4922134645600;True
+79122;TankE - Niederkasselerstr. 8;Niederkasselerstraße 8;Köln;51147;DE;0;;False;50.840479;7.103025;RheinEnergie AG;+4922134645600;True
+132190;TankE - Dürener Straße 287;Dürener Straße 287;Köln;50933;DE;0;;False;50.926851;6.904361;RheinEnergie AG;+4922134645600;True
+136130;TankE - Flughafen Köln Bonn P3;Kennedystraße 1;Köln;51149;DE;0;;False;50.882871;7.110765;RheinEnergie AG;+4922134645600;True
+244392;TankE - Kölner Straße 16;Kölner Straße  16;Bergheim;50126;DE;0;;False;50.952166;6.64674;Rhein Energie AG;+4922134645600;True
+267348;TankE - Berlin-Kölnische-Allee 6;Berlin-Kölnische-Allee 6;Köln;50969;DE;0;;False;50.916828;6.938862;Rhein Energie AG;+4922134645600;True
+278352;TankE - Willy-Brandt-Platz Köln Parkhaus P1;Willy-Brandt-Platz 3;Köln;50679;DE;0;;False;50.939396;6.981609;Rhein Energie AG;+4922134645600;True
+321892;TankE - Steinstr. 6;Steinstr. 6;Pulheim;50259;DE;0;;False;50.996442;6.799732;Rhein Energie AG;+4922134645600;True
+409940;LIS-K - Eierplätzchen;Mainzer Straße 42-48;Köln;50678;DE;0;;False;50.919056;6.964449;Rhein Energie AG;+4922134645600;True
+417160;LIS-K - Nonniweg 8;Nonniweg  8;Köln;50825;DE;0;;False;50.95438;6.9033;Rheinenergie AG;+4922134645600;True
+417164;LIS-K - Neusser Straße 453;Neusser Straße  453;Köln;50733;DE;0;;False;50.972486;6.950572;Rheinenergie AG;+4922134645600;True
+473206;LIS-K - Johannisstraße 74;Johannisstraße 74;Köln;50667;DE;0;;False;50.94498;6.960778;RheinEnergie AG;+4922134645600;True
+473208;LIS-K - Riehler Platz vor 1;Riehler Platz vor Hs-Nr ;Köln;50668;DE;0;;False;50.954988;6.966254;RheinEnergie AG;+4922134645600;True
+473210;LIS-K - Subbelrather Straße 533;Subbelrather Straße 533;Köln;50827;DE;0;;False;50.960305;6.903247;RheinEnergie AG;+4922134645600;True
+473214;LIS-K - Esenbeckstraße 14;Esenbeckstraße 14;Köln;50735;DE;0;;False;50.968218;6.97511;RheinEnergie AG;+4922134645600;True
+473216;LIS-K - Merheimer Straße 416;Merheimer Straße 416;Köln;50739;DE;0;;False;50.974028;6.946578;RheinEnergie AG;+4922134645600;True
+473218;LIS-K - Neusser Straße 681;Neusser Straße 681;Köln;50737;DE;0;;False;50.986688;6.945519;RheinEnergie AG;+4922134645600;True
+473220;LIS-K - Christian-Schult-Straße 22;Christian-Schult-Straße 22;Köln;50823;DE;0;;False;50.948878;6.927772;RheinEnergie AG;+4922134645600;True
+504002;TankE - RheinEnergie Kundenparkplatz hinter Schranke;Parkgürtel 24;Köln;50823;DE;0;;False;50.960786;6.930509;RheinEnergie AG;+4922134645600;False
+513027;LIS-K - Kreutzerstraße 4;Kreutzerstraße  4;Köln;50672;DE;0;;False;50.943959;6.929286;Rheinenergie AG;+4922134645600;True
+514297;LIS-K - Stolberger Straße 313;Stolberger Straße 313;Köln;50933;DE;0;;False;50.942366;6.893091;RheinEnergie AG;+4922134645600;True
+514298;LIS-K - Stolberger Straße 112;Stolberger Straße 112;Köln;50933;DE;0;;False;50.941992;6.897044;RheinEnergie AG;+4922134645600;True
+514305;LIS-K - Brühler Straße 22;Brühler Straße 22;Köln;50968;DE;0;;False;50.90976;6.9618;RheinEnergie AG;+4922134645600;True
+514306;LIS-K - Niehler Straße 358;Niehler Straße 358;Köln;50735;DE;0;;False;50.97716;6.96027;RheinEnergie AG;+4922134645600;True
+514307;LIS-K - Ebernburgweg 35;Ebernburgweg 35;Köln;50739;DE;0;;False;50.97038;6.93077;RheinEnergie AG;+4922134645600;True
+514308;LIS-K - Altonaer Straße 53;Altonaer Straße  53;Köln;50737;DE;0;;False;50.995206;6.92524;RheinEnergie AG;+4922134645600;True
+523587;LIS-K Tacitusstraße 17;Tacitusstraße 17;Köln;50968;DE;0;;False;50.909467;6.969244;Rheinenergie AG;+4922134645600;True
+523588;LIS-K Heidemannstraße 84;Heidemannstraße 84;Köln;50825;DE;0;;False;50.960538;6.918758;Rheinenergie AG;+4922134645600;True
+523591;LIS-K Alfred-Schütte-Allee 132;Alfred-Schütte-Allee 132;Köln;51105;DE;0;;False;50.911664;6.984901;Rheinenergie AG;+4922134645600;True
+523592;LIS-K Nikolausstraße 50;Nikolausstraße 50;Köln;51149;DE;0;;False;50.900408;7.01894;Rheinenergie AG;+4922134645600;True
+523593;LIS-K Neuenhofstraße 2;Neuenhofstraße 2;Köln;51149;DE;0;;False;50.911001;7.053249;Rheinenergie AG;+4922134645600;True
+523594;LIS-K Hauptstraße 245;Hauptstraße 245;Köln;51143;DE;0;;False;50.874174;7.050254;Rheinenergie AG;+4922134645600;True
+523595;LIS-K Thuleweg 62;Thuleweg 62;Köln;51061;DE;0;;False;50.981562;7.044829;Rheinenergie AG;+4922134645600;True
+523601;LIS-K Am Vorgebirgstor 43;Am Vorgebirgstor  43;Köln;50969;DE;0;;False;50.916649;6.942077;Rheinenergie AG;+4922134645600;True
+523602;LIS-K Zollstockgürtel 22;Zollstockgürtel 22;Köln;50969;DE;0;;False;50.905198;6.94172;Rheinenergie AG;+4922134645600;True
+523603;LIS-K Zollstockgürtel 2;Zollstockgürtel 2;Köln;50969;DE;0;;False;50.904749;6.945031;Rheinenergie AG;+4922134645600;True
+523604;LIS-K Rhöndorfer Straße 40;Rhöndorfer Straße 40;Köln;50939;DE;0;;False;50.911782;6.932;Rheinenergie AG;+4922134645600;True
+523605;LIS-K Guntharplatz 14;Guntharplatz 14;Köln;50858;DE;0;;False;50.931537;6.857329;Rheinenergie AG;+4922134645600;True
+523606;LIS-K Lessingstraße 2;Lessingstraße 2;Köln;50858;DE;0;;False;50.939739;6.844456;Rheinenergie AG;+4922134645600;True
+523608;LIS-K Rochusstraße 279;Rochusstraße 279;Köln;50827;DE;0;;False;50.96756;6.9056;Rheinenergie AG;+4922134645600;True
+523609;LIS-K Amsterdamer Straße 267;Amsterdamer Straße 267;Köln;50735;DE;0;;False;50.978652;6.968383;Rheinenergie AG;+4922134645600;True
+523610;LIS-K Taunusstraße 7;Taunusstraße 7;Köln;51105;DE;0;;False;50.934627;6.99747;Rheinenergie AG;+4922134645600;True
+523611;LIS-K Ostheimer Straße 125;Ostheimer Straße 125;Köln;51107;DE;0;;False;50.932279;7.024819;Rheinenergie AG;+4922134645600;True
+523612;LIS-K Ludwig-Ronig-Straße 6;Ludwig-Ronig-Straße 6;Köln;51107;DE;0;;False;50.928982;7.047877;Rheinenergie AG;+4922134645600;True
+523613;LIS-K Piccoloministraße 464;Piccoloministraße 464;Köln;51067;DE;0;;False;50.972986;7.049331;Rheinenergie AG;+4922134645600;True
+523614;LIS-K Amsterdamer Straße 213;Amsterdamer Straße 213;Köln;50735;DE;0;;False;50.97508;6.96902;Rheinenergie AG;+4922134645600;True
+523615;LIS-K Constantinstraße 90;Constantinstraße 90;Köln;50679;DE;0;;False;50.9391;6.977574;Rheinenergie AG;+4922134645600;True
+523616;LIS-K Gotenring 8;Gotenring 8;Köln;50679;DE;0;;False;50.93634;6.977732;Rheinenergie AG;+4922134645600;True
+523617;LIS-K Gotenring 31;Gotenring 31;Köln;50679;DE;0;;False;50.933969;6.97751;Rheinenergie AG;+4922134645600;True
+523618;LIS-K Helenenwallstraße 40;Helenenwallstraße 40;Köln;50679;DE;0;;False;50.931567;6.9719;Rheinenergie AG;+4922134645600;True
+523619;LIS-K Von Groote Straße 46;Von Groote Straße 46;Köln;50968;DE;0;;False;50.899257;6.967527;Rheinenergie AG;+4922134645600;True
+523620;LIS-K Brühler Straße 210;Brühler Straße 210;Köln;50968;DE;0;;False;50.901557;6.954735;Rheinenergie AG;+4922134645600;True
+523621;LIS-K Homburger Straße 17;Homburger Straße 17;Köln;50969;DE;0;;False;50.91378;6.94794;Rheinenergie AG;+4922134645600;True
+523623;LIS-K Kaiserstraße 56;Kaiserstraße ggü. 56;Köln;51145;DE;0;;False;50.881013;7.077721;Rheinenergie AG;+4922134645600;True
+523624;LIS-K Unterm Berg 18;Unterm Berg 18;Köln;51143;DE;0;;False;50.865236;7.036802;Rheinenergie AG;+4922134645600;True
+523625;LIS-K Lülsdorfer Straße 125;Lülsdorfer Straße 125;Köln;51143;DE;0;;False;50.84619;7.005676;Rheinenergie AG;+4922134645600;True
+523626;LIS-K Theodor-Heuss-Straße 9;Theodor-Heuss-Straße 9;Köln;51149;DE;0;;False;50.897005;7.064606;Rheinenergie AG;+4922134645600;True
+523627;LIS-K Olpener Straße 194;Olpener Straße  194;Köln;51103;DE;0;;False;50.94013;7.02626;Rheinenergie AG;+4922134645600;True
+523628;LIS-K Tiefentalstraße 39;Tiefentalstraße 39;Köln;51063;DE;0;;False;50.975596;7.006742;Rheinenergie AG;+4922134645600;True
+523629;LIS-K Düsseldorfer Straße 95;Düsseldorfer Straße 95;Köln;51063;DE;0;;False;50.97451;7.00236;Rheinenergie AG;+4922134645600;True
+523630;LIS-K Bergisch Gladbacher Straße 499;Bergisch Gladbacher Straße 499;Köln;51067;DE;0;;False;50.968878;7.041386;Rheinenergie AG;+4922134645600;True
+523631;LIS-K Neufelder Straße 35;Neufelder Straße  35;Köln;51067;DE;0;;False;50.967991;7.057602;Rheinenergie AG;+4922134645600;True
+523632;LIS-K Bergisch Gladbacher Straße 999;Bergisch Gladbacher Straße 999;Köln;51067;DE;0;;False;50.979109;7.07187;Rheinenergie AG;+4922134645600;True
+523633;LIS-K Bergisch Gladbacher Straße 988;Bergisch Gladbacher Straße 988;Köln;51067;DE;0;;False;50.978136;7.069253;Rheinenergie AG;+4922134645600;True
+543386;Bus-TankE-Venloer Str. 1152 - MuLi;Venloer Str. 1152;Köln;50829;DE;0;;False;50.969912;6.872926;Rhein Energie AG;+4922134645600;True
+568841;LIS-K Frankfurter Straße 350;Frankfurter Straße 350;Köln;51103;DE;0;;False;50.9438;7.02691;Rheinenergie;+498004393030;True
+569226;LIS-K Takusstraße 99;Takusstraße 99;Köln;50825;DE;0;;False;50.96156;6.91565;Rheinenergie;+498004393030;True
+571815;LIS-K Annostraße 12;Annostraße 12;Köln;50678;DE;0;;False;50.923198;6.961561;Rheinenergie;+498004393030;True
+573488;LIS-K Kalker Hauptstraße 176;Kalker Haupstraße 176;Köln;51103;DE;0;;False;50.938266;7.00554;Rheinenergie;+498004393030;True
+583542;LIS-K Riehler Straße 31;Riehler Straße 31;Köln;50668;DE;0;;False;50.952666;6.961192;Rheinenergie;+498004393030;True
+583543;LIS-K Ottostraße 7;Ottostraße 7;Köln;50823;DE;0;;False;50.952359;6.923396;Rheinenergie;+498004393030;True
+583544;LIS-K Karolingerring 8;Karolingerring 8;Köln;50678;DE;0;;False;50.921388;6.958706;Rheinenergie;+498004393030;True
+583545;LIS-K Hönninger Weg 166;Hönninger Weg 166;Köln;50678;DE;0;;False;50.912548;6.940296;RheinEnergie AG;+498004393030;True
+583547;LIS-K Hönninger Weg 222;Hönninger Weg 222;Köln;50969;DE;0;;False;50.90812;6.941103;Rheinenergie;+498004393030;True
+583548;LIS-K Kalscheurer Weg 35;Kalscheurer Weg 35;Köln;50969;DE;0;;False;50.906421;6.940131;Rheinenergie;+498004393030;True
+583549;LIS-K Mainstraße 38;Mainstraße 38;Köln;50996;DE;0;;False;50.884383;7.001274;Rheinenergie;+498004393030;True
+583550;LIS-K Weißer Hauptstraße 22;Weißer Hauptstraße  22;Köln;50999;DE;0;;False;50.873993;7.033222;Rheinenergie;+498004393030;True
+583551;LIS-K Sürther Marktplatz;Sürther Marktplatz 0;Köln;50999;DE;0;;False;50.86178;7.00788;Rheinenergie;+498004393030;True
+583552;LIS-K Eupener Straße 59;Eupener Straße 59;Köln;50933;DE;0;;False;50.941013;6.889449;Rheinenergie;+498004393030;True
+586165;LIS-K Riphahnstraße 21;Riphahnstraße 21;Köln;50679;DE;0;;False;51.01908;6.90241;Rheinenergie;+498004393030;True
+588937;LIS-K Gottfried-Hagen-Straße 44;Gottfried-Hagen-Straße 44;Köln;51105;DE;0;;False;50.931443;7.002094;Rheinenergie;+498004393030;True
+588938;LIS-K Olpener Straße 803;Olpener Straße 803;Köln;51109;DE;0;;False;50.945239;7.075701;Rheinenergie;+498004393030;True
+588947;LIS-K Moselstraße 74;Moselstraße 74;Köln;50674;DE;0;;False;50.92814;6.93723;Rheinenergie;+498004393030;True
+589476;LIS-K Am Aspelkreuz 16;Am Aspelkreuz 16;Köln;50859;DE;0;;False;50.961868;6.839489;Rheinenergie;+498004393030;True
+589477;LIS-K Evergerstraße 31;Evergerstraße 31;Köln;51061;DE;0;;False;51.001372;6.980353;Rheinenergie;+498004393030;True
+594106;LIS-K Rathausstraße 4;Rathausstraße 4;Köln;51143;DE;0;;False;50.88611;7.05433;Rheinenergie;+498004393030;True
+594107;LIS-K Hauptstraße 170;Haupstraße 170;Köln;51143;DE;0;;False;50.869174;7.045382;Rheinenergie;+498004393030;True
+594109;LIS-K Fockerweg;Fockerweg 8;Köln;51107;DE;0;;False;50.920487;7.083967;Rheinenergie;+498004393030;True
+594116;LIS-K Eduard-Heis-Straße 1;Eduard-Heis-Straße 1;Köln;51061;DE;0;;False;50.999401;6.983248;Rheinenergie;+498004393030;True
+594117;LIS-K Von Sparr Straße 1;Von Sparr Straße 1;Köln;51063;DE;0;;False;50.972832;7.007129;Rheinenergie;+498004393030;True
+594118;LIS-K Buchheimer Straße 54;Buchheimer Straße 54;Köln;51063;DE;0;;False;50.962577;7.003101;Rheinenergie;+498004393030;True
+596116;LIS-K Gleuler Straße 200;Gleuler Straße 200;Köln;50935;DE;0;;False;50.92167;6.90779;Rheinenergie;+498004393030;True
+596118;LIS-K Sandglöckchenweg 56;Sandglöckchenweg 56;Köln;50765;DE;0;;False;51.015485;6.890217;Rheinenergie;+498004393030;True
+596119;LIS-K Vitalisstraße 377;Vitalisstraße 377;Köln;50933;DE;0;;False;50.944653;6.884011;Rheinenergie;+498004393030;True
+598179;LIS-K Lotharstraße 30;Lotharstraße 30;Köln;50937;DE;0;;False;50.918896;6.927953;Rheinenergie;+498004393030;True
+679436;LIS-K - Merheimer Straße 217;Merheimer Straße 217;Köln;50733;DE;0;;False;50.966793;6.947419;Rheinenergie;+498004393030;True
+679437;LIS-K Neue Maastricher Straße 6;Maastricher Straße 6;Köln;50672;DE;0;;False;50.939253;6.934088;RheinEnergie AG;+498004393030;True
+679438;LIS-K Universitätsstraße 81;Universitätsstraße 81;Köln;50931;DE;0;;False;50.934178;6.924323;RheinEnergie AG;+498004393030;True
+679439;LIS_K Lortzingplatz 11;Lortzingplatz 11;Köln;50931;DE;0;;False;50.931087;6.911647;RheinEnergie AG;+498004393030;True
+689456;LIS-K Dürener Straße 385;Dürener Straße 385;Köln;50935;DE;0;;False;50.925348;6.895194;RheinEnergie AG;+498004393030;True
+689458;LIS-K Hültzplatz 1;Hültzplatz 1;Köln;50933;DE;0;;False;50.934639;6.905278;RheinEnergie AG;+498004393030;True
+689461;LIS-K Zülpicher Straße 311;Zülpicher Straße 311;Köln;50937;DE;0;;False;50.921509;6.920071;RheinEnergie AG;+498004393030;True
+689462;LIS-K Neue Sandkaul 10;Neu Sandkaul 10;Köln;50859;DE;0;;False;50.965343;6.835866;RheinEnergie AG;+498004393030;True
+689465;LIS-K Ollenauerring 41;Ollenhauerring 41;Köln;50829;DE;0;;False;50.979288;6.866022;RheinEnergie AG;+498004393030;True
+695832;LIS-K Esserstraße 79;Esserstraße 79;Köln;51105;DE;0;;False;50.93031;6.99647;RheinEnergie AG;+498004393030;True
+695897;LIS-K Lenauplatz 8;Lenauplatz 8;Köln;50825;DE;0;;False;50.957261;6.919557;RheinEnergie AG;+498004393030;True
+702947;LIS-K Vorsterstraße 68;Vorsterstraße 68;Köln;51103;DE;0;;False;50.938932;7.001707;RheinEnergie AG;+498004393030;True
+703418;LIS-K Josefine-Clouth-Straße 40;Josefine-Clouth-Straße 42;Köln;50733;DE;0;;False;50.966645;6.960478;RheinEnergie AG;+498004393030;True
+703419;LIS-K Neusser Wall 50;Neusser Wall 50;Köln;50668;DE;0;;False;50.9562;6.96723;RheinEnergie AG;+498004393030;True
+703420;LIS-K Hansaring 89;Hansaring 89;Köln;50670;DE;0;;False;50.948236;6.950133;RheinEnergie AG;+498004393030;True
+703421;LIS-K Auerstraße 23;Auerstraße  23;Köln;50733;DE;0;;False;50.96;6.95884;RheinEnergie AG;+498004393030;True
+703982;LIS-K Euskirchener Straße 50;Euskirchener Straße 50;Köln;50935;DE;0;;False;50.9178;6.91607;RheinEnergie AG;+498004393030;True
+704799;LIS-K Venloer Straße 716;Venloer Straße 716;Köln;50823;DE;0;;False;50.960126;6.895027;RheinEnergie AG;+498004393030;True
+705413;LIS-K Iltisstraße 128A;Iltisstraße 128A;Köln;50679;DE;0;;False;50.963909;6.914013;RheinEnergie AG;+498004393030;True
+705418;LIS-K Baudriplatz 16;Baudriplatz 16;Köln;50733;DE;0;;False;50.964403;6.951595;RheinEnergie AG;+498004393030;True
+706634;LIS-K Vogelsanger Markt;Vogelsanger Markt 1;Köln;50829;DE;0;;False;50.95519;6.88083;RheinEnergie AG;+498004393030;True
+706723;LIS-K Fronhofstraße 130;Fronhofstraße 130;Köln;50827;DE;0;;False;50.967839;6.899785;RheinEnergie AG;+498004393030;True
+707708;LIS-K Gudrunstraße 1;Gudrunstraße 1;Köln;50996;DE;0;;False;50.891111;6.996805;RheinEnergie AG;+498004393030;True
+726981;LIS-K Martinusstraße 2;Martinusstraße 2;Köln;50765;DE;0;;False;51.01279;6.856149;RheinEnergie AG;+498004393030;True
+729649;LIS-K Reiherstraße 21;Reiherstraße 21;Köln;50997;DE;0;;False;50.875034;6.960539;RheinEnergie AG;+498004393030;True
+729650;LIS-K Geisbergstraße 4;Geisbergstraße 4;Köln;50939;DE;0;;False;50.907391;6.919614;RheinEnergie AG;+498004393030;True
+729653;LIS-K Kratzweg 116;Kratzweg 116;Köln;51109;DE;0;;False;50.94651;7.04947;RheinEnergie AG;+498004393030;True
+739069;LIS-K Niehler Kirchweg 39;Niehler Kirchweg 39;Köln;50733;DE;0;;False;50.969082;6.951013;RheinEnergie AG;+498004393030;True
+739665;LIS-K Am Südpark 1;Am Südpark  1;Köln;50968;DE;0;;False;50.898399;6.975829;RheinEnergie AG;+498004393030;True
+743497;LIS-K Simon-Meister.Straße ; Simon-Meister.Straße  3;Köln;50733;DE;0;;False;50.966032;6.951083;RheinEnergie AG;+498004393030;True
+743527;LIS-K Karlstraße 5;Karlsstraße 5;Köln;50679;DE;0;;False;50.937826;6.972033;RheinEnergie AG;+498004393030;True
+772672;LIS-K Döbrabergstraße 2;Döbrabergstraße  2;Köln;50765;DE;0;;False;51.037681;6.884185;RheinEnergie AG;+498004393030;True
+13343;Grobe - Oesterstraße 119;Oesterstraße  119;Dortmund;44309;DE;0;;False;51.533636;7.550913;DEW21 GmbH;+4923170097799;False
+13492;DEW21 - Schnellladesäule - Westfalendamm 166;Westfalendamm  166;Dortmund;44141;DE;0;;False;51.504149;7.498185;DEW21 GmbH;+4923170097799;True
+13516;Atlas Schuhfabrik;Frische Luft  159;Dortmund;44319;DE;0;;False;51.534076;7.630646;DEW21 GmbH;+4923170097799;False
+15338;DEW21 - Rathaus Herdecke - Kirchplatz 3;Kirchplatz 3;Herdecke;58313;DE;0;;False;51.400403;7.432292;DEW21 GmbH;+4923170097799;True
+16642;DSW - VWG-Deggingstrasse;Deggingstraße  40;Dortmund;44141;DE;0;;False;51.505601;7.487775;DEW21 GmbH;+492315441564;True
+16758;DOPARK - TG-Hansaplatz;Tiefgarage Hansastraße  2;Dortmund;44137;DE;0;;False;51.512339;7.463759;DEW21 GmbH;+4923170097799;True
+182742;EWS - Juchostrasse;Juchostraße  30;Dortmund;44143;DE;0;;False;51.522775;7.510967;EWS;+4923170097799;True
+505700;DOPARK_TG Westentor;Schmiedingstraße  10;Dortmund;44135;DE;0;;False;51.515112;7.456544;DEW21 GmbH;+4923170097799;True
+542896;Lichtmast_40835;Schmiedingstr. 23;Dortmund;44137;DE;0;;False;51.515552;7.457235;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542897;Lichtmast_40836;Schmiedingstr. 19/gü;Dortmund;44147;DE;0;;False;51.515679;7.457678;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542898;Lichtmast_75628;Deutsch-Luxemb.-Str 119;Dortmund;44225;DE;0;;False;51.469654;7.435748;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542899;Lichtmast_40838;Schmiedingstr. 6;Dortmund;44147;DE;0;;False;51.515303;7.457177;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542903;Lichtmast_19235;Hombrucher Str 62;Dortmund;44225;DE;0;;False;51.475938;7.436548;Dortmunder Energie- und Wasserversorgung;+4923170097799;False
+542904;Lichtmast_19246;Hombrucher Str 54;Dortmund;44225;DE;0;;False;51.476647;7.436475;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542905;Lichtmast_43804;Junggesellenstr 14;Dortmund;44135;DE;0;;False;51.512237;7.471135;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542906;Lichtmast_35862;Jagdhausstr 1;Dortmund;44225;DE;0;;False;51.475437;7.44219;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542907;Lichtmast_35728;Kuntzestr 76;Dortmund;44225;DE;0;;False;51.473892;7.439345;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542908;Lichtmast_43796;Junggesellenstr 20;Dortmund;44135;DE;0;;False;51.511789;7.471637;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542909;Lichtmast_35759;Kuntzestr 5/gü/w;Dortmund;44225;DE;0;;False;51.473958;7.445648;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542910;Lichtmast_26374;Ii. Bickestr 19;Dortmund;44263;DE;0;;False;51.485475;7.513669;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542911;Lichtmast_26375;Ii. Bickestr 11;Dortmund;44263;DE;0;;False;51.485856;7.513693;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542912;Lichtmast_46622_;DESSAUERSTR 18;Dortmund;44263;DE;0;;False;51.49337;7.493692;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542913;Lichtmast_17745;Lange Fuhr 61;Dortmund;44149;DE;0;;False;51.503734;7.410992;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542914;Lichtmast_16197;Lange Fuhr 24/gü;Dortmund;44149;DE;0;;False;51.501653;7.410066;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542915;Lichtmast_46618_;AUF DER KLUSE 14/gü;Dortmund;44263;DE;0;;False;51.492899;7.494914;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542916;Lichtmast_26419;Am Geenseel 10;Dortmund;44263;DE;0;;False;51.486623;7.510548;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542917;Lichtmast_26421;Am Geenseel 11/gü;Dortmund;44263;DE;0;;False;51.486335;7.510547;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542918;Lichtmast_46587;SEYDLITZSTR 7;Dortmund;44263;DE;0;;False;51.492472;7.492498;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542919;Lichtmast_26430;I. Bickestr 3;Dortmund;44263;DE;0;;False;51.486308;7.513179;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542920;Lichtmast_26595;Am Rebstock 38-40;Dortmund;44263;DE;0;;False;51.495004;7.507005;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542921;Lichtmast_26596;Am Rebstock 42;Dortmund;44263;DE;0;;False;51.495172;7.506565;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542922;Lichtmast_26599;Am Rebstock 48;Dortmund;44263;DE;0;;False;51.495344;7.506029;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542932;Lichtmast_46509;NERVIERSTR 22;Dortmund;44263;DE;0;;False;51.486247;7.494537;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542937;Lichtmast_29164;Huestr 99;Dortmund;44263;DE;0;;False;51.497709;7.516434;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542939;Lichtmast_35760;Kuntzestr 42;Dortmund;44225;DE;0;;False;51.473991;7.444393;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542941;Lichtmast_35820;Kuntzestr 2;Dortmund;44225;DE;0;;False;51.47396;7.448184;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542942;Lichtmast_40462;WILHELMSTR 78/gü;Dortmund;44137;DE;0;;False;51.509798;7.457123;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542943;Lichtmast_40376;Dudenstraße 18(/Luisen;Dortmund;44137;DE;0;;False;51.508212;7.459248;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542945;Lichtmast_19160;Leostr 36;Dortmund;44225;DE;0;;False;51.47444;7.432862;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542946;Lichtmast_40476;Wilhelmstr. 64/gü;Dortmund;44137;DE;0;;False;51.51222;7.452238;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542948;Lichtmast_19174;Leostr 27/gü;Dortmund;44225;DE;0;;False;51.474568;7.436005;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542952;Lichtmast_19177;Singerhoffstr 6;Dortmund;44225;DE;0;;False;51.474812;7.437184;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542953;Lichtmast_35620;Singerhoffstr 60;Dortmund;44225;DE;0;;False;51.47066;7.440137;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542958;Lichtmast_46527;NERVIERSTR 4;Dortmund;44137;DE;0;;False;51.48706;7.494578;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542962;Lichtmast_40461;Wilhelmstr 70/gü;Dortmund;44137;DE;0;;False;51.510074;7.456139;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542963;Lichtmast_18117;Spicherner  17 /zw. 17;Dortmund;44149;DE;0;;False;51.513778;7.419931;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542964;Lichtmast_40510;Elisabethstr 2/gü;Dortmund;44137;DE;0;;False;51.509634;7.464705;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542965;Lichtmast_40514;Suedrandweg 2/gü;Dortmund;44135;DE;0;;False;51.509463;7.466764;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542966;Lichtmast_43749;Erzbergerstr. 4;Dortmund;44135;DE;0;;False;51.510441;7.47347;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542972;Lichtmast_41304;Johannisborn  4 /zw.4-6;Dortmund;44135;DE;0;;False;51.51797;7.468614;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542973;Lichtmast_41227;Bischofsgasse 1 /Reinold;Dortmund;44135;DE;0;;False;51.516147;7.467696;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542975;Lichtmast_43750;Erzbergerstr. 8 /zw.8-10;Dortmund;44135;DE;0;;False;51.512113;7.470997;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542982;Lichtmast_43958;Klosterstr 15;Dortmund;44135;DE;0;;False;51.515769;7.47103;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542983;Lichtmast_46431;Kleine Gildenstr 11;Dortmund;44263;DE;0;;False;51.48426;7.4958;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542984;Lichtmast_46440;Ermlinghofer Str 18;Dortmund;44263;DE;0;;False;51.483864;7.494942;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542986;Lichtmast_74692_;AM SCHALLACKER 15;Dortmund;44263;DE;0;;False;51.48911;7.496761;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542987;Lichtmast_40375;Dudenstr. 18/1.nw;Dortmund;44137;DE;0;;False;51.508179;7.459259;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542988;Lichtmast_40371;Dudenstr. 6;Dortmund;44137;DE;0;;False;51.507922;7.460004;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542989;Lichtmast_40370;Dudenstr. 12;Dortmund;44137;DE;0;;False;51.508297;7.459285;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542990;Lichtmast_36950;Gustavstr. 8;Dortmund;44137;DE;0;;False;51.511873;7.453632;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542992;Lichtmast_46558;Am Schallacker 21;Dortmund;44263;DE;0;;False;51.48903;7.496191;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542995;Lichtmast_46611;Dessauerstr 20;Dortmund;44263;DE;0;;False;51.493286;7.493165;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542997;Lichtmast_46618;Auf Der Kluse 14/gü;Dortmund;44263;DE;0;;False;51.492895;7.494898;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542998;Lichtmast_46622;Eckardtstr. 6;Dortmund;44263;DE;0;;False;51.487062;7.503162;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+542999;Lichtmast_46719;Hilgenstockstr 13;Dortmund;44263;DE;0;;False;51.495279;7.495488;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+543033;Lichtmast_48451;Chattenstr 15;Dortmund;44263;DE;0;;False;51.485685;7.497188;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+543042;Lichtmast_68132;Am Schallacker 9;Dortmund;44263;DE;0;;False;51.489203;7.497359;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+543045;Lichtmast_74692;Am Schallacker 15;Dortmund;44263;DE;0;;False;51.48911;7.496761;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+543046;Lichtmast_74713;Seydlitzstr 29;Dortmund;44263;DE;0;;False;51.492734;7.494932;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+543047;Lichtmast_35669;Singerhoffstr 56;Dortmund;44225;DE;0;;False;51.470945;7.439862;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+685220;Lichtmast_19156;ESCHENSTR 7;Dortmund;44225;DE;0;;False;51.474949;7.434396;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+685221;Lichtmast_19253;HOMBRUCHER STR 42;Dortmund;44225;DE;0;;False;51.477601;7.436545;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+685222;Lichtmast_35793;KUNTZESTR 8;Dortmund;44225;DE;0;;False;51.473933;7.446833;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+685223;Lichtmast_35754;KUNTZESTR 50;Dortmund;44225;DE;0;;False;51.47419;7.443205;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+685224;Lichtmast_19154;LEOSTR 32;Dortmund;44225;DE;0;;False;51.474553;7.433559;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+685225;Lichtmast_19161;LEOSTR 40;Dortmund;44225;DE;0;;False;51.474475;7.432372;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+687247;Lichtmast_46454;Am Richterbusch 6/gü;Dortmund;44263;DE;0;;False;51.502831;7.410665;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+687249;Lichtmast_26383;Stiftskamp 18;Dortmund;44263;DE;0;;False;51.486814;7.504407;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+687250;Lichtmast_26382;Stiftskamp 22;Dortmund;44263;DE;0;;False;51.486427;7.504057;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+687251;Lichtmast_46469;Chattenstr. 9;Dortmund;44263;DE;0;;False;51.48561;7.4968;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+687253;Lichtmast_46510;Nervierstr 14;Dortmund;44265;DE;0;;False;51.48667;7.494596;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+700820;Lichtmast_47332;AM OSTPARK 3 /ö;Dortmund;44135;DE;0;;False;51.511708;7.493495;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700822;Lichtmast_43880;ARNDTSTR 60a;Dortmund;44135;DE;0;;False;51.512721;7.480761;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700823;Lichtmast_47324;CALVINSTR 36;Dortmund;44135;DE;0;;False;51.512335;7.490975;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700824;Lichtmast_47416;DAVIDISSTR 33;Dortmund;44135;DE;0;;False;51.512937;7.495533;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700825;Lichtmast_47417;DAVIDISSTR 39;Dortmund;44135;DE;0;;False;51.512934;7.496149;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700826;Lichtmast_47413;DAVIDISSTR 47;Dortmund;44135;DE;0;;False;51.512932;7.497242;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700827;Lichtmast_48612;DAVIDISSTR 49 /Reichs;Dortmund;44135;DE;0;;False;51.512986;7.497788;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700828;Lichtmast_47242;DUESSELDORFER STR 42;Dortmund;44135;DE;0;;False;51.510423;7.487822;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700829;Lichtmast_47216;DUESSELDORFER STR 66;Dortmund;44135;DE;0;;False;51.509236;7.488282;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700830;Lichtmast_47463;GUENTHERSTR 128;Dortmund;44135;DE;0;;False;51.51657;7.489759;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700831;Lichtmast_47466;GUENTHERSTR 118 /Kloen;Dortmund;44135;DE;0;;False;51.516451;7.488638;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700832;Lichtmast_47464;GUENTHERSTR 3. östlich;Dortmund;44135;DE;0;;False;51.516508;7.489175;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700833;Lichtmast_47448;GUENTHERSTR 3 westlich;Dortmund;44135;DE;0;;False;51.516307;7.486348;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700834;Lichtmast_47459;GUENTHERSTR 54 /ö;Dortmund;44135;DE;0;;False;51.516265;7.484081;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700835;Lichtmast_47449;GUENTHERSTR 69 /gü;Dortmund;44135;DE;0;;False;51.516298;7.485815;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700836;Lichtmast_43920;HANS-LITTEN-STR 4;Dortmund;44135;DE;0;;False;51.514212;7.475311;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700838;Lichtmast_47241;IM GRUBENFELD 28;Dortmund;44135;DE;0;;False;51.509485;7.486928;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700839;Lichtmast_47211;IM GRUBENFELD 32;Dortmund;44135;DE;0;;False;51.509114;7.487087;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700840;Lichtmast_47526;INSELSTR 2;Dortmund;44135;DE;0;;False;51.519569;7.485162;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700841;Lichtmast_47528;INSELSTR 12;Dortmund;44135;DE;0;;False;51.519152;7.486057;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700842;Lichtmast_47530;INSELSTR 2nw 18 /Kl;Dortmund;44135;DE;0;;False;51.518726;7.486974;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700843;Lichtmast_47529;INSELSTR  3nw 18 /K;Dortmund;44135;DE;0;;False;51.518929;7.486532;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700844;Lichtmast_47569;KOERNEBACHSTR 53;Dortmund;44135;DE;0;;False;51.51972;7.485203;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700846;Lichtmast_47570;KOERNEBACHSTR 65;Dortmund;44135;DE;0;;False;51.519875;7.486287;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700847;Lichtmast_47572;KOERNEBACHSTR 73;Dortmund;44135;DE;0;;False;51.519947;7.486836;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700848;Lichtmast_47574;KOERNEBACHSTR 79;Dortmund;44135;DE;0;;False;51.520026;7.487377;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700849;Lichtmast_47576;KOERNEBACHSTR 94 /Kloenn;Dortmund;44135;DE;0;;False;51.520179;7.488476;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700850;Lichtmast_47575;KOERNEBACHSTR 85 /Kloenn;Dortmund;44135;DE;0;;False;51.52011;7.487974;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700851;Lichtmast_48596;LANGE REIHE 17;Dortmund;44135;DE;0;;False;51.510378;7.497952;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+700852;Lichtmast_48597;LANGE REIHE 19;Dortmund;44135;DE;0;;False;51.510359;7.49851;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+707711;Lichtmast_68131;Am Schallacker 3;Dortmund;44263;DE;0;;False;51.489322;7.498553;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+718054;Lichtmast_27538;Speyerstr 3 /w;Dortmund;44135;DE;0;;False;51.599951;7.503603;DEW21 GmbH;+4923170097799;True
+718056;Lichtmast_27539;Speyerstr 7 /zw.7-9;Dortmund;44135;DE;0;;False;51.520173;7.504058;DEW21 GmbH;+4923170097799;True
+718057;Lichtmast_27543;Speyerstr 13;Dortmund;44135;DE;0;;False;51.520322;7.504435;DEW21 GmbH;+4923170097799;True
+720782;Lichtmast_27544;Speyerstr 17;Dortmund;44135;DE;0;;False;51.520478;7.50483;DEW21 GmbH;+4923170097799;True
+720784;Lichtmast_43832;PRINZ-FRIEDRICH-KARL-STR 13;Dortmund;44135;DE;0;;False;51.51169;7.47693;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+720790;Lichtmast_43835;PRINZ-FRIEDRICH-KARL-STR 17;Dortmund;44135;DE;0;;False;51.51166;7.478012;DEW21 GmbH;+4923170097799;True
+720791;Lichtmast_43851;PRINZ-FRIEDRICH-KARL-STR 37;Dortmund;44135;DE;0;;False;51.51158;7.480731;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+720792;Lichtmast_47277;VON-DER-GOLTZ-STR 9;Dortmund;44135;DE;0;;False;51.511028;7.488443;DEW21 GmbH;+4923170097799;True
+720793;Lichtmast_47384;WERDERSTR 7;Dortmund;44135;DE;0;;False;51.514575;7.489761;DEW21 GmbH;+4923170097799;True
+720794;Lichtmast_47406;PRÄSIDENTENSTR 5;Dortmund;44135;DE;0;;False;51.513754;7.49505;DEW21 GmbH;+4923170097799;True
+720795;Lichtmast_47432;MANTEUFFELSTR 5;Dortmund;44135;DE;0;;False;51.514743;7.496204;DEW21 GmbH;+4923170097799;True
+720796;Lichtmast_47483;MANTEUFFELSTR 11;Dortmund;44135;DE;0;;False;51.515112;7.496168;DEW21 GmbH;+4923170097799;True
+720799;Lichtmast_47577;ZINKHÜTTENWEG 4;Dortmund;44135;DE;0;;False;51.519934;7.489305;DEW21 GmbH;+4923170097799;True
+720800;Lichtmast_48598;LANGE REIHE 25;Dortmund;44135;DE;0;;False;51.510338;7.499084;DEW21 GmbH;+4923170097799;True
+721371;Lichtmast_27246;Lange Reihe 124 /gü;Dortmund;44135;DE;0;;False;51.511753;7.507669;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+721373;Lichtmast_27288;Lange Reihe 132 /gü;Dortmund;44135;DE;0;;False;51.511872;7.508166;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+721374;Lichtmast_27300;Lange Reihe 179;Dortmund;44135;DE;0;;False;51.512586;7.51022;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+722597;Lichtmast_72562;LANGE REIHE 53;Dortmund;44135;DE;0;;False;51.510331;7.500179;DEW21 GmbH;+4923170097799;True
+722599;Lichtmast_48610;REICHSWEHRSTR 30;Dortmund;44135;DE;0;;False;51.512462;7.498116;DEW21 GmbH;+4923170097799;True
+722600;Lichtmast_48613;REICHSWEHRSTR 24;Dortmund;44135;DE;0;;False;51.512836;7.498045;DEW21 GmbH;+4923170097799;True
+722601;Lichtmast_48614;REICHSWEHRSTR 18;Dortmund;44135;DE;0;;False;51.513178;7.497971;DEW21 GmbH;+4923170097799;True
+722603;Lichtmast_27330;SPREESTR 15;Dortmund;44135;DE;0;;False;51.513688;7.503011;DEW21 GmbH;+4923170097799;True
+729637;Lichtmast_43596;KARL-ZAHN-STR 6;Dortmund;44141;DE;0;;False;51.505495;7.480976;DEW21 GmbH;+4923170097799;True
+729638;Lichtmast_43597;KARL-ZAHN-STR 11 /gü;Dortmund;44141;DE;0;;False;51.505511;7.481523;DEW21 GmbH;+4923170097799;True
+729639;Lichtmast_43598;KARL-ZAHN-STR 15 /gü;Dortmund;44141;DE;0;;False;51.505529;7.482087;DEW21 GmbH;+4923170097799;True
+729640;Lichtmast_43570;KARL-MARX-STR 53;Dortmund;44141;DE;0;;False;51.504292;7.480486;DEW21 GmbH;+4923170097799;True
+729641;Lichtmast_46850;JÜLICHER STR 8;Dortmund;44141;DE;0;;False;51.500418;7.486023;DEW21 GmbH;+4923170097799;True
+729643;Lichtmast_46966;FRIEDRICH-ENGELS-STR 12;Dortmund;44141;DE;0;;False;51.502589;7.485961;DEW21 GmbH;+4923170097799;True
+729644;Lichtmast_47009;FRIEDRICH-ENGELS-STR 14a;Dortmund;44141;DE;0;;False;51.502735;7.486435;DEW21 GmbH;+4923170097799;True
+729645;Lichtmast_43439;PETRYSTR 9;Dortmund;44141;DE;0;;False;51.503308;7.480161;DEW21 GmbH;+4923170097799;True
+729654;Lichtmast_43443;PETRYSTR 11;Dortmund;44141;DE;0;;False;51.503593;7.480606;DEW21 GmbH;+4923170097799;True
+729655;Lichtmast_43587;WENKERSTR 13;Dortmund;44141;DE;0;;False;51.505763;7.477882;DEW21 GmbH;+4923170097799;True
+729656;Lichtmast_43588;WENKERSTR 19;Dortmund;44141;DE;0;;False;51.50536;7.477753;DEW21 GmbH;+4923170097799;True
+729657;Lichtmast_46791;MENDESTR 5 /Baeumer;Dortmund;44141;DE;0;;False;51.498491;7.484935;DEW21 GmbH;+4923170097799;True
+729659;Lichtmast_46988;OVERBECKSTR 6;Dortmund;44141;DE;0;;False;51.502319;7.487554;DEW21 GmbH;+4923170097799;True
+729660;Lichtmast_47006;OVERBECKSTR 22;Dortmund;44141;DE;0;;False;51.503548;7.486673;DEW21 GmbH;+4923170097799;True
+729662;Lichtmast_27448;PADERBORNER STR 129;Dortmund;44135;DE;0;;False;51.51573;7.511884;DEW21 GmbH;+4923170097799;True
+732693;Lichtmast_47407;PRÄSIDENTENSTR 6;Dortmund;44135;DE;0;;False;51.51375;7.49513;DEW21 GmbH;+4923170097799;True
+741582;Lichtmast_47247;VON-DER-GOLTZ-STR 21;Dortmund;44135;DE;0;;False;51.510321;7.488678;DEW21 GmbH;+4923170097799;True
+743512;Lichtmast_43593;KARL-ZAHN-STR 2;Dortmund;44141;DE;0;;False;51.505472;7.480384;DEW21 GmbH;+4923170097799;True
+747323;Lichtmast_46797;WINTERFELDTSTR 18;Dortmund;44141;DE;0;;False;51.499101;7.482785;DEW21 GmbH;+4923170097799;True
+747324;Lichtmast_46752;MENDESTR 9;Dortmund;44141;DE;0;;False;51.498206;7.485374;DEW21 GmbH;+4923170097799;True
+754952;Lichtmast_46927;RAUDESTR 37;Dortmund;44141;DE;0;;False;51.49996;7.494856;DEW21 GmbH;+4923170097799;True
+754953;Lichtmast_46930;RAUDESTR 35;Dortmund;44141;DE;0;;False;51.500367;7.495102;DEW21 GmbH;+4923170097799;True
+772320;Lichtmast_43189;WINTERFELDTSTR 28;Dortmund;44141;DE;0;;False;51.499026;7.482187;Dortmunder Energie- und Wasserversorgung GmbH;+4923170097799;True
+772323;Lichtmast_47092;KULLRICHSTR 40 /gü /De;Dortmund;44141;DE;0;;False;51.505377;7.488644;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+772324;Lichtmast_47093;KULLRICHSTR 38 /gü;Dortmund;44141;DE;0;;False;51.505178;7.489028;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+772325;Lichtmast_47032;LENSINGSTR 18;Dortmund;44141;DE;0;;False;51.50252;7.495961;Dortmunder Energie- und Wasserversorgung;+4923170097799;True
+168;OBI Markt Bonn-Nord;Bornheimer Straße 166;Bonn;53119;DE;0;OBI Markt Bonn-Nord;False;50.738455;7.080825;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+13569;Moltkestraße ;Moltkestraße  38a;Bonn;53173;DE;0;Stadt Bonn;False;50.685357;7.15631;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+13570;Rathausstraße;Rathausstraße 12;Bonn;53225;DE;0;Stadt Bonn;False;50.739694;7.120194;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+13890;Stadthaus Garage;Weiherstraße 6;Bonn;53111;DE;0;;False;50.736914;7.093645;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+14858;Ahrstraße;Ahrstraße  45;Bonn;53175;DE;0;Stadt Bonn;False;50.69918;7.15068;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+14860;Bertha-von-Suttner-Platz;Bertha-von-Suttner-Platz 8;Bonn;53111;DE;0;Stadt Bonn;False;50.737311;7.102781;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+14861;Europastraße;Europastraße  6;Bonn;53175;DE;0;Stadt Bonn;False;50.704462;7.155334;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+15147;WCCB Parkhaus;Karl-Carstens-Straße 7;Bonn;53113;DE;0;Bonn Conference Center Management GmbH;False;50.718465;7.121506;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+15714;Clemens-August-Straße;Clemens-August-Straße 74;Bonn;53115;DE;0;Stadt Bonn;False;50.721286;7.087729;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+15715;Hausdorffstraße;Hausdorffstraße 158;Bonn;53129;DE;0;Stadt Bonn;False;50.712525;7.108518;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+15716;Kölnstraße;Kölnstraße 488;Bonn;53117;DE;0;Stadt Bonn;False;50.754477;7.070825;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+15717;Celsiustraße;Celsiusstraße  43;Bonn;53125;DE;0;Stadt Bonn;False;50.699595;7.057955;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+15718;Marktgarage (Tiefgarage);Stockenstraße  7;Bonn;53113;DE;0;;False;50.735369;7.101521;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+492287116230;True
+18248;Theaterstraße;Theaterstraße 60;Bonn;53111;DE;0;;False;50.740078;7.10337;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+18584;Kurt-Schumacher-Straße;Kurt-Schumacher-Straße 14;Bonn;53113;DE;0;Stadt Bonn;False;50.716913;7.126952;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+18586;Rochusstraße 176;Rochusstraße 176 - 178;Bonn;53123;DE;0;Stadt Bonn;False;50.715453;7.050392;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+18588;Grootestraße ;Grootestraße 23;Bonn;53121;DE;0;Stadt Bonn;False;50.737611;7.047639;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+18612;Paulusplatz;Paulusplatz 10;Bonn;53119;DE;0;Stadt Bonn;False;50.74548;7.06713;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+18614;Siegburger Straße;Siegburger Straße 151;Bonn;53229;DE;0;Stadt Bonn;False;50.745111;7.140556;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+20200;Beethoven Tiefgarage Stadtwerke Bonn;Engeltalstraße 2;Bonn;53111;DE;0;Bonner City Parkraum GmbH;False;50.739346;7.103235; Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+59112;RKG Bonn;Bornheimer Straße  200;Bonn;53119;DE;0;;False;50.739315;7.078573;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;False
+59334;Stiftsplatz;Stiftsplatz 9;Bonn;53111;DE;0;Stadt Bonn;False;50.73931;7.101997;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+76596;RKG Euskirchen;Kölner Straße 245;Euskirchen;53879;DE;0;;False;50.669022;6.806572;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+76598;RKG Siegburg;Wahnbachtalstraße  20;Siegburg;53721;DE;0;;False;50.790514;7.227272;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+79120;RKG Linz;Asbacher Straße 119;Linz;53545;DE;0;;False;50.573929;7.292568;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+122718;Magdalenenplatz;Magdalenenstraße 6;Bonn;53121;DE;0;;False;50.726556;7.073812;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+132194;Margaretenstraße;Margaretenstraße 1;Bonn;53175;DE;0;;False;50.698021;7.126164;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+132196;Quirinusplatz;Quirinusplatz 5;Bonn;53129;DE;0;;False;50.704478;7.112708;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+140896;Koblenzer Straße;Koblenzer Straße 67;Bonn;53177 ;DE;0;;False;50.683244;7.156864;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+154718;Vorgebirgsstraße;Vorgebirgsstraße 42;Bonn;53111;DE;0;;False;50.739699;7.0883;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+154976;Redeker Sellner Dahs;Willy-Brandt-Allee 11;Bonn;53113;DE;0;;False;50.717343;7.121193;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+159356;Im großen Garten;Im großen Garten 1;Bonn;53117;DE;0;;False;50.759143;7.057747;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+260468;Autohaus Nolden;Obernierstraße  15;Bonn;53119;DE;0;;False;50.746125;7.081571;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;False
+271084;Welschnonnenstraße Schnellladestation;Welschnonnenstraße 16;Bonn;53111;DE;0;;False;50.740652;7.101548;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+273726;Am Jesuitenhof;Am Jesuitenhof 1;Bonn;53117;DE;0;;False;50.748745;7.09891;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+273728;Christian-Lassen-Straße;Christian-Lassen-Straße  5;Bonn;53117;DE;0;;False;50.752676;7.059136;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+273730;Königswinterer Straße 646;Königswinterer Straße 646;Bonn;53227;DE;0;;False;50.712846;7.166102;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+273732;Basketsring;Basketsring 2;Bonn;53123;DE;0;;False;50.705629;7.059247;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+273734;In der Wehrhecke;In der Wehrhecke 6;Bonn;53125;DE;0;;False;50.677005;7.071644;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+273736;Ramersdorf P+R;Oberkasseler Straße 2;Bonn;53227;DE;0;;False;50.722733;7.155661;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+278342;Akazienweg;Akazienweg 2-10;Bonn;53177;DE;0;;False;50.663846;7.154586;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+278344;Roncallistraße; Roncallistraße 49;Bonn;53123;DE;0;;False;50.722486;7.043719;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+278346;Joseph-Schumpeter-Allee;Joseph-Schumpeter-Allee 19;Bonn;53227;DE;0;;False;50.719384;7.151313;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+278348;Caspar-David-Friedrich-Straße;Caspar-David-Friedrich-Straße 7;Bonn;53125;DE;0;;False;50.692274;7.064274;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+309160;Unigarage (Tiefgarage);Regina-Pacis-Weg 3;Bonn;53113;DE;0;;False;50.734127;7.104236;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+324480;Parkhaus Rabinstraße;Rabinstraße 1;Bonn;53113;DE;0;;False;50.733092;7.094547;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+379402;Emil-Nolde-Straße DC;Emil-Nolde-Straße 2;Bonn;53113;DE;0;;False;50.714934;7.119908;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+379408;Mackestraße DC;Mackestraße 2;Bonn;53119;DE;0;;False;50.743964;7.080033;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+379410;Karlrobert-Kreiten-Straße DC;Karlrobert-Kreiten-Straße 3;Bonn;53115;DE;0;;False;50.724618;7.089442;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+379412;Josef-Wirmer-Straße DC;Josef-Wirmer-Straße 3;Bonn;53123;DE;0;;False;50.704864;7.057435;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+384434;Brunnenplatz (Drachenburgstraße);Drachenburgstraße  87;Bonn;53179;DE;0;;False;50.664578;7.171112;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+384450;Clemensstraße;Clemensstraße 8;Bonn;53225;DE;0;;False;50.748027;7.117445;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+384464;Europaring;Europaring 54;Bonn;53123;DE;0;;False;50.711394;7.031717;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+384476;Hardtbergstraße;Hardtbergstraße 2-6;Bonn;53127;DE;0;;False;50.710386;7.066662;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+384500;Königswinterer Straße 315;Königswinterer Straße 315;Bonn;53227;DE;0;;False;50.727514;7.147341;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+385846;Marktstraße;Marktstraße 35;Bonn;53229;DE;0;;False;50.744675;7.153573;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+386304;Mirecourtstraße;Mirecourtstraße  12;Bonn;53225;DE;0;;False;50.744671;7.118414;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+386308;Ollenhauerstraße;Ollenhauerstraße 1;Bonn;53113;DE;0;;False;50.710249;7.126047;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+386312;Sertürnerstraße;Sertürnerstraße 39;Bonn;53127;DE;0;;False;50.703038;7.097346;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+386316;Wilfried-Hatzfeld-Straße;Wilfried-Hatzfeld-Straße 2;Bonn;53229;DE;0;;False;50.756163;7.146412;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+442034;Bahnhofgarage;Münsterstraße 6;Bonn;53111;DE;0;;False;50.733861;7.095951;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522597;Einsteinstraße;Einsteinstraße  2-4;Bonn;53123;DE;0;;False;50.72206;7.054368;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522598;Erich-Hoffmann-Straße;Erich-Hoffmann-Straße  12;Bonn;53121;DE;0;;False;50.726828;7.067639;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522600;Trierer Str. ;Trierer Str.  53;Bonn;53115;DE;0;;False;50.716692;7.086443;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522601;Bonner Talweg;Bonner Talweg 100;Bonn;53113;DE;0;;False;50.722599;7.103991;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522602;Winterstraße ;Winterstraße  1;Bonn;53177;DE;0;;False;50.683627;7.149947;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522603;Waldstraße/Venner Str. ;Waldstraße  Ecke Venne;Bonn;53177;DE;0;;False;50.681957;7.137471;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522604;Meckenheimer Str.;Meckenheimer Str. 2;Bonn;53179;DE;0;;False;50.661003;7.191467;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522605;Römerplatz;Römerplatz 9;Bonn;53173;DE;0;;False;50.684623;7.168804;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522606;Königsplatz;Königsplatz 15;Bonn;53173;DE;0;;False;50.686425;7.159584;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522607;Rudolf-Hahn-Str.;Rudolf-Hahn-Straße  73;Bonn;53225;DE;0;;False;50.728404;7.12778;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522608;Hans-Böckler-Str.;Hans-Böckler-Straße  5;Bonn;53225;DE;0;;False;50.740036;7.122011;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522609;Paul-Langen-Str.;Paul-Langen-Straße  44;Bonn;53229;DE;0;;False;50.744536;7.175046;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+522610;Julius-Palm-Str.;Julius-Palm-Straße  16;Bonn;53225;DE;0;;False;50.760302;7.124017;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560240;Wilhelmplatz ;Wilhelmstraße  5;Bonn;53111;DE;0;;False;50.740439;7.099726;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560241;Adolfstraße;Adolfstraße  2;Bonn;53111;DE;0;;False;50.737176;7.088251;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560242;Am Boeselagerhof;Am Boeselagerhof 7;Bonn;53111;DE;0;;False;50.736538;7.105981;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560243;Kaiserplatz;Kaiserplatz 5;Bonn;53111;DE;0;;False;50.732073;7.101616;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560244;Weberstraße ;Weberstraße  108;Bonn;53113;DE;0;;False;50.726009;7.102315;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560245;Bungartstraße ;Bungartstraße  16;Bonn;53111;DE;0;;False;50.745746;7.093891;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560246;Arndtstraße ;Arndtstraße  4;Bonn;53113;DE;0;;False;50.725356;7.11058;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560247;Adenauerallee 24;Adenauerallee 24;Bonn;53113;DE;0;;False;50.730061;7.108343;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560248;Adenauerallee 168;Simrockstraße 1;Bonn;53113;DE;0;;False;50.7212;7.114626;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+560249;Königstraße ;Königstraße  7;Bonn;53113;DE;0;;False;50.728655;7.102916;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+564258;Gotenstraße;Gotenstraße  1;Bonn;53175;DE;0;;False;50.695468;7.160823;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+594099;Volksbank Heinemannstraße Außenbereich;Heinemannstraße 15;Bonn;53175;DE;0;;False;50.706342;7.143038;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+689364;Duisdorf Bahnhof DC;Ladestraße  1;Bonn;53123;DE;0;;False;50.71604;7.041943;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+689366;Beethovenallee DC;Beethovenallee 1;Bonn;53173;DE;0;;False;50.685825;7.157019;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+705417;Stiftsgarage;Kölnstraße  10-16;Bonn;53111;DE;0;;False;50.73846;7.101236;Energie- und Wasserversorgung Bonn/Rhein-Sieg GmbH;+498004393030;True
+179226;018 - Parkhaus Stadthaus 3;Kiesekamps Mühle 1;Münster;48155;DE;0;;False;51.949327;7.641078;Stadtwerke Münster GmbH;+492516946944;True
+180704;003 - Parkhaus Engelenschanze;Engelstr. 49;Münster;48143;DE;0;;False;51.955953;7.631389;Stadtwerke Münster GmbH;+492516946944;True
+181232;008 - Parkplatz Ludgeriplatz;Ludgeripatz 2;Münster;48149;DE;0;;False;51.955681;7.627244;Stadtwerke Münster GmbH;+492516946944;True
+181234;009 - Parkplatz Servatiiplatz;Servatiiplatz -;Münster;48143;DE;0;;False;51.959811;7.635289;Stadtwerke Münster GmbH;+492516946944;True
+181238;007 - Parkplatz MEET - Münster Electrochemical Energy Technology;Corrensstr. 46;Münster;48149;DE;0;;False;51.96863;7.60158;Stadtwerke Münster GmbH;+492516946944;True
+181246;006 - Parkhaus Alter Steinweg;Alter Steinweg 21;Münster;48143;DE;0;;False;51.962039;7.632006;Stadtwerke Münster GmbH;+492516946944;True
+181248;004 - Parkhaus Münster Akaden;Königsstr. / Ludgeristr.1 9;Münster;48155;DE;0;;False;51.959686;7.62635;Stadtwerke Münster GmbH;+492516946944;True
+182656;002 - Parkplatz Super Bio Markt;Grevener Str. 61a;Münster;48149;DE;0;;False;51.9715;7.612086;Stadtwerke Münster GmbH;+492516946944;True
+182660;011 - Parkplatz Leonardo Campus;Johann-Krane-Weg 18;Münster;48149;DE;0;;False;51.975428;7.599331;Stadtwerke Münster GmbH;+492516946944;True
+184496;020 - Parkplatz Arbeiter-Samariter-Bund;Gustav-Stresemann-Weg 62;Münster;48155;DE;0;;False;51.93142;7.647657;Stadtwerke Münster GmbH;+492516946944;True
+291768;015 - Halle Münsterland;Albersloher Weg 32;Münster;48155;DE;0;;False;51.948579;7.637086;Stadtwerke Münster GmbH;+492516946944;True
+385728;030 - Marktallee 83 - LOOP;Marktallee 83;Münster;48155;DE;0;;False;51.905062;7.651005;Stadtwerke Münster GmbH;+492516946944;True
+385738;029 - Kappenberger Damm - LOOP;Kappenberger Damm 149;Münster;48163;DE;0;;False;51.931427;7.606983;Stadtwerke Münster GmbH;+492516946944;True
+414132;031 - Ottmarsbocholter Str. - LOOP;Ottmarsbocholter Str. 1;Münster-Amelsbüren;48163;DE;0;;False;51.882345;7.605849;Stadtwerke Münster GmbH;+492516946944;True
+516598;032 - Bahnhof Hiltrup;Bergiusstr. Bahnhof;Münster-Hiltrup;48165;DE;0;;False;51.905029;7.653517;Stadtwerke Münster GmbH;+492516946944;True
+520047;034 - Landwirtschaftsverlag Münster-Hiltrup;Hülsebrockstr. 10;Münster-Hiltrup;48165;DE;0;;False;51.906581;7.650359;Stadtwerke Münster GmbH;+492516946944;True
+520048;035 - Ringhotel Eggert;Zur Haskenau 81;Münster-Handorf;48157;DE;0;;False;52.016367;7.6897;Stadtwerke Münster GmbH;+492516946944;True
+708146;038 - PSD-Bank;Hafenplatz 2;Münster-Hafen;48155;DE;0;;False;51.951548;7.636888;Stadtwerke Münster GmbH;+492516946944;True
+721369;040-Tiefgarage-Clemenshospital;Düesbergweg 124;Münster;48153;DE;0;;False;51.9325;7.61563;Stadtwerke Münster GmbH;+492516946944;True
+732244;042- Meyerbeerstr.;Meyerbeerstr. 32-38;Münster Mecklenbeck;48163;DE;0;;False;51.926007;7.577724;Stadtwerke Münster GmbH;+492516946944;True
+10168;Kiel_Mittelstraße;Mittelstraße 5;Kiel;24103;DE;0;;False;54.329539;10.131165;Stadtwerke Kiel AG;+498004393030;True
+10169;Kiel_Stephan-Heinzel-Straße;Stephan-Heinzel-Straße 2;Kiel;24116;DE;0;;False;54.322811;10.121924;Stadtwerke Kiel AG;+498004393030;True
+10170;Kiel_Blücherplatz;Blücherstraße 2;Kiel;24105;DE;0;;False;54.342056;10.136843;Stadtwerke Kiel AG;+498004393030;True
+10172;Kiel_Waisenhofstraße;Waisenhofstraße 5;Kiel;24103;DE;0;;False;54.321711;10.132334;Stadtwerke Kiel AG;+498004393030;True
+10173;Kiel_Sparkasse;Lorentzendamm 30;Kiel;24103;DE;0;;False;54.325906;10.134843;Stadtwerke Kiel AG;+498004393030;True
+10174;Kiel_CITTI-PARK ;Mühlendamm 1;Kiel;24113;DE;0;;False;54.312325;10.09947;Stadtwerke Kiel AG;+498004393030;False
+10208;Kiel_Betriebshof Hassee P5 (Öffentlich);Uhlenkrog 32;Kiel;24113;DE;0;;False;54.30973;10.096861;Stadtwerke Kiel AG;+498004393030;True
+13000;Kiel_An der Schanze;An der Schanze 38;Kiel;24159;DE;0;;False;54.394234;10.174605;Stadtwerke Kiel AG;+498004393030;True
+15050;Kiel_Drachenbahn;Drachenbahn 12;Kiel;24159;DE;0;;False;54.42847;10.168053;Stadtwerke Kiel AG;+498004393030;True
+15051;Kiel_Am Seefischmarkt;Am Seefischmarkt 9;Kiel;24148;DE;0;;False;54.325786;10.179754;Stadtwerke Kiel AG;+498004393030;True
+15054;Kiel_Gutenbergstraße;Gutenbergstraße 16;Kiel;24118;DE;0;;False;54.332268;10.124864;Stadtwerke Kiel AG;+498004393030;True
+15055;Kiel_Sophienblatt;Sophienblatt 48;Kiel;24114;DE;0;;False;54.314002;10.130271;Stadtwerke Kiel AG;+498004393030;True
+15275;Kiel_Elisabethstraße;Elisabethstraße 28;Kiel;24143;DE;0;;False;54.314645;10.148645;Stadtwerke Kiel AG;+498004393030;True
+15276;Kiel_Kanalstraße;Kanalstraße 39;Kiel;24159;DE;0;;False;54.369931;10.142282;Stadtwerke Kiel AG;+498004393030;True
+22476;Kiel_EDEKA_Flintbek;Dorfstraße 14;Flintbek;24220;DE;0;;False;54.238184;10.069554;Stadtwerke Kiel AG;+498004393030;True
+22482;Kiel_Strandhotel Strande;Strandstraße 21;Strande;24229;DE;0;;False;54.437207;10.173333;Stadtwerke Kiel AG;+498004393030;True
+22484;Kiel_Stadtwerke Schwentinental;Mergenthalerstraße 24;Schwentinental;24223;DE;0;;False;54.288406;10.220498;Stadtwerke Kiel AG & Stadtwerke Schwentinental;+498004393030;True
+22566;Kiel_Parkhaus Wunderinoarena;Exerzierplatz 3;Kiel;24103;DE;0;;False;54.321021;10.12947;Stadtwerke Kiel AG;+498004393030;True
+22568;Kiel_Preetz Cathrinplatz;Bahnhofst. 5;Preetz;24211;DE;0;;False;54.234173;10.280439;Stadtwerke Kiel AG;+498004393030;True
+79158;Kiel_Hofholzallee;Hofholzallee 220;Kiel;24109;DE;0;;False;54.317026;10.066623;Stadtwerke Kiel AG;+498004393030;True
+132170;Kiel_Clever Shuttle;Uhlenkrog  32;Kiel;24113;DE;0;;False;54.309817;10.09681;Stadtwerke Kiel AG;+498004393030;True
+154848;Kiel_Freilichtmuseum Molfsee;Hamburger Landstr.  99;Molfsee;24113;DE;0;;False;54.274991;10.076002;Stadtwerke Kiel AG;+498004393030;True
+154850;Kiel_Schülperbaum;Schülperbaum 4;Kiel;24103;DE;0;;False;54.319767;10.12846;Stadtwerke Kiel AG;+498004393030;True
+155014;Kiel_EDEKA Ristow;Am Eksol 18;Mönkeberg;24248;DE;0;;False;54.348474;10.188467;Stadtwerke Kiel AG;+498004393030;True
+155024;Kiel_Franckestraße;Franckestraße 2;Kiel;24105;DE;0;;False;54.33671;10.130927;Stadtwerke Kiel AG;+498004393030;True
+155030;Kiel_Krummbogen;Krummbogen 82a;Kiel;24113;DE;0;;False;54.295565;10.116125;Stadtwerke Kiel AG;+498004393030;True
+155032;Kiel_Ruthkamp;Ruthkamp 71;Kiel;24111;DE;0;;False;54.305614;10.078033;Stadtwerke Kiel AG;+498004393030;True
+155036;Kiel_Rungholtplatz;Rungholtplatz 1-3;Kiel;24107;DE;0;;False;54.361125;10.076935;Stadtwerke Kiel AG;+498004393030;True
+155040;Kiel_Dataport;Altenholzer Str.  10 - 14;Kiel;24161;DE;0;;False;54.40366;10.129771;Stadtwerke Kiel AG;+498004393030;False
+155046;Kiel_Preetz Wilhelminenplatz;Wilhelminenplatz 3;Preetz;24211;DE;0;;False;54.234897;10.279443;Stadtwerke Kiel AG;+498004393030;True
+155048;Kiel_Preetz Garnkorbparkplatz;Garnkorbparkplatz 3-5;Preetz;24211;DE;0;;False;54.236032;10.282135;Stadtwerke Kiel AG;+498004393030;True
+155058;Kiel_Herzog-Friedrich-Str.;Herzog-Friedrich-Str. 32;Kiel;24103;DE;0;;False;54.317752;10.130719;Stadtwerke Kiel AG;+498004393030;True
+155060;Kiel_Langer Segen;Langer Segen 6;Kiel;24105;DE;0;;False;54.329295;10.138453;Stadtwerke Kiel AG;+498004393030;True
+159230;Kiel_MARE Schönkirchen;Söhren  47;Schönkirchen;24232;DE;0;;False;54.3394;10.210254;Stadtwerke Kiel AG;+498004393030;True
+247402;Kiel_Schwentinental Seebrooksberg ;Seebrooksberg 1;Schwentinental;24222;DE;0;;False;54.303474;10.215636;Stadtwerke Kiel AG & Stadtwerke Schwentinental;+498004393030;True
+247404;Kiel_Schwentinental Zum See;Zum See 2;Schwentinental;24223;DE;0;;False;54.283805;10.240877;Stadtwerke Kiel AG & Stadtwerke Schwentinental;+498004393030;True
+273720;Kiel_Heidkate Deichterrassen;Alte Heidkate  20;Wisch;24217;DE;0;;False;54.434469;10.3281;Stadtwerke Kiel AG;+498004393030;True
+283340;Kiel_Steigenberger Conti Hansa;Schloßgarten 7;Kiel;24103;DE;0;;False;54.326443;10.142416;Stadtwerke Kiel AG;+498004393030;True
+291770;Kiel_Charles-Roß-Ring 39;Charles-Roß-Ring 39;Kiel;24106;DE;0;;False;54.356085;10.107383;Stadtwerke Kiel AG;+498004393030;True
+291772;Kiel_Bendixenstraße;Bendixenstraße 0;Kiel;24106;DE;0;;False;54.355977;10.113111;Stadtwerke Kiel AG;+498004393030;True
+291774;Kiel_Charles-Roß-Ring 118;Charles-Roß-Ring 118;Kiel;24106;DE;0;;False;54.358093;10.11031;Stadtwerke Kiel AG;+498004393030;True
+301038;Kiel_Sporthalle Molfsee;Hamburger Chaussee 2;Molfsee;24113;DE;0;;False;54.259484;10.062003;Stadtwerke Kiel AG;+498004393030;True
+315482;Kiel_Technische Fakultät CAU;Kaiserstraße  2;Kiel;24143;DE;0;;False;54.315561;10.152552;Stadtwerke Kiel AG;+498004393030;False
+326206;Kiel_Wisch Strandweg;Strandweg 0;Wisch;24217;DE;0;;False;54.434148;10.318519;Stadtwerke Kiel AG;+498004393030;True
+326208;Kiel_Stein Dorfring;Dorfring 20 a;Stein;24235;DE;0;;False;54.417279;10.269575;Stadtwerke Kiel AG;+498004393030;True
+327390;Kiel_Schönberg Käptn`s Gang;Käptn's Gang 1;Schönberg;24217;DE;0;;False;54.412768;10.414927;Stadtwerke Kiel AG;+498004393030;True
+327392;Kiel_Schönberg Bürgermeister-Wiese-Straße;Bürgermeister-Wiese-Straße 1;Schönberg;24217;DE;0;;False;54.393136;10.373458; Stadtwerke Kiel AG;+498004393030;True
+409942;Kiel_Tiefe Allee;Tiefe Allee 2;Kiel;24149;DE;0;;False;54.329053;10.189741;Stadtwerke Kiel AG;+498004393030;True
+355;"Parkplatz ""eins - Straße der Nationen""";Straße der Nationen  140;Chemnitz;09113;DE;0;;False;50.849506;12.933407;eins energie in sachsen GmbH & Co. KG;+49800111148910;False
+14888;"Parkplatz ""Solaris""";Neefestraße 88;Chemnitz;09116;DE;0;;False;50.819402;12.887048;eins energie in sachsen GmbH & Co. KG;+49800111148910;False
+14889;"Parkhaus ""Galerie Roter Turm""";Theaterstraße 7;Chemnitz;09111;DE;0;;False;50.835223;12.920058;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14891;"Parkhaus ""Galeria Kaufhof""";Am Rathaus 1;Chemnitz;09111;DE;0;;False;50.831822;12.92141;eins energie in sachsen GmbH & Co. KG;+49800111148910;False
+14892;"Parkplatz ""IHK""";Straße der Nationen  25;Chemnitz;09111;DE;0;;False;50.83669;12.92504;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14893;"Parkplatz ""Georgstraße""";Georgstraße 13;Chemnitz;09111;DE;0;;False;50.841012;12.922595;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14894;"Parkplatz ""Autohaus Schloz-Wöllenstein-C""";Werner-Seelenbinder-Straße 11b;Chemnitz;09120;DE;0;;False;50.805651;12.921763;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14895;"Parkplatz ""Handwerkskammer Chemnitz""";Limbacher Straße 195;Chemnitz;09116;DE;0;;False;50.832081;12.87376;eins energie in sachsen GmbH & Co. KG;+49800111148910;False
+14907;"Parkplatz ""Zöllnerplatz""";Zöllnerplatz 1;Chemnitz;09111;DE;0;;False;50.845162;12.925941;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14908;"Parkplatz ""Chemnitzer FC""";Gellertstraße 25;Chemnitz;09130;DE;0;;False;50.841546;12.943657;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14909;"Parkplatz ""Rhenus Logistics""";Paul-Gruner-Straße 56;Chemnitz;09120;DE;0;;False;50.809355;12.910055;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14910;"Parkplatz ""Schönherrfabrik""";Schönherrstraße 8;Chemnitz;09113;DE;0;;False;50.850518;12.921121;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14911;"Parkplatz ""Carl-Bobach-Straße""";Carl-Bobach-Straße 6;Chemnitz;09120;DE;0;;False;50.805173;12.890133;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14912;"Parkplatz ""Alfred-Neubert-Straße""";Alfred-Neubert-Straße 17;Chemnitz;09123;DE;0;;False;50.786366;12.902672;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14913;"Parkplatz ""Autohaus Schneider""";Hilbersdorferstraße 1;Chemnitz;09131;DE;0;;False;50.845823;12.936077;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14914;"Parkplatz ""Further Straße""";Further Straße 41;Chemnitz;09113;DE;0;;False;50.849406;12.926375;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14915;"Parkhaus ""Volksbank Zwickau - Ebene 7""";Georgenstraße 6;Zwickau;08056;DE;0;;False;50.718932;12.49008;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+14916;"Parkplatz ""Neumarkt""";Neumarkt 15;Ehrenfriedersdorf;09427;DE;0;;False;50.64478;12.967971;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22312;"Parkplatz ""Max-Saupe-Straße / Eichendorffstraße""";Max-Saupe-Straße 36;Chemnitz;09131;DE;0;;False;50.86984;12.95907;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22502;"Parkplatz ""Alberti-Park""";Pestalozzistr. 6;Chemnitz;09111;DE;0;;False;50.834913;12.939041;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22506;"Parkplatz ""Rathaus Thalheim""";Hauptstr. 5;Thalheim;09380;DE;0;;False;50.702457;12.851544;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22508;"Parkplatz ""Orthstraße / Zeißstraße""";Orthstr. 9;Chemnitz;09131;DE;0;;False;50.85242;12.94489;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22510;"Parkplatz ""Uhlichstraße""";Uhlichstr. 3;Chemnitz;09112;DE;0;;False;50.83718;12.90896;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22512;"Parkplatz ""Am Karbel""";Am Karbel 65;Chemnitz;09116;DE;0;;False;50.83754;12.88121;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22514;"Parkplatz ""Walter-Oertel-Straße""";Walter-Oertel-Str. 39;Chemnitz;09112;DE;0;;False;50.83386;12.89867;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22516;"Parkplatz ""Schwimmhalle Gablenz""";Augustusburger Str. 195;Chemnitz;09127;DE;0;;False;50.832166;12.956393;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22518;"Parkplatz ""Schauspielhaus""";Zieschestr. 28;Chemnitz;09111;DE;0;;False;50.8287;12.93241;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22520;"Parkplatz ""Carl-von-Ossietzky-Straße 168 b""";Carl-von-Ossietzky-Str. 168 b;Chemnitz;09127;DE;0;;False;50.82197;12.96072;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22522;"Parkplatz ""Pfarrhübel""";Pfarrhübel 29;Chemnitz;09125;DE;0;;False;50.78939;12.933;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+22524;"Parkplatz ""Wasserschloß Klaffenbach""";Gutsweg 1;Chemnitz;09123;DE;0;;False;50.76985;12.88983;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59124;"Parkplatz ""Uhlandstraße 17""";Uhlandstr. 17;Chemnitz;09130;DE;0;;False;50.837506;12.935767;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59126;"Parkplatz ""Jagdschänkenstraße 50""";Jagdschänkenstr. 50;Chemnitz;09117;DE;0;;False;50.80951;12.84202;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59128;"Parkplatz ""Lortzingstraße 47""";Lortzingstr. 47;Chemnitz;09119;DE;0;;False;50.820838;12.90334;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59130;"Parkplatz ""Carl-von-Ossietzky-Straße 21""";Carl-von-Ossietzky-Straße 21;Chemnitz;09126;DE;0;;False;50.823989;12.935642;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59132;"Parkplatz ""Irkutskerstraße 101""";Irkutskerstr. 101;Chemnitz;09119;DE;0;;False;50.81435;12.893807;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59184;"Parkplatz ""Bernsdorfer Straße 130""";Bernsdorfer Straße 130;Chemnitz;09126;DE;0;;False;50.815139;12.943536;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59186;"Parkplatz ""Bruno-Granz-Straße""";Bruno-Granz-Straße 42;Chemnitz;09122;DE;0;;False;50.79494;12.88604;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59188;"Parkplatz ""Robert-Siewert-Straße 22""";Robert-Siewert-Str. 22;Chemnitz;09122;DE;0;;False;50.796875;12.897374;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+59190;"Parkplatz ""Marie-Tilch-Straße 2a""";Marie-Tilch-Str. 2a;Chemnitz;09123;DE;0;;False;50.78326;12.87729;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+136124;"Parkplatz ""Autohaus Klapper""";Neefestraße 147;Chemnitz;09116;DE;0;;False;50.816363;12.88283;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+136128;"Parkplatz ""Autohaus Schloz-Wöllenstein-ANA""";Gewerbering 4;Annaberg-Buchholz;09456;DE;0;;False;50.598644;13.019199;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+136132;"Parkplatz ""Autohaus Schloz-Wöllenstein-FG""";Dresdner Straße 58;Freiberg;09599;DE;0;;False;50.913554;13.368289;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+154858;"Parkplatz ""An den Anlagen""";An den Anlagen 2;Zschopau;09405;DE;0;;False;50.747817;13.07278;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+158968;"Parkplatz ""Autohaus Schloz-Wöllenstein-FR""";An der Autobahn 2;Frankenberg;09669;DE;0;;False;50.918172;13.037873;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+158970;"Parkplatz ""Stadthalle Chemnitz / Carlowitz Congresscenter""";Theaterstraße 3;Chemnitz;09111;DE;0;;False;50.835376;12.920049;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+493548;"Parkplatz ""Am Heizhaus""";Am Heizhaus 19;Zschopau;09405;DE;0;;False;50.756082;13.073106;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+493552;"Parkplatz ""Straubeweg""";Straubeweg 1;Zschopau;09405;DE;0;;False;50.756832;13.069817;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+493554;"Parkplatz ""Schwimmhalle Zschopau""";Launer Ring 9;Zschopau;09405;DE;0;;False;50.754724;13.068593;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+495285;"Parkplatz ""Am Walkgraben""";Am Walkgraben 13;Chemnitz;09119;DE;0;;False;50.827711;12.9132;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+495287;"Mobi-Knoten ""Am alten Flughafen""";Straße Usti nad Labem 19;Chemnitz;09119;DE;0;;False;50.810559;12.89222;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+702951;"Parkplatz ""Hechinger Straße""";Hechinger Str. 4;Limbach-Oberfrohna;09212;DE;0;;False;50.859021;12.762689;eins energie in sachsen GmbH & Co. KG;+49800111148910;True
+122726;SWK ENERGIE Wachtendonk;Friedensplatz 5;Wachtendonk;47669;DE;0;;False;51.409013;6.337781;SWK ENERGIE GmbH;+498004393030;True
+122764;SWK Carsharing Uerdinger 219;Uerdinger Str. 219;Krefeld;47799;DE;0;;False;51.338003;6.585281;SWK ENERGIE GmbH;+498004393030;True
+122766;SWK Carsharing Bahnhofstr 62a;Bahnhofstr. 62 A;Krefeld;47829;DE;0;;False;51.357129;6.647493;SWK ENERGIE GmbH;+498004393030;True
+122768;SWK Carsharing WilhelmStefen 2;Wilhelm-Stefen-Straße 2;Krefeld;47807;DE;0;;False;51.303805;6.589663;SWK ENERGIE GmbH;+498004393030;True
+249986;SWK Carsharing Nordwall 39;Nordwall 39;Krefeld;47798;DE;0;;False;51.337172;6.562039;SWK ENERGIE GmbH;+498004393030;True
+249988;SWK Carsharing Westwall 66;Westwall 66;Krefeld;47798;DE;0;;False;51.33078;6.559226;SWK ENERGIE GmbH;+498004393030;True
+249990;SWK Carsharing Nordwall 131;Nordwall 131;Krefeld;47798;DE;0;;False;51.335101;6.552038;SWK ENERGIE GmbH;+498004393030;True
+266200;SWK Carsharing Bismarkplatz 38;Bismarkplatz 38;Krefeld;47799;DE;0;;False;51.340166;6.576509;SWK ENERGIE GmbH;+498004393030;True
+266202;SWK Carsharing Uerdinger Straße 593;Uerdinger Straße 593;Krefeld;47800;DE;0;;False;51.346019;6.619667;SWK ENERGIE GmbH;+498004393030;True
+269664;SWK Carsharing ST 270;St. Toeniser Str. 270;Krefeld;47804;DE;0;;False;51.32806;6.533057;SWK ENERGIE GmbH;+498004393030;True
+269666;SWK Carsharing ST 124;St. Toeniser Str. 124;Krefeld;47804;DE;0;;False;51.329112;6.538817;SWK ENERGIE GmbH;+498004393030;True
+271072;SWK Carsharing Obergath 79;Obergath 79;Krefeld;47805;DE;0;;False;51.315752;6.568799;SWK ENERGIE GmbH;+498004393030;True
+271076;SWK Carsharing Huelser 167;Huelser Straße 167;Krefeld;47803;DE;0;;False;51.344473;6.549656;SWK ENERGIE GmbH;+498004393030;True
+271080;SWK Carsharing Lewerentzstrasse 118;Lewerentzstrasse 118;Krefeld;47798;DE;0;;False;51.325632;6.558181;SWK ENERGIE GmbH;+498004393030;True
+297074;SWK ENERGIE Inseltank Gutenbergstr. 197;Gutenbergstraße 197;Krefeld;47804;DE;0;;False;51.328791;6.546437;SWK ENERGIE GmbH;+498004393030;True
+326446;SWK ENERGIE Straelen Klosterplatz 6;Klosterplatz 6;Straelen;47638;DE;0;;False;51.443996;6.265382;SWK ENERGIE GmbH;+498004393030;True
+690614;SWK Carsharing Koenigstr. 97;Koenigstr. 97;Krefeld;47798;DE;0;;False;51.331705;6.564344;SWK ENERGIE GmbH;+498004393030;True
+690617;SWK Carsharing Josef-Heinrichs-Str. 3;Josef-Heinrichs-Straße 3;Krefeld;47839;DE;0;;False;51.372453;6.508435;SWK ENERGIE GmbH;+498004393030;True
+380;GBO Parkhaus Opladen;Günther-Weisenborn-Straße 21;Leverkusen;51379;DE;0;;False;51.067973;7.001122;EVL;+498004393030;False
+381;CityCenter Parkgarage;Friedrich-Ebert-Straße 39;Leverkusen;51373;DE;0;;False;51.030486;6.988297;EVL;+498004393030;False
+12928;AVEA Küppersteg;Im Eisholz 3;Leverkusen;51373;DE;0;;False;51.04524;7.002204;EVL;+498004393030;True
+122794;EVL Verwaltung Overfeldweg 53;Overfeldweg 53z;Leverkusen;51371;DE;0;;False;51.043367;6.986449;EVL;+498004393030;True
+269320;ECE Parkhaus Wiesdorf;Friedrich-Ebert-Platz  2c;Leverkusen;51373;DE;0;;False;51.032903;6.987289;EVL;+498004393030;False
+269668;Klinikum Leverkusen;Paracelsusstraße 15;Leverkusen;51375;DE;0;;False;51.032515;7.029548;EVL;+498004393030;True
+269670;Marktplatz Schlebusch;Martin-Luther-Straße 2;Leverkusen;51375;DE;0;;False;51.033387;7.046273;EVL;+498004393030;False
+275036;Königsberger Platz;Insterstraße 9;Leverkusen;51371;DE;0;;False;51.063351;6.955503;EVL;+498004393030;True
+297664;Elberfelder Haus;Hauptstraße  101;Leverkusen;51373;DE;0;;False;51.030984;6.979355;EVL;+498004393030;True
+298070;Mobilspot NBSO;Torstraße 15;Leverkusen;51379;DE;0;;False;51.061855;7.015508;EVL;+498004393030;False
+302464;Marktplatz Opladen;Opladenerplatz  5;Leverkusen;51379;DE;0;;False;51.063934;7.002657;EVL;+498004393030;False
+179910;Stadtwerke Heidelberg Werksgelände;Alte Eppelheimer Straße 3;Heidelberg;69115;DE;0;;False;49.406071;8.680941;Stadtwerke Heidelberg Energie GmbH;+4962215131313;False
+179912;Parkhaus P6 (Kraus);Untere Neckarstraße 2;Heidelberg;69117;DE;0;;False;49.411731;8.696741;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+179918;Parkhaus Pflughof;Hauptstraße 20;Neckargemünd;69151;DE;0;;False;49.392988;8.800113;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180754;Gadamerplatz;Da-Vinci-Straße 0;Heidelberg;69115;DE;0;;False;49.402961;8.665371;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180756;Parkhaus P16 (Nordbrückenkopf);Brückenkopfstraße 1/1;Heidelberg;69120;DE;0;;False;49.413417;8.692521;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180758;Johannes-Gutenberg-Schule;Wieblinger Weg 24;Heidelberg;69115;DE;0;;False;49.409399;8.661824;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180760;Patton Ostloop;Kirchheimer Weg 4;Heidelberg;69124;DE;0;;False;49.394544;8.676054;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180762;Stadtwerke Heidelberg Alte Eppelheimer Straße;Alte Eppelheimer Straße 3;Heidelberg;69115;DE;0;;False;49.406425;8.68138;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180764;Sickingenstraße;Sickingenstraße 55;Heidelberg;69126;DE;0;;False;49.384106;8.680903;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180766;Steinbachhalle;Am Fürstenweiher 40;Heidelberg;69118;DE;0;;False;49.428055;8.748026;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180768;Parkhaus P10 Friedrich-Ebert-Platz;Friedrich-Ebert-Platz 3;Heidelberg;69117;DE;0;;False;49.408464;8.698455;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180770;Rufinusplatz;Rufinusplatz 0;Heidelberg;69120;DE;0;;False;49.415501;8.678133;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180772;Halle 02;Max-Jarecki-Straße 0;Heidelberg;69115;DE;0;;False;49.40205;8.672877;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180774;Gregor Mendel Realschule;Pleikartsförster Straße 130;Heidelberg;69124;DE;0;;False;49.387181;8.664742;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180776;Tiergartenbad;Tiergartenstraße 13;Heidelberg;69120;DE;0;;False;49.41964;8.659545;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180778;Parkhaus Zoo;Tiergartenstraße 3;Heidelberg;69120;DE;0;;False;49.414872;8.66474;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180780;P+R Kirchheim Friedhof;Heuauer Weg 0;Heidelberg;69124;DE;0;;False;49.376185;8.65822;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180782;Bahnhofstraße;Bahnhofstraße 0;Heidelberg;69115;DE;0;;False;49.405094;8.685464;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+180784;Fashion Park Nußloch;Max-Berk-Straße 20;Nußloch;69226;DE;0;;False;49.331695;8.684364;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+245122;Parkhaus Mathematikon Neu;Im Neuenheimer Feld 205;Heidelberg;69120;DE;0;;False;49.418749;8.675251;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+246236;An der Steige;An der Steige -;Neckargemünd-Dilsberg;69151;DE;0;;False;49.397422;8.837338;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+298078;Racket Center Nußloch;Walldorfer Str. 100;Nußloch;69226;DE;0;;False;49.317232;8.675514;Racket Center Nußloch GmbH & CO. KG;+4962215131313;True
+415684;TSG Rohrbach - Erlenweg 26;Erlenweg 26;Heidelberg;69124;DE;0;;False;49.374344;8.676609;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+415686;Fritz-Frey-Straße ;Fritz-Frey-Straße 10;Heidelberg;69121;DE;0;;False;49.434952;8.681151;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+442024;Ahornweg;Ahornweg 1;Heidelberg;69124;DE;0;;False;49.378716;8.677192;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+442026;Berghalde ;Berghalde 11;Heidelberg;69126;DE;0;;False;49.380024;8.704141;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+442028;Thermalbad-Vangerowstraße;Vangerowstraße 4;Heidelberg;69115;DE;0;;False;49.408882;8.678966;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+490239;Steigerweg ;Steigerweg 25;Heidelberg;69115;DE;0;;False;49.399062;8.692608;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+490240;Lothar-Wiegand-Ring;Lothar-Wiegand-Ring 60;Eppelheim;69214;DE;0;;False;49.403815;8.618701;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+490241;Jellinekstraße ;Jellinekstraße 28;Heidelberg;69126;DE;0;;False;49.360468;8.705494;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+490242;Slevogtstraße;Slevogtstraße 1;Heidelberg;69115;DE;0;;False;49.393803;8.688365;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+490244;nahkauf - Breslauer Straße/Königsberger Straße;Breslauer Straße 26;Heidelberg;69124;DE;0;;False;49.383565;8.666606;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+490245;Pfälzer Straße;Pfälzer Straße 21;Heidelberg;69123;DE;0;;False;49.419048;8.649889;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+516170;Hugo-Giese-Platz;Marktplatz 0;Eppelheim;69214;DE;0;;False;49.399503;8.631187;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+523526;Krankenhaus Salem;Zeppelinstraße 11-33;Heidelberg;69120;DE;0;;False;49.423175;8.684672;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+571816;Belfortstraße;Belfortstraße  3;Heidelberg;69115;DE;0;;False;49.404353;8.679699;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+571820;Im Weiher;Im Weiher 5-9;Heidelberg;69121;DE;0;;False;49.434675;8.67825;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+589648;S-Bahnhof Schlierbach Ziegelhausen;In der Aue -;Heidelberg;69118;DE;0;;False;49.415059;8.761994;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+594120;Im Hüttenbühl;Im Hüttenbühl 1;Heidelberg;69124;DE;0;;False;49.38336;8.66231;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+603285;Hans Thoma Straße;Hans Thoma Straße 49/51;Heidelberg;69121;DE;0;;False;49.43287;8.680336;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+666516;Langgewann ;Langgewann  1;Heidelberg;69121;DE;0;;False;49.420987;8.679651;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+679625;Dantestraße;Dantestraße 50;Heidelberg;69115;DE;0;;False;49.400401;8.682999;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+688749;Am Grünen Hag;Am Grünen Haag 16-20;Heidelberg;69118;DE;0;;False;49.41342;8.77028;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+688751;Peterstalerstraße / Steinbachweg;Peterstalerstraße / Steinbachweg  5;Heidelberg;69118;DE;0;;False;49.41926;8.75624;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+689543;Käfertalerstraße ;Käfertaler Str  7;Heidelberg;69123;DE;0;;False;49.43141;8.64609;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+725139;Neckargemünd Bahnhof/2;Jahnstraße 17A;Neckargemünd;69151;DE;0;;False;49.394218;8.788977;Stadtwerke Heidelberg Energie GmbH;+4962215131313;True
+9270;Stadtwerke Solingen - Beethovenstr. 210;Beethovenstraße 210;Solingen;42655;DE;0;;False;51.175;7.051889;Stadtwerke Solingen GmbH;+492122952900;True
+15506;Stadtwerke Solingen - Eigenheim eG Friedenstr 112;Friedenstraße 112;Solingen;42699;DE;0;;False;51.150599;7.019767;Stadtwerke Solingen GmbH;+492122952900;True
+18120;Stadtwerke Solingen - Beethovenstr. 210 Säule 2;Beethovenstraße 210;Solingen;42655;DE;0;;False;51.175;7.051773;Stadtwerke Solingen GmbH;+492122952900;True
+18124;Stadtwerke Solingen - Klingenhalle;Kotter Straße 9;Solingen;42655;DE;0;;False;51.17194;7.07667;Stadtwerke Solingen GmbH;+492122952900;True
+18126;Stadtwerke Solingen - St. Lukas Klinik;Schwanenstraße 132;Solingen;42697;DE;0;;False;51.15505;6.98417;Stadtwerke Solingen GmbH;+492122952900;True
+19986;Stadtwerke Solingen - Eigenheim eG Friedenstr. 124a/126a;Friedenstr. 124a/126a;Solingen;42699;DE;0;;False;51.14996;7.019207;Stadtwerke Solingen GmbH;+492122952900;True
+20278;Stadtwerke Solingen - Blumenstr.49;Blumenstr. 49;Solingen;42655;DE;0;;False;51.17416;7.08077;Stadtwerke Solingen GmbH;+492122952900;True
+21916;Stadtwerke Solingen - Bergerstr. 11;Bergerstraße 11;Solingen;42657;DE;0;;False;51.15179;7.06242;Stadtwerke Solingen GmbH;+492122952900;True
+21918;Stadtwerke Solingen - Dycker Feld72;Dyker Feld 72;Solingen;42653;DE;0;;False;51.204215;7.073744;Stadtwerke Solingen GmbH;+492122952900;True
+21924;Stadtwerke Solingen - Burgstr.;Burgstr. 8;Solingen;42655;DE;0;;False;51.178336;7.081383;Stadtwerke Solingen GmbH;+492122952900;True
+22266;Stadtwerke Solingen - Gerberstr. 47y;Gerberstr. 47y;Solingen;42653;DE;0;;False;51.21102;7.07212;Stadtwerke Solingen GmbH;+492122952900;True
+22556;Stadtwerke Solingen - Merian;Merianstr. 3;Solingen;42651;DE;0;;False;51.17689;7.08474;Stadtwerke Solingen GmbH;+492122952900;True
+70302;Stadtwerke Solingen - Cheruskerstr.;Cheruskerstr. 17;Solingen;42653;DE;0;;False;51.186993;7.071354;Stadtwerke Solingen GmbH;+492122952900;True
+70304;Stadtwerke Solingen - Poststr.;Poststraße 14;Solingen;42719;DE;0;;False;51.18351;7.04449;Stadtwerke Solingen GmbH;+492122952900;True
+132270;Stadtwerke Solingen - Stadt-Sparkasse Solingen GS Central;Schlagbaumer Str.  175;Solingen;42653;DE;0;;False;51.19165;7.07503;Stadtwerke Solingen GmbH;+492122952900;True
+132272;Stadtwerke Solingen - Stadt-Sparkasse Solingen GS Höhscheid;Neuenhofer Str.  20;Solingen;42657;DE;0;;False;51.15333;7.06496;Stadtwerke Solingen GmbH;+492122952900;True
+136122;Stadtwerke Solingen - Focher Str.;Focher Str. 85;Solingen;42719;DE;0;;False;51.18944;7.0625;Stadtwerke Solingen GmbH;+492122952900;True
+158618;Stadtwerke Solingen - Technische Betriebe Dültgenstaler Str. 61;Dültgenstaler Str. 61;Solingen;42719;DE;0;;False;51.183379;7.05158;Stadtwerke Solingen GmbH;+492122952900;False
+158620;Stadtwerke Solingen - Technische Betriebe Dültgenstaler Str. 65z;Dültgenstaler Str. 65z;Solingen;42719;DE;0;;False;51.182726;7.052718;Stadtwerke Solingen GmbH;+492122952900;False
+159004;Stadtwerke Solingen - Kölner Str.;Kölner Str. 6;Solingen;42651;DE;0;;False;51.165035;7.080075;Stadtwerke Solingen GmbH;+492122952900;True
+159006;Stadtwerke Solingen - Bahnhofstr.;Bahnhofstr. 10-16;Solingen;42651;DE;0;;False;51.164653;7.081934;Stadtwerke Solingen GmbH;+492122952900;True
+180914;Stadtwerke Solingen - Aufderhöher Str.;Aufderhöher Str. 1;Solingen;42699;DE;0;;False;51.141287;7.01422;Stadtwerke Solingen GmbH;+492122952900;True
+180916;Stadtwerke Solingen - Wittenbergstraße;Wittenbergstraße 7;Solingen;42659;DE;0;;False;51.162485;7.001757;Stadtwerke Solingen GmbH;+492122952900;True
+181206;Stadtwerke Solingen - Dorper Str. 8;Dorper Str. 8;Solingen;42651;DE;0;;False;51.171078;7.087187;Stadtwerke Solingen GmbH;+492122952900;True
+303584;Stadtwerke Solingen - Eigenheim eG Friedenstr. 122A;Friedenstr. 122A;Solingen;42699;DE;0;;False;51.14945;7.019958;Stadtwerke Solingen GmbH;+492122952900;True
+308760;Stadtwerke Solingen - Bonner Str.;Bonner Str. 100;Solingen;42697;DE;0;;False;51.1544;6.992178;Stadtwerke Solingen GmbH;+492122952900;True
+308762;Stadtwerke Solingen - Bonner Str. 100;Bonner Str. 100;Solingen;42697;DE;0;;False;51.154403;6.992199;Stadtwerke Solingen GmbH;+492122952900;True
+386302;Stadtwerke Solingen - Autohaus Lackmann Säule 1;Carl-Ruß-Str. 1;Solingen;42719;DE;0;;False;51.187554;7.0576;Stadtwerke Solingen GmbH;+492122952900;False
+386306;Stadtwerke Solingen - Autohaus Lackmann Säule 2;Carl-Ruß-Str. 1;Solingen;42719;DE;0;;False;51.187028;7.057404;Stadtwerke Solingen GmbH;+492122952900;True
+386310;Stadtwerke Solingen - Autohaus Lackmann Säule 3;Carl-Ruß-Str. 1;Solingen;42719;DE;0;;False;51.187205;7.058024;Stadtwerke Solingen GmbH;+492122952900;True
+482572;Stadtwerke Solingen - Cronenbergerstr. 61z Säule 1;Cronenbergerstr. 61z;Solingen;42651;DE;0;;False;51.177426;7.086522;Stadtwerke Solingen GmbH;+492122952900;True
+482574;Stadtwerke Solingen - Cronenberg61y Säule 2;Cronenbergerstr. 61y;Solingen;42651;DE;0;;False;51.177409;7.086628;Stadtwerke Solingen GmbH;+492122952900;True
+544735;Stadtwerke Solingen - Stadt-Sparkasse Solingen - GS Emscherstr. 9;Emscherstr. 9;Solingen;42697;DE;0;;False;51.162176;6.99745;Stadtwerke Solingen GmbH;+498004393030;False
+22528;Parkhaus Hauptbahnhof West ;Elisabethstraße  3;Ingolstadt;85051;DE;0;;False;48.743609;11.437127;SWI;+49841804222;True
+22530;Parkhaus Hauptbahnhof Ost;Martin-Hemm-Strasse 8;Ingolstadt;85051;DE;0;;False;48.744962;11.439909;SWI;+49841804222;True
+22532;Parkhaus Nordbahnhof;Am Nordbahnhof  3;Ingolstadt;85049;DE;0;;False;48.772804;11.43247;SWI;+49841804222;True
+59120;Tiefgarage Münster ;Bergbräustraße 5;Ingolstadt;85049;DE;0;;False;48.764593;11.419355;SWI;+49841804222;True
+59192;Tiefgarage Zeughaus;Proviantstraße  3;Ingolstadt;85049;DE;0;;False;48.767839;11.425475;SWI;+49841804222;True
+59198;TG Reduit Tilly;Regimentstraße 6;Ingolstadt;85051;DE;0;;False;48.760006;11.433702;SWI;+49841804222;True
+59200;TG Congress;Schloßlände 25;Ingolstadt;85049;DE;0;;False;48.764647;11.433694;SWI;+49841804222;True
+59338;Kundencenter Ingolstadt;Ringlerstraße  28;Ingolstadt;85057;DE;0;;False;48.776425;11.425253;SWI;+49841804222;True
+59340;Mauthstraße ;Mauthstraße  13;Ingolstadt;85049;DE;0;;False;48.763436;11.426718;SWI;+49841804222;True
+59342;Donaustraße ;Donaustraße 10;Ingolstadt;85049;DE;0;;False;48.761434;11.426341;SWI;+49841804222;True
+59344;Audi Sportpark ;Am Sportpark  1;Ingolstadt;85053;DE;0;;False;48.745306;11.485235;SWI;+49841804222;True
+59346;Audi Sportpark FCI ;Am Sportpark  1b;Ingolstadt;85053;DE;0;;False;48.746759;11.4863;SWI;+49841804222;True
+59348;Ingolstadt Village ;Otto - Hahn - Straße  1;Ingolstadt;85055;DE;0;;False;48.783766;11.478224;SWI;+49841804222;True
+59350;Klinikum Ingolstadt;Levelingstraße  1;Ingolstadt;85049;DE;0;;False;48.771465;11.379276;SWI;+49841804222;True
+59352;Hallenbad ;Jahnstraße  1;Ingolstadt;85049;DE;0;;False;48.760768;11.421418;SWI;+49841804222;True
+59354;Festplatz;Dreizehnerstraße  0;Ingolstadt;85049;DE;0;;False;48.770137;11.423832;SWI;+49841804222;True
+59356;Schloss;Esplanade  1;Ingolstadt;85049;DE;0;;False;48.766113;11.431455;SWI;+49841804222;True
+59358;Theater;Schloßlände  1;Ingolstadt;85049;DE;0;;False;48.763837;11.430773;SWI;+49841804222;True
+59360;Saturnarena ;Bei der Arena  1;Ingolstadt;85053 ;DE;0;;False;48.759207;11.438577;SWI;+49841804222;True
+59362;Technikerschule;Adolf - Kolping - Straße  11;Ingolstadt;85049;DE;0;;False;48.76702;11.424704;SWI;+49841804222;True
+59364;Schuster Home Company;Heinkelstraße  1;Ingolstadt;85053;DE;0;;False;48.746704;11.462299;SWI;+49841804222;True
+158926;Hotel Roomreich;Gundekarstraße  4;Ingolstadt;85057;DE;0;;False;48.779718;11.414761;SWI;+49841804222;True
+185572;Altstadthotel;Gymnasiumstraße 2;Ingolstadt;85049;DE;0;;False;48.766607;11.422023;SWI;+49841804222;True
+304236;Sparks GmbH;Friedrichshofener Str. 20;Ingolstadt;85049;DE;0;;False;48.777625;11.380765;SWI;+49841804222;True
+378148;High Power Ladepark ;Friedrichshofener Str.  2a;Ingolstadt;85049;DE;0;;False;48.772944;11.386;SWI;+49841804222;True
+419862;GWG Luise-Rinser-Str.;Luise-Rinser-Str. 1;Ingolstadt;85055;DE;0;;False;48.767532;11.452254;SWI;+49841804222;True
+560293;Golf-Club Ingolstadt;Krumenauerstraße 1;Ingolstadt;85049;DE;0;;False;48.762833;11.374889;SWI;+49841804222;True
+18880;SPF - Kundenzentrum SWP;Werderstraße 38;Pforzheim;75173;DE;0;;False;48.888652;8.7;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49800797393837;True
+18882;SPF - ebz Pforzheim;Am Mühlkanal 22;Pforzheim;75179;DE;0;;False;48.883404;8.665906;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49800797393837;True
+18884;SPF - Schiller Gymnasium Büchenbronn;Siedlungstraße 38;Pforzheim;75180;DE;0;;False;48.855477;8.655806;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49800797393837;True
+18886;SPF - Bad Herrenalb Notariat;An der Alb 0;Bad Herrenalb;76332;DE;0;;False;48.796489;8.435576;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49800797393837;True
+120796;SPF - Maulbronn Kloster;Gartenstraße 15;Maulbronn;75443;DE;0;;False;49.00064;8.80856;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120798;Keltern-Rathaus Ellmendingen;Weinbergstraße 9;Keltern;75210;DE;0;;False;48.901772;8.578473;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120800;Keltern-Parkplatz Bahnhofstraße;Bahnhofstraße 2;Keltern;75210;DE;0;;False;48.894679;8.604296;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120834;SPF - Hauptfriedhof Pforzheim;Sommerweg 0;Pforzheim;75177;DE;0;;False;48.900535;8.692282;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120836;SPF - Kiehnlestraße Pforzheim;Kiehnlestraße 26;Pforzheim;75172;DE;0;;False;48.892818;8.699352;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120838;SPF - Pforzheim Theater CCP;Am Waisenhausplatz 12;Pforzheim;75172;DE;0;;False;48.889761;8.701463;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120840;SPF - Klostermühlgasse Pforzheim;Klostermühlgasse 0;Pforzheim;75175;DE;0;;False;48.889782;8.704579;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120846;SPF - Wohnfabrik Pforzheim;Kieselbronner Straße 86;Pforzheim;75177;DE;0;;False;48.917163;8.728418;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120848;SPF - Gasometer Pforzheim;Hohenwiesenweg 0;Pforzheim;75175;DE;0;;False;48.895778;8.722389;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120850;SPF - Inselstraße Eutingen;Inselstraße 0;Pforzheim;75181;DE;0;;False;48.909748;8.74789;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120852;SPF - Niefern Edeka Kuhnle;Birkenstraße 0;Niefern-Öschelbronn;75223;DE;0;;False;48.916335;8.780379;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120854;SPF - Hochfeldhalle Pforzheim-Huchenfeld;Huchenfelder Hauptstraße 0;Pforzheim;75181;DE;0;;False;48.859069;8.692839;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120856;SPF - Hohenwartforum Pforzheim;Schönbornstraße 0;Pforzheim;75181;DE;0;;False;48.836933;8.729431;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120858;SPF - Würmtalhalle Pforzheim;Ritterstraße 0;Pforzheim;75181;DE;0;;False;48.854781;8.738725;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120866;SPF - Wildpark Pforzheim;Tiefenbronnerstraße 0;Pforzheim;75175;DE;0;;False;48.876564;8.717287;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+120868;SPF - Messplatz Pforzheim;Habermehlstraße 0;Pforzheim;75172;DE;0;;False;48.890977;8.686443;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151938;SPF - Sonnenhof Schule;Konrad Adenauer Straße 0;Pforzheim;75180;DE;0;;False;48.8688;8.669626;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151940;SPF - Maulbronn Bahnhofstraße;Bahnhofstraße  0;Maulbronn;75433;DE;0;;False;48.998116;8.805548;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151944;SPF - Maulbronn Sporthalle Schefenacker;Hermann-Röger-Straße 0;Maulbronn;75433;DE;0;;False;48.997473;8.811618;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151946;SPF - Ötisheim Erlentalhalle;Maulbronner Straße 0;Ötisheim;75443;DE;0;;False;48.96559;8.801881;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151948;SPF - Ötisheim neue Sporthalle;Hauffweg 0;Ötisheim;75443;DE;0;;False;48.962409;8.812652;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151950;SPF - Schömberg Kinderklinik;Römerweg 0;Schömberg;75328;DE;0;;False;48.791592;8.647969;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151952;SPF - Schömberg Bauhof;Schwarzwaldstraße 100;Schömberg;75328;DE;0;;False;48.784374;8.651003;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151954;SPF - Dobel Kurhaus;Neue Herrenalber Straße 0;Dobel;75335;DE;0;;False;48.796901;8.493396;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151956;SPF - Dobel Bauhof;Höhenstraße 0;Dobel;75335;DE;0;;False;48.793683;8.488909;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151958;SPF - Neuenbürg Kirchplatz;Kirchplatz 0;Neuenbürg;75305;DE;0;;False;48.846287;8.589317;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151960;SPF - Neuenbürg Gymnasium;Waldenburgweg 0;Neuenbürg;75305;DE;0;;False;48.849882;8.582162;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151962;SPF - Neuenbürg Stadthalle;Robert Grob Straße 0;Neuenbürg;75305;DE;0;;False;48.850904;8.579525;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+151964;SPF - Maulbronn Kinderzentrum;Knittlinger Steige 0;Maulbronn;75433;DE;0;;False;49.001001;8.801508;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+158894;SPF - Straubenhardt Ford Ochner;Herrenalber Straße 5;Straubenhardt;75334;DE;0;;False;48.842646;8.530872;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+158896;SPF - Karlsbad Beckerhalle;Am Schelmenbusch 0;Karlsbad;76307;DE;0;;False;48.912446;8.495526;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+158898;SPF - Karlsbad Berghalle;Holderäckerweg 0;Karlsbad;76307;DE;0;;False;48.897934;8.473783;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+158900;SPF - Birkenfeld Edeka Berger;Gräfenhäuser Straße  0;Birkenfeld;75217;DE;0;;False;48.870901;8.629524;SWP Stadtwerke Pforzheim GmbH&Co.KG;+49723139713244;True
+22560;Stadtwerke Göttingen AG;Hildebrandstr. 1;Göttingen;37081;DE;0;;False;51.540404;9.926161;Stadtwerke Göttingen AG;+49551301333;True
+22612;Parkhaus Groner Tor;Groner-Tor-Straße 31;Göttingen;37073;DE;0;;False;51.533039;9.929188;Stadtwerke Göttingen AG;+49551301333;True
+22614;Parkhaus Hospitalstraße;Hospitalstraße 8;Göttingen;37073;DE;0;;False;51.530404;9.93681;Stadtwerke Göttingen AG;+49551301333;True
+59366;UMG Ostparkplatz;Am Papenberg 11;Göttingen;37075;DE;0;;False;51.551481;9.946965;Stadtwerke Göttingen AG;+49551301333;True
+158622;Badeparadies Eiswiese;Windausweg 60;Göttingen;37073;DE;0;;False;51.522918;9.930543;Stadtwerke Göttingen AG;+49551301333;True
+179232;e-Rast Solartankstelle;Berliner Str. 502;Helsa-Wickenrode;34298;DE;0;;False;51.257788;9.72915;e-rast Solartankstelle;+49551301333;False
+179568;Gallus-Park;Weender Landstraße  59;Göttingen ;37075;DE;0;;False;51.545069;9.93094;Stadtwerke Göttingen AG;+49551301333;True
+181228;Bürgerstraße;Bürgerstraße 31;Göttingen;37073;DE;0;;False;51.529454;9.932327;Stadtwerke Göttingen AG;+49551301333;True
+181230;Theaterplatz;Theaterplatz 9a;Göttingen;37073;DE;0;;False;51.536011;9.94102;Stadtwerke Göttingen AG;+49551301333;True
+283820;Am Steinsgraben;Am Steinsgraben 27;Göttingen;37085;DE;0;;False;51.527316;9.952068;Stadtwerke Göttingen AG;+49551301333;True
+283822;Stettiner Straße;Stettiner Straße 44;Göttingen;37083;DE;0;;False;51.520367;9.937093;Stadtwerke Göttingen AG;+49551301333;True
+412982;Ernst Malzfeldt KG - Wasserkraftwerk & Vermietungen;Carlstraße 9;Bad Karlshafen;34385;DE;0;;False;51.64106;9.450502;Ernst Malzfeldt KG;+49551301333;True
+472982;Stadtfriedhof;Lütjen Feldsweg 6a;Göttingen;37081;DE;0;;False;51.5322;9.90506;Stadtwerke Göttingen AG;+49551301333;True
+472984;Kiessee;Sandweg 9b;Göttingen;37083;DE;0;;False;51.51988;9.91975;Stadtwerke Göttingen Ag;+49551301333;True
+472986;Allerstraße;Allerstraße 28;Göttingen;37081;DE;0;;False;51.52653;9.91618;Stadtwerke Göttingen AG;+49551301333;True
+472990;Kulturzentrum Godehardstr.;Godehardstr. 24;Göttingen;37081;DE;0;;False;51.54087;9.91663;Stadtwerke Göttingen AG;+49551301333;True
+472992;Albert-Einstein-Str.;Albert-Einstein-Str. 21;Göttingen;37075;DE;0;;False;51.54057;9.95158;Stadtwerke Göttingen AG;+49551301333;True
+472994;Nikolausberger Weg;Nikolausberger Weg 39;Göttingen;37073;DE;0;;False;51.54013;9.94326;Stadtwerke Göttingen AG;+49551301333;True
+473194;Nachbarschaftszentrum Grone Süd;Deisterstraße 10;Göttingen;37081;DE;0;;False;51.52787;9.89962;Stadtwerke Göttingen AG;+49551301333;True
+473196;Parkstreifen Schulweg;Schulweg 12;Göttingen;37083;DE;0;;False;51.51331;9.94757;Stadtwerke Göttingen AG;+49551301333;True
+473198;Parkplatz Charlottenburger Str.;Charlottenburger Str. 5;Göttingen;37085;DE;0;;False;51.51621;9.97083;Stadtwerke Göttingen AG;+49551301333;True
+473200;Badeparadies Eiswiese 2.0;Windausweg 60;Göttingen;37073;DE;0;;False;51.522944;9.930762;Stadtwerke Göttingen AG;+49551301333;True
+473202;Querparker Am Kirschberge;Am Kirschberge 65;Göttingen;37085;DE;0;;False;51.52124;9.95803;Stadtwerke Göttingen AG;+49551301333;True
+473204;Ludwig-Prandtl-Straße;Ludwig-Prandtl-Straße 35;Göttingen;37077;DE;0;;False;51.572365;9.937171;Stadtwerke Göttingen AG;+49551301333;True
+473212;Naturerlebnisbad Grone;Greitweg 109;Göttingen;37081;DE;0;;False;51.53833;9.90976;Stadtwerke Göttingen AG;+49551301333;True
+473222;Parkstreifen Herzberger Landstr.;Herzberger Landstr. 59;Göttingen;37085;DE;0;;False;51.5364;9.95334;Stadtwerke Göttingen Ag;+49551301333;True
+477396;Parkbad Weende;Am Weendespring 1a;Göttingen;37077;DE;0;;False;51.5661;9.93218;Stadtwerke Göttingen AG;+49551301333;True
+505709;Ehrengard-Schramm-Weg;Ehrengard-Schramm-Weg  8;Göttingen;37085;DE;0;;False;51.520374;9.970986;Stadtwerke Göttingen AG;+49551301333;True
+505710;Zur Scharfmühle ;Zur Scharfmühle  4;Göttingen;37083;DE;0;;False;51.510168;9.949373;Stadtwerke Göttingen AG;+49551301333;True
+505711;Dürrstr. Ecke Rheinhäuser Landstr.;Dürrstraße 1;Göttingen;37083;DE;0;;False;51.52396;9.939709;Stadtwerke Göttingen AG;+49551301333;True
+505712;Hauptstraße 29 Ecke Kerllsgasse;Hauptstraße 29;Göttingen;37083;DE;0;;False;51.51183;9.956103;Stadtwerke Göttingen AG;+49551301333;True
+505713;Ostlandweg 17;Ostlanweg 17;Göttingen;37075;DE;0;;False;51.555543;9.936866;Stadtwerke Göttingen AG;+49551301333;True
+505714;Otto-Lauffer-Str.;Otto-Lauffer-Str. 20a;Göttingen;37077;DE;0;;False;51.563449;9.938994;Stadtwerke Göttingen AG;+49551301333;True
+505716;Nonnenstieg 59;Nonnenstieg 59;Göttingen;37075;DE;0;;False;51.548301;9.958802;Stadtwerke Göttingen AG;+49551301333;True
+505717;Nußanger;Nußanger 25;Göttingen;37079;DE;0;;False;51.55585;9.904473;Stadtwerke Göttingen AG;+49551301333;True
+505718;Karl-Grünklee-Straße;Karl-Grünklee-Straße 55;Göttingen;37077;DE;0;;False;51.565954;9.926315;Stadtwerke Göttingen AG;+49551301333;True
+505720;Söseweg 14;Söseweg  14;Göttingen;37081;DE;0;;False;51.522347;9.911194;Stadtwerke Göttingen AG;+49551301333;True
+505721;Schulweg IGS Parkplatz;Schulweg 22;Göttingen;37083;DE;0;;False;51.514826;9.947586;Stadtwerke Göttingen AG;+49551301333;True
+505722;Große Breite real;Große Breite 6;Göttingen;37077;DE;0;;False;51.560114;9.926085;Stadtwerke Göttingen AG;+49551301333;True
+505723;Weender Landstraße UNI Parkplatz;Weender Landstraße 15;Göttingen;37073;DE;0;;False;51.539879;9.933703;Stadtwerke Göttingen AG;+49551301333;True
+505724;Am Geismartor ACDC;Am Geismartor 2;Göttingen;37083;DE;0;;False;51.529743;9.939554;Stadtwerke Göttingen AG;+49551301333;True
+505725;Landkreis Göttingen Parkplatz;Walkemühlenweg 4;Göttingen;37037;DE;0;;False;51.528462;9.937427;Stadtwerke Göttingen AG;+49551301333;True
+505726;Brauweg 45;Brauweg 45;Göttingen;37073;DE;0;;False;51.525093;9.92692;Stadtwerke Göttingen AG;+49551301333;True
+505727;Genfstraße 12;Genfstraße 12;Göttingen;37079;DE;0;;False;51.560878;9.904804;Stadtwerke Göttingen AG;+49551301333;True
+515314;Friedrich Rolf GmbH - Citroen-Vertragshändler;Anna-Vandenhoeck-Ring 2;Göttingen;37081;DE;0;;False;51.524013;9.886886;Friedrich Rolf GmbH;+49551301333;True
+598823;Am Geismartor AC;Am Geismartor 1;Göttingen;37083;DE;0;;False;51.529823;9.939787;Stadtwerke Göttingen AG;+49551301333;True
+602548;Cheltenham Park;Schildweg 40;Göttingen;37085;DE;0;;False;51.532504;9.942992;Stadtwerke Göttingen AG;+49551301333;True
+602550;Königsallee Cube;Königsallee 243;Göttingen;37079;DE;0;;False;51.547249;9.908268;Stadtwerke Göttingen AG;+49551301333;True
+690619;Best Western Hotel;Hermann-Rein-Straße 2;Göttingen;37075;DE;0;;False;51.553043;9.938952;Best Western Hotel Am Papenberg;+49551301333;True
+706632;Monrose Park;Hospitalstr. 31;Göttingen;37073;DE;0;;False;51.529702;9.933363;Stadtwerke Göttingen AG;+49551301333;True
+384452;Erlangen - Damaschkestraße 129a;Damaschkestraße 129a;Erlangen;91056;DE;0;;False;49.587778;10.978441;Erlanger Stadtwerke AG;+498002340001;True
+384456;Erlangen - Strümpelstraße 26;Strümpelstraße 26;Erlangen;91052;DE;0;;False;49.581484;11.010586;Erlanger Stadtwerke AG;+498002340001;True
+384458;Erlangen - Parkplatz 2t;Parkplatzstraße 2t;Erlangen;91052;DE;0;;False;49.597976;10.999342;Erlanger Stadtwerke AG;+498002340001;True
+384460;Erlangen  - Kurt-Eisner-Platz;Kurt-Eisner-Platz 1;Erlangen;91052;DE;0;;False;49.591284;11.008751;Erlanger Stadtwerke AG;+498002340001;True
+384462;Erlangen - Fröbelstraße;Fröbelstraße 6;Erlangen;91058;DE;0;;False;49.57862;10.99239;Erlanger Stadtwerke AG;+498002340001;True
+384466;Erlangen - Autohaus Kraus;St. Johann  5;Erlangen;91056;DE;0;;False;49.606134;10.985426;Erlanger Stadtwerke AG;+498002340001;True
+385726;Erlangen - Bohlenplatz;Bohlenplatz 12;Erlangen;91052;DE;0;;False;49.597022;11.012217;Erlanger Stadtwerke AG;+498002340001;True
+385730;Erlangen -Theaterplatz (Parkplatz Theaterplatz);Theaterplatz 2;Erlangen;91054;DE;0;;False;49.59998;11.00546;Erlanger Stadtwerke AG;+498002340001;True
+385732;Erlangen - Parkplatz Altstadt Fuchsgarten;Fuchsgarten 4;Erlangen;91054;DE;0;;False;49.60196;11.00067;Erlanger Stadtwerke AG;+498002340001;True
+385734;Erlangen - An den Häuslinger Wegäckern;An den Häuslinger Wegäckern 1;Erlangen;91056;DE;0;;False;49.59288;10.94865;Erlanger Stadtwerke AG;+498002340001;True
+9963;swt - Parkhaus Metropol - E0;Reutlinger Str. 7;Tübingen;72072;DE;0;;False;48.515782;9.06109;Stadtwerke Tübingen GmbH;+49135;True
+10268;swt - Kundenparkplatz AC-Ladesäule;Eisenhutstr. 6;Tübingen;72072;DE;0;;False;48.510966;9.071077;Stadtwerke Tübingen GmbH;+49135;True
+15059;swt - Bismarckstraße 66-S;Bismarckstr. 66-S;Tübingen;72072;DE;0;;False;48.517257;9.070888;Stadtwerke Tübingen GmbH;+497071157111;True
+15245;swt - Nürtinger Str. 60-S;Nürtinger Str. 60-S;Tübingen;72074;DE;0;;False;48.527737;9.089676;Stadtwerke Tübingen GmbH;+497071157111;True
+15507;swt - Freibad;Am Freibad 3;Tübingen;72072;DE;0;;False;48.510929;9.04156;Stadtwerke Tübingen GmbH;+497071157111;True
+16612;swt - Primus-Truber-Straße 54 ;Primus-Truber-Straße 54;Tübingen;72072;DE;0;;False;48.503892;9.055906;Stadtwerke Tübingen GmbH;+497071157111;True
+16614;swt - Berliner-Ring 33;Berliner-Ring 33;Tübingen;72076;DE;0;;False;48.543745;9.05768;Stadtwerke Tübingen GmbH;+497071157111;True
+16616;swt - Hechingerstraße 43;Hechingerstraße 43;Tübingen;72072;DE;0;;False;48.511595;9.060058;Stadtwerke Tübingen GmbH;+497071157111;True
+16618;swt - Köstlinstraße 9;Köstlinstraße 9;Tübingen;72074;DE;0;;False;48.529759;9.067778;Stadtwerke Tübingen GmbH;+497071157111;True
+16620;swt - Rotdornweg 24;Rotdornweg 24;Tübingen;72076;DE;0;;False;48.546581;9.060428;Stadtwerke Tübingen GmbH;+497071157111;True
+16622;swt - Sindelfingerstraße 4;Sindelfingerstraße 4;Tübingen;72072;DE;0;;False;48.522045;9.037593;Stadtwerke Tübingen GmbH;+497071157111;True
+16624;swt - Provenceweg 22;Provenceweg  22;Tübingen;72072;DE;0;;False;48.512166;9.077604;Stadtwerke Tübingen GmbH;+497071157111;True
+16626;swt - Primus-Truber-Straße 47;Primus-Truber-Straße 47;Tübingen;72072;DE;0;;False;48.502142;9.05589;Stadtwerke Tübingen GmbH;+497071157111;True
+18220;swt - AVIA Renningen;Weil der Städter Straße 57;Renningen;71272;DE;0;;False;48.760611;8.931489;Stadtwerke Tübingen GmbH;+497071157111;True
+20212;swt - Herrenbergerstraße 40;Herrenbergerstraße 40;Tübingen;72070;DE;0;;False;48.524158;9.046126;Stadtwerke Tübingen GmbH;+497071157111;True
+22244;swt - Neckar Parkhaus;Wöhrdstraße  11;Tübingen;72072;DE;0;;False;48.518124;9.060235;Stadtwerke Tübingen GmbH;+497071157111;True
+22246;swt - Parkhaus Altstadt-König;Herrenbergerstraße 2;Tübingen;72072;DE;0;;False;48.523877;9.052078;Stadtwerke Tübingen GmbH;+497071157111;True
+70306;swt - Kundenparkplatz Schnellladesäule; Eisenhutstr. 6;Tübingen;72072;DE;0;;False;48.510964;9.07086; Stadtwerke Tübingen GmbH;+49707157111;True
+140898;swt - Bahnhofstraße 27 - Dettenhausen;Bahnhofstraße 27;Dettenhausen;72135;DE;0;;False;48.606437;9.094217;Stadtwerke Tübingen GmbH;+497071157111;True
+143434;swt - Alfred-Ritter-Straße 27 - Waldenbuch;Alfred-Ritter-Straße 27;Waldenbuch;71111;DE;0;;False;48.638619;9.1234;Stadtwerke Tübingen GmbH;+497071157111;True
+143436;swt - Brunnenstraße 3 swt;Brunnenstraße 3;Tübingen;72074;DE;0;;False;48.52341;9.06017;Stadtwerke Tübingen GmbH;+497071157111;True
+154720;swt - Herrenbergerstraße 6 - Ammerbuch;Herrenbergerstraße 6;Ammerbuch;72119;DE;0;;False;48.554848;8.965443;Stadtwerke Tübingen GmbH;+497071157111;True
+154722;swt - Eisenbahnstraße - Ammerbuch;Eisenbahnstraße 1;Ammerbuch;72119;DE;0;;False;48.531666;8.964515; Stadtwerke Tübingen GmbH;+497071157111;True
+158914;swt - Hagenloherstraße 19 - Hagelloch;Hagenloherstraße 19;Tübingen;72070;DE;0;;False;48.540497;9.01259;Stadtwerke Tübingen GmbH;+497071157111;True
+159346;swt - Parkhaus Altstadt-Mitte (Nonnenhaus);Am Stadtgraben 15;Tübingen;72070;DE;0;;False;48.522453;9.056597;Stadtwerke Tübingen GmbH;+497071157111;True
+181182;swt - Weiler Weg 3, Steinenbronn;Weiler Weg 3;Steinenbronn;71144;DE;0;;False;48.65751;9.118663;Stadtwerke Tübingen GmbH;+497071157111;True
+181202;swt - Stuttgarter Straße 5, Steinenbronn;Stuttgarter Straße 5;Steinenbronn;71144;DE;0;;False;48.66068;9.119267;Stadtwerke Tübingen GmbH;+497071157111;False
+181210;swt - Goldäckerstraße 69, Steinenbronn;Goldäckerstraße 69;Steinenbronn;71144;DE;0;;False;48.669433;9.124433;Stadtwerke Tübingen GmbH;+497071157111;True
+297666;swt - AVIA Neuenstein;Robert-Bosch-Straße 1;Neuenstein;74632;DE;0;;False;49.213192;9.585974;Stadtwerke Tübingen GmbH;+497071157111;True
+306746;swt - Poststraße KSK Rottenburg;Poststraße 26;Rottenburg;72108;DE;0;;False;48.472709;8.938468;Stadtwerke Tübingen GmbH;+497071157111;True
+365144;swt - Waldenbuch - Westlicher Bauhof;Im Meißel 7;Waldenbuch;71111;DE;0;;False;48.63047;9.138893;Stadtwerke Tübingen GmbH;+497071157111;True
+368700;swt - Hanna Bernheim Straße 8 – Westspitze Öffentlich;Hanna Bernheim Straße 8;Tübingen;72072;DE;0;;False;48.516444;9.064722;Stadtwerke Tübingen GmbH;+497071157111;True
+368702;swt - Hanna Bernheim Straße 6 – Westspitze Coono;Hanna Bernheim Straße 6;Tübingen;72072;DE;0;;False;48.516472;9.063806;Stadtwerke Tübingen GmbH;+497071157111;True
+385108;Bayreuth - Ludwig-Thoma-Str. 20;Ludwig-Thoma-Str.  20;Bayreuth;95447;DE;0;;False;49.933466;11.567943;Stadtwerke Bayreuth Energie und Wasser GmbH;08002340001;True
+385110;Bayreuth - Parkplatz AOK;Friedrich-Puchta-Straße  27;Bayreuth;95444;DE;0;;False;49.947199;11.5721;Stadtwerke Bayreuth Energie und Wasser GmbH;+498002340001;True
+385112;Bayreuth - Wendekreis Jahnstraße;Jahnstraße  11B;Bayreuth;95444;DE;0;;False;49.943573;11.571021;Stadtwerke Bayreuth Energie und Wasser GmbH;+498002340001;True
+385114;Bayreuth - Am Sendelbach;Am Sendelbach  1;Bayreuth;95444;DE;0;;False;49.945033;11.568198;Stadtwerke Bayreuth Energie und Wasser GmbH;+498002340001;True
+385116;Bayreuth - Parkplatz Post;Bürgerreuther Straße  1;Bayreuth;95444;DE;0;;False;49.951132;11.578785;Stadtwerke Bayreuth Energie und Wasser GmbH;+498002340001;True
+385118;Bayreuth - Opernstraße;Opernstraße  22;Bayreuth;95444;DE;0;;False;49.944872;11.577976;Stadtwerke Bayreuth Energie und Wasser GmbH;+498002340001;True
+385120;Bayreuth - Parkhaus Oberfrankenhalle;Albrecht-Dürer-Str.  2a;Bayreuth;95448;DE;0;;False;49.946;11.583;Stadtwerke Bayreuth Energie und Wasser GmbH;+498002340001;True
+406644;BEW Kundenparkplatz;Kaiser-Wilhelm-Straße 1;Bocholt;46395;DE;0;;False;51.834043;6.615989;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+406646;Europa Haus;Adenauerallee 59;Bocholt;46399;DE;0;;False;51.847956;6.616134;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+406650;Liebfrauen Platz;Langenbergstraße 22;Bocholt;46397;DE;0;;False;51.839036;6.617355;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+406652;Inselbad Bahia;Hemdener Weg 169;Bocholt;46399;DE;0;;False;51.862129;6.610056;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+406654;Berliner Platz;Berliner Platz 1;Bocholt;46395;DE;0;;False;51.836755;6.610821;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+548859;Parkplatz Volksbank/Kinodrom;An der Bleiche 1;Bocholt;46395;DE;0;;False;51.837987;6.608006;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+743544;Fildekenbad;Rheinstraße 6;Bocholt;46395;DE;0;;False;51.828409;6.622153;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+743545;Willi-Pattberg-Ring;Willi-Pattberg-Ring 10;Bocholt;46395;DE;0;;False;51.815015;6.616426;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+743547;Aa-See (St. Antonius-Str.);Sankt-Antonius-Straße 2-3;Bocholt;46397;DE;0;;False;51.831222;6.639253;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+747332;Parkplatz Theodor-Heuss-Ring;Theodor-Heuss-Ring 8;Bocholt;46397;DE;0;;False;51.837429;6.620866;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+753460;Robert-Bosch-Straße;Robert-Bosch-Straße 6;Bocholt;46397;DE;0;;False;51.836423;6.655538;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+753461;Hamminkelner_Straße;Hamminkelner Straße 3;Bocholt;46395;DE;0;;False;51.836514;6.591905;Bocholter Energie- und Wasserversorgung GmbH;+4928719540;True
+178;Bahnhof Dormagen;Willy-Brandt-Platz 1;Dormagen;41540;DE;0;;False;51.099793;6.817409;energieversorgung dormagen gmbh;+498004393030;True
+194;evd Verwaltungsgebäude;Mathias-Giesen-Straße 13;Dormagen;41540;DE;0;;False;51.093121;6.819894;energieversorgung dormagen gmbh;+498004393030;True
+195;Stadt Dormagen Rathaus;Castellstraße  11;Dormagen;41539;DE;0;;False;51.092875;6.840667;energieversorgung dormagen gmbh;+498004393030;True
+181252;Möbel Bernskötter Polsterarena;Lübecker Straße 3;Dormagen;41540;DE;0;;False;51.09405;6.81294;energieversorgung dormagen gmbh;+498004393030;True
+185568;Schützenplatz Stadt Zons;Herrenweg 3;Dormagen;41541;DE;0;;False;51.12369;6.85153;energieversorgung dormagen gmbh;+498004393030;True
+272810;Dorfplatz in Straberg;Linden-Kirch-Platz 23;Dormagen;41542;DE;0;;False;51.092918;6.764491;energieversorgung dormagen gmbh;+498004393030;True
+543335;Unter den Hecken;Unter den Hecken 68;Dormagen;41539;DE;0;;False;51.093648;6.844064;evd energieversorgung dormagen gmbh;+498004393030;True
+543338;Mux & Harf Automobiltechnik GmbH / Automobile-Motorboote-Wohnmobile;Hamburger Str. 4;Dormagen;41540;DE;0;;False;51.089285;6.81252;evd energieversorgung dormagen gmbh;+498004393030;True
+544165;Autohaus Tolles GmbH;In Ückerath 115;Dormagen;41542;DE;0;;False;51.11;6.74888;evd energieversorgung dormagen gmbh;+498004393030;False
+586169;Langemarkstraße;Langemarkstraße 30;Dormagen;41539;DE;0;;False;51.093361;6.835943;evd energieversorgung dormagen gmbh;+498004393030;True
+586221;Bahnhof Nievenheim;Wilhelm-Zaun-Straße 64;Dormagen;41542;DE;0;;False;51.123574;6.783121;evd energieversorgung dormagen gmbh;+498004393030;True
+20248;Markgrafenstr.7;Markgrafenstr. 7;Rastatt;76437;DE;0;;False;48.85224;8.202522;Stadtwerke Rastatt GmbH;+497222773274;True
+20250;Am Schlossplatz 5;Am Schlossplatz 5;Rastatt;76437;DE;0;;False;48.860579;8.212726;Stadtwerke Rastatt GmbH;+497222773274;True
+20252;Kaiserstr. 63;Kaiserstr. 63;Rastatt;76437;DE;0;;False;48.859517;8.20073;Stadtwerke Rastatt GmbH;+497222773274;True
+20262;Leopoldring 8;Leopoldring 8;Rastatt;76437;DE;0;;False;48.854216;8.199719;Stadtwerke Rastatt GmbH;+497222773274;True
+158810;Hauptstr. 75 Durmersheim;Hauptstr. 75;Durmersheim;76448;DE;0;;False;48.931977;8.268547;Stadtwerke Rastatt GmbH;+497222773333;False
+244394;Josef-Durler-Schule Rastatt;Richard-Wagner-Ring 24;Rastatt;76437;DE;0;;False;48.865622;8.211263;Stadtwerke Rastatt GmbH;+497222773333;True
+489200;Stadtwerke Rastatt - Stadtmobil;Markgrafenstr. 5;Rastatt;76437;DE;0;;False;48.852123;8.202485;Stadtwerke Rastatt GmbH;+497222773333;True
+666280;Badner Halle;Kapellenstr.  20;Rastatt;76437;DE;0;;False;48.855308;8.208053;Stadtwerke Rastatt GmbH;+497222773333;True
+708804;Papiermacherschule Gernsbach;Scheffelstr 27;Gernsbach;76593;DE;0;;False;48.767117;8.345702;Stadtwerke Rastatt GmbH;+497222773333;True
+709035;Total Tankstelle - Untere Wiesen 2;Untere Wiesen 2;Rastatt;76437;DE;0;;False;48.861474;8.239988;Stadtwerke Rastatt GmbH;+497222773333;True
+713957;Overlack - Rauentaler Str. 50;Rauentaler Str. 50;Rastatt;76437;DE;0;;False;48.8594;8.235916;Stadtwerke Rastatt GmbH;+497222773333;True
+384432;Hof -  Parkplatz Kreuzsteinstraße, Ecke Marienstraße;Kreuzsteinstraße 7;Hof;95028;DE;0;;False;50.317275;11.913417;HEW HofEnergie+Wasser GmbH;+498002340001;True
+384436;Hof - Nailaer Straße;Nailaer Straße 2a;Hof;95030;DE;0;;False;50.321268;11.904754;HEW HofEnergie+Wasser GmbH;+498002340001;True
+384438;Hof - Rathaus;Klosterstraße 3;Hof;95028;DE;0;;False;50.321945;11.917482;HEW HofEnergie+Wasser GmbH;+498002340001;True
+384440;Hof - Parkplatz Oberer Anger;Oberer Anger 1;Hof;95028;DE;0;;False;50.314348;11.919153;HEW HofEnergie+Wasser GmbH;+498002340001;True
+384442;Hof - Auto Müller Mercedes 2;Ernst-Reuter-Straße  65;Hof;95030;DE;0;;False;50.313295;11.90606;HEW HofEnergie+Wasser GmbH;+498002340001;True
+384444;Hof - Auto Müller Mercedes 1;Ernst-Reuter-Straße 65;Hof;95030;DE;0;;False;50.313306;11.906124;HEW HofEnergie+Wasser GmbH;+498002340001;True
+324864;Breitwieserweg;Breitwieserweg 5, SWW Parkplatz;Weinheim;69469;DE;0;;False;49.549974;8.657019;Stadtwerke Weinheim GmbH;+496201106150;True
+327644;Am Hauptbahnhof;Am Hauptbahnhof, Park and Ride Parkplatz;Weinheim;69469;DE;0;;False;49.554253;8.666341;Stadtwerke Weinheim GmbH;+496201106150;True
+361810;Schlossergäßchen;Schlossergäßchen, Amtshausplatz Parkplatz;Weinheim;69469;DE;0;;False;49.547134;8.672207;Stadtwerke Weinheim GmbH;+496201106150;True
+361812;Rote Turm Straße;Rote Turm Straße, Marktplatz / Hermannshof Parkplatz;Weinheim;69469;DE;0;;False;49.5469;8.670231;Stadtwerke Weinheim GmbH;+496201106150;True
+361814;Weststraße;Weststraße, HaWei Parkplatz;Weinheim;69469;DE;0;;False;49.553083;8.662451;Stadtwerke Weinheim GmbH;+496201106150;True
+361816;Alleestraße;Alleestraße, Rathaus Parkplatz;Hemsbach;69502;DE;0;;False;49.588675;8.653663;Stadtwerke Weinheim GmbH;+496201106150;True
+365138;Auf der Lind;Auf der Lind, Mehrzweckhalle Parkplatz;Hohensachen;69469;DE;0;;False;49.520075;8.662961;Stadtwerke Weinheim GmbH;+496201106150;True
+365140;Bahnhofstraße;Bahnhofstraße, Nähe Kriegerdenkmal Parkplatz;Weinheim;69469;DE;0;;False;49.550697;8.670549;Stadtwerke Weinheim GmbH;+496201106150;True
+365142;Seefeldstraße;Seefeldstraße, Bürgerhaus Parkplatz;Hüttenfeld;68623;DE;0;;False;49.59468;8.583588;Stadtwerke Weinheim GmbH;+496201106150;True
+365146;Schillerstraße;Schillerstraße, Sonnenbergschule Parkplatz;Laudenbach;69514;DE;0;;False;49.612568;8.652642;Stadtwerke Weinheim GmbH;+496201106150;True
+695695;Viernheimer Straße ;Viernheimer Straße  Parkplatz;Hüttenfeld;68623;DE;0;;False;49.59415;8.589247;Stadtwerke Weinheim GmbH;+496201106150;True
+223;Am alten Güterbahnhof 9, Bruchsal;Am alten Güterbahnhof 9;Bruchsal;76646;DE;0;;False;49.124011;8.58866;Stadtwerke Bruchsal;+497251706400;True
+224;Schnabel-Henning-Strasse 1A, Bruchsal;Schnabel-Henning-Straße 1a;Bruchsal;76646;DE;0;;False;49.124866;8.584673;Stadtwerke Bruchsal ;+497251706400;False
+225;Luisenstraße 3 Bruchsal;Luisenstraße 3;Bruchsal;76646;DE;0;;False;49.125034;8.59371;Stadtwerke Bruchsal ;+497251706400;True
+226;Kaiserstraße 16 Bruchsal;Kaiserstraße 16;Bruchsal;76646;DE;0;;False;49.126525;8.594228;Stadtwerke Bruchsal;+497251706400;True
+228;John-Bopp-Straße 26 Bruchsal;John-Bopp-Straße 26;Bruchsal;76646;DE;0;;False;49.123634;8.597425;Stadtwerke Bruchsal ;+497251706400;True
+229;Rathausstraße 66 Bruchsal;Rathausstraße 66;Bruchsal;76646;DE;0;;False;49.123861;8.598003;Stadtwerke Bruchsal;+497251706400;True
+230;Seilersbahn 0 Bruchsal;Seilersbahn 0;Bruchsal;76646;DE;0;;False;49.123315;8.601276;Stadtwerke Bruchsal ;+497251706400;True
+232;Sportzentrum 7 Bruchsal;Sportzentrum 7;Bruchsal;76646;DE;0;;False;49.134917;8.589606;Stadtwerke Bruchsal ;+497251706400;True
+233;Stegwiesenstraße 8 Bruchsal;Stegwiesenstraße 8;Bruchsal;76646;DE;0;;False;49.13732;8.591298;Stadtwerke Bruchsal;+497251706400;True
+234;Badener Straße 0 Bruchsal-Hd;Badener Straße 0;Bruchsal;76646;DE;0;;False;49.099989;8.644892;Stadtwerke Bruchsal;+497251706400;True
+235;Joß-Fritz-Strasse 0 Bruchsal-Ug;Joß-Fritz-Straße 0;Bruchsal;76646;DE;0;;False;49.088395;8.547155;Stadtwerke Bruchsal;+497251706400;True
+240;Rathausplatz 1  Sulzfeld;Am Rathausplatz 1;Sulzfeld;75056;DE;0;;False;49.1015;8.85898;Stadtwerke Bruchsal ;+497251706400;True
+241;Bahnhofstraße 0 Sulzfeld;Bahnhofstraße 0;Sulzfeld;75056;DE;0;;False;49.1081;8.85217;Stadtwerke Bruchsal;+497251706400;True
+242;Hauptstraße 97 Zaisenhausen;Hauptstraße 97;Zaisenhausen;75059;DE;0;;False;49.107446;8.816939;Stadtwerke Bruchsal ;+497251706400;True
+243;Zum Grenzgraben 28 Ubstadt;Zum Grenzgraben 28;Ubstadt-Weiher;76698;DE;0;;False;49.1724;8.6243;Stadtwerke Bruchsal;+497251706400;True
+244;Berthold-Bott-Strasse Gochsheim;Berthold-Bott-Straße 0;Kraichtal;76703;DE;0;;False;49.10937;8.74345;Stadtwerke Bruchsal;+497251706400;True
+245;Wilhelmstraße 0 Gochsheim;Wilhelmstraße 0;Kraichtal;76703;DE;0;;False;49.10608;8.74554;Stadtwerke Bruchsal ;+497251706400;True
+246;Bruchsaler Straße 1-3, Ubstadt;Bruchsaler Straße 1-3;Ubstadt-Weiher;76698;DE;0;;False;49.15839;8.63047;Stadtwerke Bruchsal;+497251706400;True
+247;Unterdorfstraße 39 Zeutern;Unterdorfstraße 39;Ubstadt-Weiher;76698;DE;0;;False;49.17677;8.67359;Stadtwerke Bruchsal ;+497251706400;True
+248;Bruchsaler Straße 32 Gondelsheim;Bruchsaler Straße 32;Gondelsheim;75053;DE;0;;False;49.06169;8.65872;Stadtwerke Bruchsal;+497251706400;True
+249;Bruchsaler Straße 81, Gondelsheim;Bruchsaler Straße 81;Gondelsheim;75053;DE;0;;False;49.06699;8.6575;Stadtwerke Bruchsal;+497251706400;True
+250;Campus 1 Bruchsal;Campus 1;Bruchsal;76646;DE;0;;False;49.117006;8.591097;Stadtwerke Bruchsal ;+497251706400;True
+251;Hambrücker Strasse 52 Forst;Hambrücker Straße 52;Forst;76694;DE;0;;False;49.1535;8.57948;Stadtwerke Bruchsal;+497251706400;True
+252;Werner-von-Siemens Straße 14 Forst;Werner-von-Siemens Straße 14;Forst;76694;DE;0;;False;49.15593;8.57788;Stadtwerke Bruchsal ;+497251706400;True
+253;Tullastraße 0 Karlsdorf;Tullstraße 0;Karlsdorf-Neuthard;76689;DE;0;;False;49.13575;8.54535;Stadtwerke Bruchsal ;+497251706400;True
+254;Hauptstraße 108 Hambrücken;Hauptstraße 108;Hambrücken;76707;DE;0;;False;49.186314;8.545556;Stadtwerke Bruchsal;+497251706400;True
+255;Bahnhofstraße 68 Karlsdorf-Neuthard;Bahnhofstraße 68;Karlsdorf-Neuthard;76689;DE;0;;False;49.14279;8.54766;Stadtwerke Bruchsal;+497251706400;True
+256;Am Hambiegel 17 Dettenheim;Am Hambiegel 17;Dettenheim;76706;DE;0;;False;49.15882;8.41009;Stadtwerke Bruchsal;+497251706400;True
+257;Kirrlacher Straße 7 Kronau;Kirlacher Straße 7;Kronau;76709;DE;0;;False;49.21904;8.63329;Stadtwerke Bruchsal ;+497251706400;True
+258;Klammenstraße 0 Langenbrücken;Klammenstraße 0;Bad Schönborn;76669;DE;0;;False;49.20176;8.64579;Stadtwerke Bruchsal ;+497251706400;True
+259;Justus-Liebig-Strasse 8 Östringen;Justus-Liebig-Straße 8;Östringen;76684;DE;0;;False;49.215444;8.69608;Stadtwerke Bruchsal ;+497251706400;True
+260;Franz-Peter-Siegel-Straße 0 Langenbrücken;Franz-Peter-Siegel-Straße 0;Bad Schönborn;76669;DE;0;;False;49.20145;8.65283;Stadtwerke Bruchsal;+497251706400;True
+261;Monestraße 0 Mingolsheim;Monestraße 0;Bad Schönborn;76669;DE;0;;False;49.22048;8.65929;Stadtwerke Bruchsal;+497251706400;True
+262;Am Kirchberg 19 Östringen;Am Kirchberg 19;Östringen;76684;DE;0;;False;49.21926;8.71035;Stadtwerke Bruchsal GmbH;+497251706400;True
+263;Jahnstraße neben Haus Nr. 13 Kronau;Jahnstraße bei Haus Nr. 13 13;Kronau;76709;DE;0;;False;49.219707;8.636376;Stadtwerke Bruchsal;+497251706400;True
+264;Kirchplatz 0 Ubstadt-Weiher;Kirchplatz 0;Ubstadt-Weiher;76698;DE;0;;False;49.17878;8.62206;Stadtwerke Bruchsal ;+497251706400;True
+265;Kriegsstraße 41-43 Hambrücken;Kriegsstraße 41-43;Hambrücken;76707;DE;0;;False;49.1886;8.53884;Stadtwerke Bruchsal ;+497251706400;True
+266;Weiherer Straße 1 Forst;Weiherer Straße 1;Forst;76694;DE;0;;False;49.15302;8.58706;Stadtwerke Bruchsal ;+497251706400;True
+267;Lußhardtstrasse 12 Karlsdorf;Lußhardtstraße 12;Karlsdorf-Neuthard;76689;DE;0;;False;49.14736;8.54706;Stadtwerke Bruchsal ;+497251706400;True
+268;Friedrichsplatz 0 Unteröwisheim;Friedrichsplatz 0;Kraichtal;76703;DE;0;;False;49.143;8.66894;Stadtwerke Bruchsal;+497251706400;True
+269;Kirchstraße 37 Neuthard;Kirchstraße 37;Karlsdorf-Neuthard;76689;DE;0;;False;49.12793;8.52112;Stadtwerke Bruchsal;+497251706400;True
+270;Schönbornstrasse 0 Stettfeld;Schönbornstraße 0;Ubstadt-Weiher;76698;DE;0;;False;49.18228;8.6451;Stadtwerke Bruchsal;+497251706400;True
+324;Bahnhofstraße 0 Mingolsheim;Bahnhofstraße 0;Mingolsheim;76669;DE;0;;False;49.219549;8.647401;Stadtwerke Bruchsal ;+497251706400;True
+325;Rathausstraße 1 Liedolsheim;Rathausstraße 1;Dettenheim;76706;DE;0;;False;49.161668;8.418081;Stadtwerke Bruchsal;+497251706400;True
+326;Rathausstraße 1 Münzesheim;Rathausstraße 0;Kraichtal;76703;DE;0;;False;49.125062;8.715917;Stadtwerke Bruchsal;+497251706400;True
+327;Rathausstraße 2 Münzesheim;Rathausstraße 0;Kraichtal;76703;DE;0;;False;49.12502;8.715892;Stadtwerke Bruchsal ;+497251706400;True
+328;Bahnhofstraße 0 Zaisenhausen;Bahnhofstraße  0;Zaisenhausen;75059;DE;0;;False;49.105237;8.817233;Stadtwerke Bruchsal;+497251706400;True
+18152;Pfarrstraße Öschelbronn;Pfarrstrasse ggü. 4;Niefern-Öschelbronn;75223;DE;0;;False;48.905604;8.813928;Gemeindewerke Niefern Öschelbronn;+491712730284;True
+18154;Hebelstraße Niefern;Hebelstr. ggü. 10;Niefern-Öschelbronn;75223;DE;0;;False;48.916703;8.784905;Gemeindewerke Niefern Öschelbronn;+491712730284;True
+18158;Pforzheiner Straße Niefern;Pforzheimer Str. ?;Niefern-Öschelbronn;75223;DE;0;;False;48.916891;8.781709;Gemeindewerke Niefern Öschelbronn;+491712730284;True
+18160;Bischwiesen Niefern;Bischwiesen 0;Niefern-Öschelbronn;75223;DE;0;;False;48.91882;8.780891;Gemeindewerke Niefern Öschelbronn;+491712730284;True
+18162;Bahnhofstraße Niefern.;Bahnhofstr 0;Niefern-Öschelbronn;75223;DE;0;;False;48.919793;8.768737;Gemeindewerke  Niefern Öschelbronn;+491712730284;True
+20060;Badenerstraße Linkenheim-Hochstetten;Badenerstraße 0; Linkenheim-Hochstetten;76351;DE;0;;False;49.1315;8.4211;Stadtwerke Bruchsal GmbH;+497251706400;True
+20062;Am Biegen Linkenheim-Hochstetten ;Am Biegen 0;Linkenheim-Hochstetten ;76351;DE;0;;False;49.1297;8.4192;Stadtwerke Bruchsal;+497251706400;True
+141400;Au in den Buchen, Bruchsal-Bü;Au in den Buchen 80;Büchenau;76646;DE;0;;False;49.0996;8.5275;Stadtwerke Bruchsal;+497251706400;True
+141842;Hauptstrasse 1 Bruchsal-Og;Hauptstraße  1;Bruchsal;76646;DE;0;;False;49.0768;8.5869;Stadtwerke Bruchsal;+497251706400;True
+144946;Werner von Siemens Str. 2-6;Werner-von-Siemens-Straße 2-6;Bruchsal;76646;DE;0;;False;49.1295;8.5898;Stadtwerke Bruchsal;+497251706400;False
+158876;Bahnhofstraße 1 Odenheim;Bahnhofstraße 1;Östringen;76684;DE;0;;False;49.1795;8.7447;Stadtwerke Bruchsal GmbH;+497251706400;True
+509471;Schnabel-Henning-Str.37 Bauhof;Schnabel Henning Str.  37;Bruchsal;76646;DE;0;;False;49.120003;8.580041;Stadtwerke Bruchsal;+497251706400;True
+543326;Stegwiesenstr. 8  neu;Stegwiesenstr. 8;Bruchsal;76646;DE;0;;False;49.13732;8.591298;Stadtwerke Bruchsal;+497251706400;True
+775513;Bahnhofstr.34 links, Graben-Neudorf;Bahnhofstraße 34;Graben-Neudorf;76676;DE;0;;False;49.16171;8.49013;Stadtwerke Bruchsal;+497251706400;True
+775514;Bahnhofstr.34 rechts, Graben-Neudorf;Bahnhofstrsße 34;Graben-Neudorf;76676;DE;0;;False;49.16171;8.4903;Stadtwerke Bruchsal;+497251706400;True
+13829;Doerkesplatz;Doerkesplatz 0;Nettetal;41334;DE;0;;False;51.306961;6.277075;Stadtwerke Nettetal GmbH;+498004393030;True
+13830;Obi;An der Landwehr  7;Nettetal;41334;DE;0;;False;51.327967;6.211917;Stadtwerke Nettetal GmbH;+498004393030;True
+13831;Nettetal-West;An der Kleinbahn 5;Nettetal;41334;DE;0;;False;51.328975;6.195411;Stadtwerke Nettetal GmbH;+498004393030;True
+386320;Buschstraße;Buschstraße 5;Nettetal;41334;DE;0;;False;51.316294;6.190744;Stadtwerke Nettetal GmbH;+498004393030;True
+385028;Ansbach - Liebigstraße 1;Liebigstraße  1;Ansbach;91522;DE;0;;False;49.276878;10.512938;Stadtwerke Ansbach GmbH;08002340001;True
+385030;Ansbach - Landratsamt Ansbach;Crailsheimstraße  1;Ansbach;91522;DE;0;;False;49.296944;10.562099;Stadtwerke Ansbach GmbH;+498002340001;True
+385032;Ansbach - Fischstraße;Fischstraße 6;Ansbach;91522;DE;0;;False;49.303923;10.57613;Stadtwerke Ansbach GmbH;+498002340001;True
+385034;Ansbach - Eyber Straße;Eyber Straße  3;Ansbach;91522;DE;0;;False;49.303654;10.580522;Stadtwerke Ansbach GmbH;+498002340001;True
+385036;Ansbach - Aquella;Am Stadion  2;Ansbach;91522;DE;0;;False;49.30475;10.559373;Stadtwerke Ansbach GmbH;+498002340001;True
+385038;Ansbach - Feuerbachstraße;Feuerbachstraße  1;Ansbach;91522;DE;0;;False;49.296461;10.578064;Stadtwerke Ansbach GmbH;+498002340001;True
+385040;Ansbach - Promenade;Promenade  20;Ansbach;91522;DE;0;;False;49.301413;10.5762;Stadtwerke Ansbach GmbH;+498002340001;True
+385042;Ansbach - Karlsplatz;Karlsplatz  ;Ansbach;91522;DE;0;;False;49.299936;10.575444;Stadtwerke Ansbach GmbH;08002340001;True
+424604;Ansbach - Stadtwerke;Rügländer Straße 1;Ansbach;91522;DE;0;;False;49.311109;10.568781;Stadtwerke Ansbach GmbH;+498002340001;True
+385382;Schwabach - Wendelsteiner Str. 3;Wendelsteiner Str. 3;Schwabach;91126;DE;0;;False;49.323136;11.042675;Stadtwerke Schwabach GmbH;+498002340001;True
+385386;Schwabach - Angerstraße;Angerstraße  10;Schwabach;91126;DE;0;;False;49.322678;11.028096;Stadtwerke Schwabach GmbH;08002340001;True
+385388;Büchenbach - Dr.-Rudolf-Faulhaber-Straße 1 Büchenbach Sporthalle;Dr.-Rudolf-Faulhaber-Straße  1;Büchenbach;91186;DE;0;;False;49.261973;11.055423;Stadtwerke Schwabach GmbH;08002340001;True
+385390;Schwabach - Bismarckstraße;Bismarckstr.  4;Schwabach;91126;DE;0;;False;49.326146;11.018547;Stadtwerke Schwabach GmbH;08002340001;True
+385392;Schwabach - Am Falbenholzweg - Einkaufszentrum;Am Falbenholzweg  15;Schwabach;91126;DE;0;;False;49.32233;11.051476;Stadtwerke Schwabach GmbH;08002340001;False
+385394;Schwabach - Regelsbacher Str. Parkplatz;Regelsbacher Str.  ;Schwabach;91126;DE;0;;False;49.334588;11.011698;Stadtwerke Schwabach GmbH;08002340001;True
+385396;Schwabach - Martin-Luther-Platz;Martin-Luther-Platz  ;Schwabach;91126;DE;0;;False;49.328757;11.022068;Stadtwerke Schwabach GmbH;08002340001;True
+385398;Schwabach - Stadtwerke;Ansbacher Str.  14;Schwabach;91126;DE;0;;False;49.337413;11.014337;Stadtwerke Schwabach GmbH;08002340001;True
+385400;Schwabach - Eisentrautstraße;Eisentrautstr.  1;Schwabach;91126;DE;0;;False;49.327895;11.025719;Stadtwerke Schwabach GmbH;08002340001;True
+364;Ettlingen, (West) Odertalweg 0;Odertalweg 5;Ettlingen;76275;DE;0;;False;48.950231;8.385613;Stadtwerke Ettlingen GmbH;+49724310102;True
+13330;Ettlingen, (Stadtwerke) Hertzstr. 33;Hertzstr.  33;Ettlingen;76275;DE;0;;False;48.937301;8.381107;Stadtwerke Ettlingen GmbH;+49724310102;True
+13344;Ettlingen, (Tiefgarage) Neuer Markt 2;Neuer Markt 2;Ettlingen;76275;DE;0;;False;48.941596;8.406159;Stadtwerke Ettlingen GmbH;+49724310102;False
+20244;Ettlingen (Bruchhausen), Richard-Wagner-Str. 29;Richard-Wagner-Str.  27-29;Ettlingen;76275;DE;0;;False;48.924631;8.365972;Stadtwerke Ettlingen GmbH;+49724310102;True
+20274;Ettlingen (Albgaubad), Luisenstr. 6;Luisenstr. 14;Ettlingen;76275;DE;0;;False;48.938073;8.415697;Stadtwerke Ettlingen GmbH;+49724310102;True
+59138;Waldbronn (Reichenbach/Polizei), Kronenstraße 2;Kronenstraße 2;Waldbronn;76337;DE;0;;False;48.923184;8.475912;Stadtwerke Ettlingen GmbH;+49724310102;True
+141396;Waldbronn (Therme), Waldring 1;Waldring 1;Waldbronn;76337;DE;0;;False;48.928002;8.469975;Stadtwerke Ettlingen GmbH;+49724310102;True
+158708;Ettlingen (Schluttenbach), Hofstr. 2;Hofstr.  2;Ettlingen;76275;DE;0;;False;48.898623;8.405752;Stadtwerke Ettlingen GmbH;+49724310102;True
+185562;Straubenhardt (Feldrennach), Ittersbacherstr. 1;Ittersbacher Str. 1;Straubenhardt;75334;DE;0;;False;48.854869;8.531453;Stadtwerke Ettlingen GmbH;+49724310102;True
+185564;Straubenhardt (Schwann), Doblerstr. 2;Dobeler Str. 2;Straubenhardt;75334;DE;0;;False;48.847326;8.546749;Stadtwerke Ettlingen GmbH;+49724310102;True
+185566;Au am Rhein, (Rathaus) Hauptstr. 5;Hauptstr. 5;Au am Rhein;76474;DE;0;;False;48.951633;8.239222;Stadtwerke Ettlingen GmbH;+49724310102;True
+298082;Marxzell (Rathaus), Karlsruher Straße 2;Karlsruher Straße 2;Maxzell-Paffenrot;76359;DE;0;;False;48.860829;8.458695;Stadtwerke Ettlingen GmbH;+49724310102;True
+317434;Marxzell (Cortum), Im Schwarzenbusch 8;Im Schwarzenbusch 8;Marxzell;76359;DE;0;;False;48.85492;8.486319;Stadtwerke Ettlingen GmbH;+49724310102;True
+320958;Würmersheim (Gemeindezentrum), Beethovenstraße 4;Beethovenstraße 4;Durmersheim;76448;DE;0;;False;48.937581;8.253462;Stadtwerke Ettlingen GmbH;+49724310102;True
+420024;Ettlingen (Oberweier), Bergstraße 1;Bergstraße 1;Ettlingen;76275;DE;0;;False;48.913593;8.381617;Stadtwerke Ettlingen GmbH;+49724310102;True
+420710;Ettlingen (Spessart), Hauptstraße 29;Haupstraße  29;Ettlingen;76275;DE;0;;False;48.912029;8.432189;Stadtwerke Ettlingen GmbH;+49724310102;True
+424142;Ettlingen (Ettlingenweier), Seestraße 40;Seestraße 40;Ettlingen;76275;DE;0;;False;48.924372;8.374777;Stadtwerke Ettlingen GmbH;+49724310102;True
+436192;Ettlingen (Schöllbronn), Zehntstraße 1;Zehntstraße 1;Ettlingen;76275;DE;0;;False;48.897276;8.421969;Stadtwerke Ettlingen GmbH;+49724310102;True
+477400;Ettlingen, Bruchhausen Autohaus Müller;Im Katzentach  10;Ettlingen;76275;DE;0;;False;48.925767;8.374388;Stadtwerke Ettlingen GmbH;+49724310102;True
+481552;Ettlingen, (Spinnerei) Pforzheimerstraße 130;Pforzheimerstraße  130;Ettlingen;76275;DE;0;;False;48.934788;8.440453;Stadtwerke Ettlingen GmbH;+49724310102;True
+384532;Crailsheim - Volksfestplatz;Am Volksfestplatz 1;Crailsheim;74564;DE;0;;False;49.13974;10.07608;Stadtwerke Crailsheim;+498002340001;True
+384534;Crailsheim -Parkplatz Voith;Voithstraße Ecke Voithstr. und Hardtstr. 1;Crailsheim;74564;DE;0;;False;49.13555;10.05985;Stadtwerke Crailsheim;+498002340001;True
+384536;Crailsheim - Parkplatz ZOB;Worthingtonstraße  11;Crailsheim;74564;DE;0;;False;49.13846;10.06729;Stadtwerke Crailsheim;+498002340001;True
+597154;Crailsheim - Friedrich-Bergius-Straße ;Friedrich-Bergius-Straße  10-14;Crailsheim;74564;DE;0;;False;49.13223;10.055697;Stadtwerke Crailsheim;+498002340001;True
+765749;Crailsheim - Parkhaus Grabenstraße ;Dekan-Matthes-Weg 1;Crailsheim;74564;DE;0;;False;49.134399;10.069934;Stadtwerke Crailsheim;+498002340001;True
+385286;Deggendorf - Bahnhof;Güterstraße 1;Deggendorf;94469;DE;0;;False;48.8379;12.94979;Stadtwerke Deggendorf GmbH;+498002340001;True
+385288;Deggendorf - Michael-Fischer-Platz;Michael-Fischer-Platz 1;Deggendorf;94469;DE;0;;False;48.83128;12.96211;Stadtwerke Deggendorf GmbH;+498002340001;True
+385290;Deggendorf - Neues Rathaus;Franz-Josef-Strauss-Straße  3;Deggendorf;94469;DE;0;;False;48.83717;12.9645;Stadtwerke Deggendorf GmbH;+498002340001;True
+385292;Deggendorf - Westl. Stadtgraben 18;Westl. Stadtgraben  18;Deggendorf;94469;DE;0;;False;48.83507;12.96022;Stadtwerke Deggendorf GmbH;+498002340001;True
+385294;Deggendorf - Am Sand;Am Sand 1;Deggendorf;94469;DE;0;;False;48.8338;12.96557;Stadtwerke Deggendorf GmbH;+498002340001;True
+384472;Forchheim - Medical Valley 2;Äußere Nürnberger Straße  62;Forchheim;91301;DE;0;;False;49.704443;11.0603;Stadtwerke Forchheim;+498002340001;True
+384474;Forchheim - Krankenhausstr. Medikon;Krankenhausstr.  8;Forchheim;91301;DE;0;;False;49.714615;11.077311;Stadtwerke Forchheim;+498002340001;True
+384478;Forchheim - Autohaus Hartner;Äußere Nürnberger Straße  41;Forchheim;91301;DE;0;;False;49.709692;11.061899;Stadtwerke Forchheim;+498002340001;True
+384482;Forchheim -  Tiefgarage am Paradeplatz;Paradeplatz  6;Forchheim;91301;DE;0;;False;49.718493;11.060716;Stadtwerke Forchheim;+498002340001;True
+384484;Forchheim - Medical Valley;Äußere Nürnberger Straße  62;Forchheim;91301;DE;0;;False;49.704521;11.060272;Stadtwerke Forchheim;+498002340001;True
+384494;Egloffstein - Badstraße 165 -Parkplatz am Freibad;Badstraße  165;Egloffstein;91349;DE;0;;False;49.702278;11.262194;Stadtwerke Forchheim;+498002340001;True
+384496;Forchheim - Käsröthe;Käsröthe 4;Forchheim;91301;DE;0;;False;49.710083;11.065889;Stadtwerke Forchheim;+498002340001;True
+384498;Hausen - Heroldsbacher Straße;Heroldsbacher Straße  51;Hausen;91353;DE;0;;False;49.692833;11.027278;Stadtwerke Forchheim;+498002340001;True
+384502;Egloffstein - P and R Parkplatz Egloffstein;Talstraße 1;Egloffstein;91349;DE;0;;False;49.699194;11.264778;Stadtwerke Forchheim;+498002340001;True
+384504;Forchheim - BMW Wormser;Hans-Böckler-Straße  1;Forchheim;91301;DE;0;;False;49.705613;11.066103;Stadtwerke Forchheim;+498002340001;True
+384506;Forchheim - Bahnhofsplatz;Bahnhofsplatz 1;Forchheim;91301;DE;0;;False;49.716662;11.068242;Stadtwerke Forchheim;+498002340001;True
+384508;Kersbach - Bahnhof;Bahnhofstraße 10;Forchheim;91301;DE;0;;False;49.685379;11.060848;Stadtwerke Forchheim;+498002340001;True
+386336;Forchheim - Stadtwerke Forchheim;Haidfeldstraße 8;Forchheim;91301;DE;0;;False;49.72105;11.066473;Stadtwerke Forchheim;+498002340001;True
+409086;Wiesenthau - Hauptstraße;Hauptstraße 0;Wiesenthau;91369;DE;0;;False;49.715669;11.131476;Stadtwerke Forchheim;+498002340001;True
+424278;Egloffstein - Parkplatz Wildpark Hundshaupten;Hundshaupten 63;Egloffstein;91349;DE;0;;False;49.721074;11.228841;Stadtwerke Forchheim;+498002340001;True
+424588;Forchheim - Bambergerstraße ;Bambergerstraße  6;Forchheim;91301;DE;0;;False;49.72159;11.05982;Stadtwerke Forchheim;+498002340001;True
+439114;Langensendelbach - Fränkische-Schweiz-Str. 9;Fränkische-Schweiz-Str. 9;Langensendelbach;91094;DE;0;;False;49.643483;11.072759;Stadtwerke Forchheim;+498002340001;True
+549178;Kirchehrenbach - Hauptstraße;Hauptstraße 8;Kirchehrenbach;91356;DE;0;;False;49.732342;11.142259;Stadtwerke Forchheim;+498002340001;True
+709067;Hirschaid - Pickelsgasse (Parkplatz Rathaus);Pickelsgasse 1;Hirschaid;96114;DE;0;;False;49.817026;10.991783;Stadtwerke Forchheim;+498002340001;True
+317;Parkplatz technisches Rathaus;Hermann-Beuttenmüller-Straße 6;Bretten;75015;DE;0;;False;49.033996;8.701676;Stadtwerke Bretten GmbH;+4972529130;True
+318;Parkplatz Rathaus;Untere Kirchgasse 9;Bretten;75015;DE;0;;False;49.036561;8.704628;Stadtwerke Bretten GmbH;+4972529130;True
+319;Parkplatz Bäderwelt;Max Plank Straße 1;Bretten;75015;DE;0;;False;49.031359;8.718637;Stadtwerke Bretten GmbH;+4972529130;False
+328942;Ladesäule Stadtwerke Bühl (Hofladen);Stollhofener Straße  32;Lichtenau-Ulm;77839;DE;0;;False;48.732862;8.008835;Stadtwerke Bühl;+497223946399;True
+328944;Ladesäule Stadtwerke Bühl (Autohaus Grethel);Robert-Bosch-Straße  12a;Bühl;77815;DE;0;;False;48.687995;8.114886;Stadtwerke Bühl;+497223946399;True
+328946;Ladesäule Stadtwerke Bühl (Volksbank Parkplatz);Franz-Conrad-Straße 24;Bühl;77815;DE;0;;False;48.697508;8.136003;Stadtwerke Bühl GmbH;+497223946399;True
+330232;Ladesäule Stadtwerke Bühl (Parkplatz);Siemensstraße 5;Bühl;77815;DE;0;;False;48.696496;8.121531;Stadtwerke Bühl GmbH;+497223946399;True
+385536;Wallbox DogOne;Waldstr. 18;Lichtenau-Scherzheim;77839;DE;0;;False;48.709583;7.998639;Stadtwerke Bühl GmbH;+497223946399;True
+489396;Wallbox Cum Natura;Am Froschbächle 17;Bühl;77815;DE;0;;False;48.707712;8.132682;Stadtwerke Bühl GmbH;+497223946399;True
+667689;Wallbox Breitmattstub;Jahnstraße 22;Bühlertal;77830;DE;0;;False;48.682673;8.190396;Stadtwerke Bühl GmbH;+497223946399;True
+384470;Zirndorf - Kolbstraße;Kolbstraße  3;Zirndorf;90513;DE;0;;False;49.441108;10.959295;Stadtwerke Zirndorf GmbH;+498002340001;True
+385494;Roth - Otto-Schrimpff-Straße;Otto-Schrimpff-Straße  1;Roth;91154;DE;0;;False;49.24328;11.094969;Stadtwerke Roth;+498002340001;True
+385496;Roth - Friedrich-Ebert-Straße 40;Friedrich-Ebert-Straße  40;Roth;91154;DE;0;;False;49.251531;11.103479;Stadtwerke Roth;+498002340001;True
+385498;Roth - Belmbracher Str.;Belmbracher Str.  ;Roth;91154;DE;0;;False;49.234851;11.094456;Stadtwerke Roth;08002340001;True
+385500;Roth - Willy-Supf-Platz;Willy-Supf-Platz  1;Roth;91154;DE;0;;False;49.248797;11.090066;Stadtwerke Roth;+498002340001;True
+385502;Roth - Weinbergweg;Weinbergweg  1;Roth;91154;DE;0;;False;49.236563;11.076382;Stadtwerke Roth;+498002340001;True
+9567;Calw Wasserkraftwerk;Bahnhofstr. 4-6;Calw;75365;DE;0;;False;48.713049;8.741878;deer GmbH;+4970511300432;True
+9571;Schömberg Sparkasse;Lindenstraße 16;Schömberg;75328;DE;0;;False;48.787191;8.643518;deer GmbH;+4970511300432;True
+9576;Calw Parkhaus ZOB;Bischofstraße 10;Calw;75365;DE;0;;False;48.714507;8.741359;deer GmbH;+4970511300432;True
+9612;Calw Parkhaus Calwer Markt;Lederstraße 16;Calw;75365;DE;0;;False;48.714499;8.740002;deer GmbH;+4970511300432;True
+9613;Calw TSV Calw;Bahnhofstraße 95;Calw;75365;DE;0;;False;48.702909;8.734134;deer GmbH;+4970511300432;True
+9635;Althengstett-Ottenbronn Dorfplatz;Wasenstraße 1;Althengstett - Ottenbronn;75382;DE;0;;False;48.74137;8.753923;deer GmbH;+4970511300432;True
+9636;Altensteig Sparkasse;Rosenstraße 16;Altensteig;72213;DE;0;;False;48.584616;8.603391;deer GmbH;+4970511300432;True
+9664;Althengstett Festhalle;Jahnstraße 6;Althengstett;75382;DE;0;;False;48.725314;8.793868;deer GmbH;+4970511300432;True
+9665;Ostelsheim Elsner Elektronik;Sohlengrund 16;Ostelsheim;75395;DE;0;;False;48.719692;8.843011;deer GmbH;+4970511300432;True
+9693;Calw Parkhaus Haggasse;Lederstraße 41;Calw;75365;DE;0;;False;48.716534;8.736729;deer GmbH;+4970511300432;True
+9694;Hirsau Finanzamt;Klosterhof 1;Calw;75365;DE;0;;False;48.736873;8.731647;deer GmbH;+4970511300432;True
+9860;Freiberg am Neckar Gaumentanz;Porschestraße 5;Freiberg am Neckar;71691;DE;0;;False;48.92578;9.203521;deer GmbH;+4970511300432;True
+9861;Bad Herrenalb P3;Kurpromenade 38;Bad Herrenalb;76332;DE;0;;False;48.800073;8.441209;deer GmbH;+4970511300432;True
+9906;Brauhaus Schönbuch;Auf dem Brühl 1;Calw;75365;DE;0;;False;48.717585;8.738101;deer GmbH;+4970511300432;True
+10123;Trochtelfingen;Untere Gasse 7;Trochtelfingen;72818;DE;0;;False;48.308032;9.244465;deer GmbH;+4970511300432;True
+10299;Althengstett Genthner Industrietechnik;Gottlieb-Daimler-Straße 3;Althengstett;75382;DE;0;;False;48.727666;8.783165;deer GmbH;+4970511300432;True
+10315;Calw Bauzentrum Kömpf;Leibnizstraße 2;Calw;75365;DE;0;;False;48.703962;8.761583;deer GmbH;+4970511300432;True
+10365;Simmozheim;Hauptstraße 3;Simmozheim;75397;DE;0;;False;48.752339;8.812651;deer GmbH;+4970511300432;True
+12929;Stammheim Rathaus;Hauptstraße 24;Calw;75365;DE;0;;False;48.695827;8.771816;deer GmbH;+4970511300432;True
+13003;Wimberg Edeka;Otto-Göhner-Straße 28;Calw;75365;DE;0;;False;48.714743;8.72079;deer GmbH;+4970511300432;True
+13022;Altburg Rathaus;Speßhardter Straße 1;Calw;75365;DE;0;;False;48.724168;8.700222;deer GmbH;+4970511300432;True
+13036;Haiterbach MEVA;Industriestraße 5;Haiterbach;72221;DE;0;;False;48.507395;8.627418;deer GmbH;+4970511300432;True
+13873;Bad Wildbad Technisches Rathaus;Wilhelmstraße  50;Bad Wildbad;75323;DE;0;;False;48.752722;8.550105;deer GmbH;+4970511300432;True
+14885;Neubulach Schwenker;Calwer Straße 62;Neubulach;75387;DE;0;;False;48.666445;8.686823;deer GmbH;+4970511300432;True
+15053;Höfen Hotel Ochsen;Bahnhofstraße 2;Höfen;75339;DE;0;;False;48.799702;8.582415;deer GmbH;+4970511300432;True
+15146;Ostelsheim Autohaus Lohre;Wiesenweg 7;Ostelsheim;75365;DE;0;;False;48.727914;8.846066;deer GmbH;+4970511300432;True
+15256;Bad Wildbad Stadtwerke;Ladestraße 5;Bad Wildbad;75323;DE;0;;False;48.7564;8.550736;deer GmbH;+4970511300432;True
+15277;Bad Wildbad Sommerberg;Peter-Liebig-Weg 10;Bad Wildbad;75323;DE;0;;False;48.751234;8.535682;deer GmbH;+4970511300432;True
+15505;Oberreichenbach-Würzbach;Calwer Straße 27;Würzbach;75394;DE;0;;False;48.722377;8.62877;deer GmbH;+4970511300432;True
+15726;Freiberg am Neckar Kemmler;Benzstraße 11;Freiberg am Neckar;71691;DE;0;;False;48.926869;9.203532;deer GmbH;+4970511300432;True
+18026;Schömberg Berufsförderungswerk;Bühlhof 6;Schömberg;75328;DE;0;;False;48.78489;8.635361;deer GmbH;+4970511300432;True
+18122;Bad Teinach Stadtverwaltung;Untere Talstraße 12;Bad Teinach;75385;DE;0;;False;48.688443;8.689015;deer GmbH;+4970511300432;True
+18156;Bad Teinach Hotel Therme Teinach;Otto-Neidhart-Allee 5;Bad Teinach - Zavelstein;75385;DE;0;;False;48.688969;8.686007;deer GmbH;+4970511300432;True
+18482;Weissach-Flacht Markt Apotheke;Weissacher Straße 38;Weissach;71287;DE;0;;False;48.837556;8.913689;deer GmbH;+4970511300432;True
+18888;Althengstett Edeka Mägerle;Gottlieb-Braun-Straße 25;Althengstett;75382;DE;0;;False;48.726996;8.787723;deer GmbH;+4970511300432;True
+20018;Ostelsheim Stadtverwaltung;Weilderstädter Straße 19;Ostelsheim;75395;DE;0;;False;48.727222;8.851316;deer GmbH;+4970511300432;True
+20202;Haiterbach Stadtverwaltung;Marktplatz 5;Haiterbach;72221;DE;0;;False;48.524179;8.649724;deer GmbH;+4970511300432;True
+20230;Sachsenheim Stadtverwaltung;Bahnhofstraße 14;Sachsenheim;74343;DE;0;;False;48.96162;9.064904;deer GmbH;+4970511300432;True
+20236;Nagold Sparkasse;Haiterbacher Straße 66/1;Nagold;72202;DE;0;;False;48.545056;8.728412;deer GmbH;+4970511300432;True
+20238;Calw Sparkasse;Marktbrücke 1;Calw;75365;DE;0;;False;48.714363;8.740549;deer GmbH;+4970511300432;True
+20246;Nagold Wackenhut;Altensteiger Straße 49;Nagold;72202;DE;0;;False;48.553671;8.709795;deer GmbH;+4970511300432;True
+21910;Tiefenbronn Rathaus;Gemmingenstraße 1;Tiefenbronn;75233;DE;0;;False;48.824049;8.802502;deer GmbH;+4970511300432;True
+22610;Calw KTD;Rudolf-Diesel-Straße 8;Calw;75365;DE;0;;False;48.705138;8.756433;deer GmbH;+4970511300432;True
+59310;Gechingen Brunnenstraße;Brunnenstraße 8;Gechingen;75391;DE;0;;False;48.694288;8.829359;deer GmbH;+4970511300432;True
+59336;Bad Liebenzell Bahnhofstraße;Bahnhofstraße 15;Bad Liebenzell;75378;DE;0;;False;48.772585;8.734212;deer GmbH;+4970511300432;True
+76390;Schömberg Haus am Kurpark;Parkstraße 13;Schömberg;75328;DE;0;;False;48.785411;8.646118;deer GmbH;+4970511300432;True
+78958;Egenhausen Gemeindeverwaltung;Winterstraße 2;Egenhausen;72227;DE;0;;False;48.564715;8.618478;deer GmbH;+4970511300432;True
+122918;Enzklösterle Mehrzweckhalle;Wildbader Straße 36;Enzklösterle;75337;DE;0;;False;48.670871;8.475795;deer GmbH;+4970511300432;True
+132280;Lahnstein Bäckerei Kugel;Koblenzer Straße 34 a;Lahnstein;56112;DE;0;;False;50.320313;7.599312;deer GmbH;+4970511300432;True
+136126;Linkenheim-Hochstetten Rathaus;Kaiserstraße 2;Linkenheim-Hochstetten;76351;DE;0;;False;49.123289;8.408608;deer GmbH;+4970511300432;True
+140418;Stammheim Freibad;Jahnstraße 10;Calw;75365;DE;0;;False;48.693008;8.764831;deer GmbH;+4970511300432;True
+143696;Neuweiler Rathaus;Marktstraße 7;Neuweiler;75389;DE;0;;False;48.658357;8.598416;deer GmbH;+4970511300432;True
+147200;Altensteig Volksbank;Rosenstraße 37;Altensteig;72213;DE;0;;False;48.585719;8.601973;deer GmbH;+4970511300432;True
+147614;Eberdingen-Hochdorf Keltenmuseum;Keltenstraße 2;Eberdingen;71735;DE;0;;False;48.889042;9.002372;deer GmbH;+4970511300432;True
+152942;Fellbach-Oeffingen Bücherei;Hauptstraße 1;Fellbach;70736;DE;0;;False;48.843481;9.265339;SW Fellbach / deer GmbH;+4970511300432;True
+152944;Fellbach-Schmiden Bühnerstraße;Bühnerstraße 2;Fellbach;70736;DE;0;;False;48.83402;9.262808;SW Fellbach / deer GmbH;+4970511300432;True
+152946;Fellbach Bahnhof;Eisenbahnstraße 21;Fellbach;70736;DE;0;;False;48.819672;9.269165;SW Fellbach / deer GmbH;+4970511300432;True
+152948;Fellbach Rathaus;Kirchhofstraße 1;Fellbach;70734;DE;0;;False;48.808013;9.275838;SW Fellbach / deer GmbH;+4970511300432;True
+154840;Weil der Stadt-Merklingen Rathaus;Kirchplatz 2;Weil der Stadt;71263;DE;0;;False;48.769109;8.851804;deer GmbH;+4970511300432;True
+158716;Schwieberdingen Kaiserstein;Stuttgarter Straße 94;Schwieberdingen;71701;DE;0;;False;48.872999;9.084614;deer GmbH;+4970511300432;True
+158820;Wimberg Ökosiedlung;Herrengarten 29;Calw;75365;DE;0;;False;48.71056;8.72166;deer GmbH;+4970511300432;True
+158892;Vaihingen an der Enz Kaufhaus Sämann;Stuttgarter Str. 46-52;Vaihingen an der Enz;71665;DE;0;;False;48.930117;8.958857;deer GmbH;+4970511300432;True
+158924;Gärtringen Femos;Robert-Bosch-Straße 15;Gärtringen;71116;DE;0;;False;48.636746;8.90867;deer GmbH;+4970511300432;True
+159030;Göppingen Bahnhof;Bahnhofstraße 1;Göppingen;73033;DE;0;;False;48.700441;9.652545;deer GmbH;+4970511300432;True
+159222;Walldürn Parkhaus;Burgstraße 3;Walldürn;74731;DE;0;;False;49.583736;9.36702;deer GmbH;+4970511300432;True
+176960;Brackenheim Rathaus;Marktplatz 1;Brackenheim;74336;DE;0;;False;49.078741;9.065538;deer GmbH;+4970511300432;True
+179230;Schorndorf Stadtwerke;Augustenstraße 7;Schorndorf;73614;DE;0;;False;48.806309;9.532387;deer GmbH;+4970511300432;True
+181224;Althengstett-Neuhengstett Sporthalle;Am Schlaichdorn 40;Althengstett;75382;DE;0;;False;48.737835;8.776141;deer GmbH;+4970511300432;True
+183964;Weil der Stadt Carlo-Schmid-Platz;Hermann-Schnaufer-Straße 12;Weil der Stadt;71263;DE;0;;False;48.749413;8.873119;deer GmbH;+4970511300432;True
+183966;Remchingen-Wilferdingen Sparkasse;Hauptstraße 24;Remchingen;75196;DE;0;;False;48.947246;8.574424;deer GmbH;+4970511300432;True
+187568;Zaberfeld Michelbacher Straße;Michelbacher Straße 5;Zaberfeld;74374;DE;0;;False;49.059092;8.926855;deer GmbH;+4970511300432;True
+246732;Ebhausen Postplätzle;Nagolder Straße 24;Ebhausen;72224;DE;0;;False;48.584978;8.676244;deer GmbH;+4970511300432;True
+271034;Neubulach Badgasse;Badgasse 14;Neubulach;75387;DE;0;;False;48.661179;8.695491;deer GmbH;+4970511300432;True
+271036;Neubulach Ärztehaus;Hohenbergstraße  1;Neubulach;75387;DE;0;;False;48.663156;8.691823;deer GmbH;+4970511300432;True
+271082;Schwieberdingen Bürgerhaus;Bahnhofstraße 14;Schwieberdingen;71701;DE;0;;False;48.875664;9.073046;deer GmbH;+4970511300432;True
+272146;Schwieberdingen Walkerplatz;Stuttgarter Str. 34;Schwieberdingen;71701;DE;0;;False;48.875726;9.077096;deer GmbH;+4970511300432;True
+283112;Kuppenheim Festhalle;Badstraße 2;Kuppenheim;76456;DE;0;;False;48.829578;8.267121;deer GmbH;+4970511300432;True
+289982;Neuhausen Rathaus;Pforzheimer Str. 20;Neuhausen;75242;DE;0;;False;48.792601;8.779299;deer GmbH;+4970511300432;True
+296328;Calw GWW;Carl-Benz-Str. 3;Calw;75365;DE;0;;False;48.70628;8.751798;deer GmbH;+4970511300432;True
+297662;Haiterbach Burgschule;Hohenrainstraße 34;Haiterbach;72221;DE;0;;False;48.524612;8.645825;deer GmbH;+4970511300432;True
+303078;Böblingen Motorworld;Graf-Zeppelin-Platz 1;Böblingen;71034;DE;0;;False;48.690581;9.003732;deer GmbH;+4970511300432;True
+303080;Gechingen Talaue;Talstraße 5;Gechingen;75391;DE;0;;False;48.69308;8.827463;deer GmbH;+4970511300432;True
+317224;Weil der Stadt Bahnhof;Eisenbahnstr. 20;Weil der Stadt;71263;DE;0;;False;48.756324;8.873396;deer GmbH;+4970511300432;True
+326202;Malsch Rathaus;Hauptstraße 71;Malsch;76316;DE;0;;False;48.879613;8.337298;deer GmbH;+4970511300432;True
+326204;Malsch Bahnhof;Bahnhofstraße 11;Malsch;76316;DE;0;;False;48.889453;8.324202;deer GmbH;+4970511300432;True
+365056;Schönaich Rathaus;Bühlstraße 10;Schönaich;71101;DE;0;;False;48.659452;9.063046;deer GmbH;+4970511300432;True
+365136;Elchesheim-Illingen Rathaus;Rathausplatz 12;Elchesheim-Illingen;76477;DE;0;;False;48.930745;8.209072;deer GmbH;+4970511300432;True
+371158;Loffenau Kirchhaldenpfad;Kirchhaldenpfad 4;Loffenau;76597;DE;0;;False;48.774117;8.387908;deer GmbH;+4970511300432;True
+373686;Oberreichenbach-Igelsloch Rathaus;Rathausgasse 1;Oberreichenbach;75394;DE;0;;False;48.751653;8.663486;deer GmbH;+4970511300432;True
+373688;Oberreichenbach-Oberkollbach Gemeindehaus;Alte Badstraße 90;Oberreichenbach;75394;DE;0;;False;48.746459;8.680223;deer GmbH;+4970511300432;True
+378144;Ötigheim Bahnhof;Industriestr. 42;Ötigheim;76470;DE;0;;False;48.888488;8.240907;deer GmbH;+4970511300432;True
+378146;Ötigheim Kirchplatz;Kronenstraße 4;Ötigheim;76470;DE;0;;False;48.891227;8.231825;deer GmbH;+4970511300432;True
+409332;Friolzheim Rathaus;Rathausstraße 7;Friolzheim;71292;DE;0;;False;48.835808;8.834639;deer GmbH;+4970511300432;True
+409334;Schömberg Wellenbad;Bergstraße 48;Schömberg;75328;DE;0;;False;48.793112;8.642074;Deer GmbH;+4970511300432;True
+413942;Gammelshausen;Rosenstr. 1;Gammelshausen;73108;DE;0;;False;48.641538;9.650916;deer GmbH;+4970511300432;True
+415680;Bietigheim Bahnhof;Zufuhrstraße 21;Bietigheim;76467;DE;0;;False;48.908706;8.25636;deer GmbH;+4970511300432;True
+422430;Malsch Hauptstraße;Hauptstraße 17;Malsch;76316;DE;0;;False;48.882287;8.334422;deer GmbH;+4970511300432;True
+422432;Murrhardt Bahnhof;Bahnhofstraße 18;Murrhardt;71540;DE;0;;False;48.982005;9.578664;deer GmbH;+4970511300432;True
+439740;Kuppenheim Autohaus Burger;Friedrichstraße 118;Kuppenheim;76456;DE;0;;False;48.824706;8.252724;deer GmbH;+4970511300432;True
+486648;Dobel Kurhaus;Neue Herrenalber Str. 11;Dobel;75335;DE;0;;False;48.796898;8.491589;deer GmbH;+4970511300432;True
+492939;Muggensturm Tennishalle;Malscher Str. 29;Muggensturm;76461;DE;0;;False;48.868867;8.288423;deer GmbH;+4970511300432;True
+494353;Höfen an der Enz Festhalle;Enzauenweg 9;Höfen an der Enz;75339;DE;0;;False;48.805719;8.582659;deer GmbH;+4970511300432;True
+522814;Eberdingen Rathaus;Stuttgarter Str. 51;Eberdingen;71735;DE;0;;False;48.877718;8.964907;deer GmbH;+4970511300432;True
+522815;Eberdingen-Nussdorf Friedhof;Mönsheimer Weg 7;Eberdingen;71735;DE;0;;False;48.891803;8.937753;deer GmbH;+4970511300432;True
+560230;Burgstetten Bahnhof;Neue Str. 2;Burgstetten;71576;DE;0;;False;48.928798;9.370945;deer GmbH;+4970511300432;True
+560238;Löchgau Rathaus;Nonnengasse 1;Löchgau;74369;DE;0;;False;49.000802;9.108283;deer GmbH;+4970511300432;True
+585721;Fellbach-Schmiden Neue Mitte;Butterstraße 8;Fellbach;70736;DE;0;;False;48.832955;9.264662;SW Fellbach / deer GmbH;+4970511300432;True
+664977;Jettingen Willy Dieterle Halle;Heubergring 1;Jettingen;71131;DE;0;;False;48.569886;8.781577;deer GmbH;+4970511300432;True
+668183;Murr Rathaus;Mühlgasse 1;Murr;71711;DE;0;;False;48.962004;9.259694;deer GmbH;+4970511300432;True
+679327;München Motorworld;Am Ausbesserungswerk 8;München;80939;DE;0;;False;48.195717;11.607059;deer GmbH;+4970511300432;True
+690613;Simmersfeld Boysen BAK;Albblickstraße 3;Simmersfeld;72226;DE;0;;False;48.630575;8.507515;deer GmbH;+4970511300432;True
+690616;Hildrizhausen Kirchgasse;Kirchgasse 1;Hildrizhausen;71157;DE;0;;False;48.625351;8.967268;deer GmbH;+4970511300432;True
+706304;Altdorf Friedhof;Seeweg 4;Altdorf;71155;DE;0;;False;48.630655;8.994304;deer GmbH;+4970511300432;True
+721370;Denkendorf Sporthalle;Lenaustraße 3;Denkendorf;73770;DE;0;;False;48.70051;9.326415;deer GmbH;+4970511300432;True
+733809;Haiterbach DUROtherm;Industriestraße 52;Haiterbach;72221;DE;0;;False;48.504006;8.633615;deer GmbH;+4970511300432;True
+736681;Calmbach Bahnhof;Bahnhofstraße 10;Bad Wildbad;75323;DE;0;;False;48.776881;8.571961;deer GmbH;+4970511300432;True
+738596;Haiterbach Festhalle;Alte Nagolder Str. 8/2;Haiterbach;72221;DE;0;;False;48.526363;8.655129;deer GmbH;+4970511300432;True
+739662;Ebersbach an der Fils Bahnhof;Bahnhofstraße 19;Ebersbach an der Fils;73061;DE;0;;False;48.715682;9.525455;deer GmbH;+4970511300432;True
+743517;Salach Weberstraße;Weberstraße 6 6;Salach;73084;DE;0;;False;48.689746;9.737457;deer GmbH;+4970511300432;True
+749311;Deckenpfronn Rathaus;Marktplatz 6;Deckenpfronn;75392;DE;0;;False;48.651686;8.823179;deer GmbH;+4970511300432;True
+750411;Hattenhofen Grundschule;Schulgasse 2;Hattenhofen;73110;DE;0;;False;48.667344;9.572243;deer GmbH;+4970511300432;True
+754958;Uhingen Rathaus;Sparwieser Str. 4;Uhingen;73066;DE;0;;False;48.704784;9.585438;deer GmbH;+4970511300432;True
+385166;Herzogenaurach - Ladesäule Münchener Straße 21;Münchener Straße  21;Herzogenaurach;91074;DE;0;;False;49.577637;10.908161;Herzo Werke GmbH;+498002340001;True
+385168;Herzogenaurach - Ladesäule am Behälterberg;Tuchenbacher Straße 1;Herzogenaurach;91074;DE;0;;False;49.55689;10.9171;Herzo Werke GmbH;+498002340001;True
+385170;Herzogenaurach - Ladesäule am Fasanenweg;Fasanenweg  1;Herzogenaurach;91074;DE;0;;False;49.556529;10.917933;Herzo Werke GmbH;+498002340001;True
+385172;Herzogenaurach - Würzburger Straße 35;Würzburger Straße  35;Herzogenaurach;91074;DE;0;;False;49.572778;10.866944;Herzo Werke GmbH;+498002340001;True
+385174;Herzogenaurach -  Werner-Heisenberg-Straße 10;Werner-Heisenberg-Straße  10;Herzogenaurach;91074;DE;0;;False;49.579768;10.881461;Herzo Werke GmbH;+498002340001;True
+385176;Herzogenaurach - Ladesäule An der Schütt;An der Schütt  10;Herzogenaurach;91074;DE;0;;False;49.567951;10.881041;Herzo Werke GmbH;+498002340001;True
+385178;Herzogenaurach - Ladesäule am INA-Ring;INA-Ring  22;Herzogenaurach;91074;DE;0;;False;49.573162;10.890727;Herzo Werke GmbH;+498002340001;True
+385180;Herzogenaurach - Ladesäule Münchener Straße 2;Münchener Straße  2;Herzogenaurach;91074;DE;0;;False;49.578379;10.90778;Herzo Werke GmbH;+498002340001;True
+385736;Herzogenaurach - Martin-Luther-Platz;Martin-Luther-Platz 5;Herzogenaurach;91074;DE;0;;False;49.56984;10.90362;Herzo Werke GmbH;+498002340001;True
+385740;Herzogenaurach - Schulstraße;Schulstraße 17;Herzogenaurach;91074;DE;0;;False;49.56542;10.91242;Herzo Werke GmbH;+498002340001;True
+386386;Herzogenaurach - Carl-von-Ossietzky-Straße;Carl-von-Ossietzky-Straße 7;Herzogenaurach;91074;DE;0;;False;49.57616;10.90678;Herzo Werke GmbH;+498002340001;True
+386394;Herzogenaurach - Aristide Briand Straße;Aristide Briand Straße 12;Herzogenaurach;91074;DE;0;;False;49.57635;10.91083;Herzo Werke GmbH;+498002340001;True
+424592;Herzogenaurach an der Schütt - Parkdeck an der Schütt;Parkdeck an der Schütt 1;Herzogenaurach;91074;DE;0;;False;49.56734;10.883175;Herzo Werke GmbH;+498002340001;True
+490321;Herzogenaurach - Lessingstraße;Lessingstraße 12;Herzogenaurach;91074;DE;0;;False;49.57595;10.87231;Herzo Werke GmbH;+498002340001;True
+490322;Ladesäule Hammerbach – Margeritenstraße;Margeritenstraße 1;Herzogenaurach;91704;DE;0;;False;49.5953;10.85338;Herzo Werke GmbH;+498002340001;True
+490324;Herzogenaurach - Geschwister-Scholl-Straße;Geschwister-Scholl-Straße 1;Herzogenaurach;91074;DE;0;;False;49.57532;10.90651;Herzo Werke GmbH;+498002340001;True
+490325;Herzogenaurach - Lion-Feuchtwanger-Straße;Lion-Freuchtwanger-Straße 1;Herzogenaurach;91074;DE;0;;False;49.57525;10.91157;Herzo Werke GmbH;+498002340001;True
+490326;Herzogenaurach - Olympiaring;Olympiaring 3;Herzogenaurach;91704;DE;0;;False;49.57405;10.91576;Herzo Werke GmbH;+498002340001;True
+385306;Wertheim - Post/Bahnhof Wertheim;Posttraße 1;Wertheim;97877;DE;0;;False;49.762008;9.512321;Stadtwerke Wertheim;+498002340001;True
+385310;Wertheim - Packhofstraße;Packhofstraße 1;Wertheim;97877;DE;0;;False;49.760487;9.51951;Stadtwerke Wertheim;+498002340001;True
+385312;Wertheim - Stadtwerke Wertheim;Mühlenstraße  60;Wertheim;97877;DE;0;;False;49.753924;9.519981;Stadtwerke Wertheim;+498002340001;True
+385320;Freudenberg - Mainstraße;Mainstraße 1;Freudenberg;84227;DE;0;;False;49.740315;9.319557;Stadtwerke Wertheim;+498002340001;True
+385848;Wertheim - Storck Store;Almosenberg 9;Wertheim;97877;DE;0;;False;49.771521;9.585687;Stadtwerke Wertheim;+498002340001;True
+385850;Wertheim - Kloster Bronnbach;Bronnbach 9;Wertheim;97877;DE;0;;False;49.713214;9.546818;Stadtwerke Wertheim;+498002340001;True
+385854;Kreuzwertheim - Dreschhalle;Kreuzstraße 3;Kreuzwertheim;97892;DE;0;;False;49.76852;9.517552;Stadtwerke Wertheim;+498002340001;True
+385352;Kitzingen-Schwalbenhof;Schwalbenhof 1;Kitzingen;97318;DE;0;;False;49.736805;10.16341;Licht-, Kraft- und Wasserwerke Kitzingen GmbH;+498002340001;True
+385354;Kitzingen - Wörthstraße 5;Wörthstraße  5;Kitzingen;97318;DE;0;;False;49.734581;10.162306;Licht-, Kraft- und Wasserwerke Kitzingen GmbH;+498002340001;True
+385146;Lichtenfels - Gelände Stadtwerke Lichtenfels;Eichenweg  15;Lichtenfels;96215;DE;0;;False;50.146536;11.085516;Stadtwerke Lichtenfels;+498002340001;True
+385148;Lichtenfels - Kronacher Straße;Kronacher Straße  30;Lichtenfels;96215;DE;0;;False;50.148157;11.072478;Stadtwerke Lichtenfels;+498002340001;True
+385154;Lichtenfels - Parkhaus oberes Tor ;Pabstenweg  9;Lichtenfels;96215;DE;0;;False;50.148065;11.065366;Stadtwerke Lichtenfels;+498002340001;True
+385156;Lichtenfels - Parkhaus unteres Tor ;Am Stadtgraben  9;Lichtenfels;96215;DE;0;;False;50.144904;11.063421;Stadtwerke Lichtenfels;+498002340001;True
+424272;Lichtenfels Parkplatz Rathaus 2;Am Marktplatz 5;Lichtenfels;96215;DE;0;;False;50.146382;11.062725;Stadtwerke Lichtenfels;+498002340001;True
