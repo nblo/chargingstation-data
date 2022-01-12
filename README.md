@@ -292,7 +292,9 @@ There could be different DAGs for ingestion jobs on different scheduling interva
  
 
 # Data Visualization
-#TODO:
+Example of how to visualize utilization of carging points: 
+Still Work-in-Progress.
+![Example dashboard](example_dashboard.png)
 
 
 # Acknowledgements 
