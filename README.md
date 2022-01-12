@@ -1,50 +1,50 @@
 # Overview
 
-The projects' goal is to dynamically model the occupancy of charging stations in Germany. The data is gathered from the [chargecloud API](https://www.chargecloud.de/), a German E-Mobility company providing back-end solutions for Charging Point Operators (**abrev CPOs). 
+The projects' goal is to set up a data model for charging station utilization data. The data is gathered from the [chargecloud API](https://www.chargecloud.de/), a German E-Mobility company providing back-end solutions for Charging Point Operators (**abbrev CPOs). 
 
-Additionally, to analyze relationship between utilization rate and the charging stations' surroundings [OpenStreetMap](https://www.openstreetmap.org) (*abbrev. OSM*) Points-of-Interest  (*abbrev. POI*) locations like food retailers, shopping malls, and highway services is included in the data model.  
+Additionally, in order to be able to analyze the relationship between charging stations' utilization and its surroundings [OpenStreetMap](https://www.openstreetmap.org) (*abbrev. OSM*) Points-of-Interest  (*abbrev. POI*) locations like food retailers, shopping malls, and highway services are included in the data model.  
 
-The project serves as a basis for setting up a maintainable and easily extendable data architecture and ETL-process for charging-data. 
-
-The project consist of the following steps: 
+The project serves as a basis for setting up a maintainable and easily extendable data architecture and ETL-process for charging data and it consists of the following steps: 
 1. **Data Acquisition** 
     - Call chargecloud API in regular time intervals and store raw results
-    - Retrieve OSM Points-of-Interest data for the cities where charging stations are placed 
+    - Retrieve OSM Points-of-Interest data for the cities where charging stations are located 
 2. **Data Cleaning** 
-    - Postprocess API results and transform data into flat files of master data and utilization data
+    - Postprocess API results and transform data master data and utilization data
     - Match POI locations to charging station locations by spatial distance mapping between the two location datasets
 3. **Data Modelling and ETL process**
     - Set up data model 
     - Ingest charging data and POI data into Data Warehouse (Redshift)
 
-Some example use cases for data model: 
+Some example use cases for the data: 
 - business reporting: generate utilization reports for single charging stations, cities or operators
-- BI-dashboards: Generate interactive visualizations for visualizing charging station usage
-- Utilization analysis and predictive modelling: Use utilization data to examine the relationship between utilization and POIs in the charging station vicinity. Develop a model to predict usage development or determine optimal charging point locations with Machine Learning Models
+- BI-dashboards: Generate interactive visualizations of charging station usage
+- Utilization analysis and predictive modelling: Use utilization data to examine the relationship between utilization and POIs in the charging stations' vicinity. Predict usage development or determine optimal charging point locations with Machine Learning Models
+
+The project was part of the Udacity Data Engineering Nanodegree.  
 
 # How to Run This Project
-
-Replace the example step-by-step instructions with your own.
 
 1. Install packages in `requirements.txt`
 2. Provide credentials for Redshift and S3 URLs (optional) in `config.cfg`
 3. [Data Acquisition](#Step-1:-Data-Acquisition): 
-    - Run command `python get_chargecloud_data.py` inside `.src` folder: Calling chargecloud API in regular time intervals
-    - Run command `python get_chargecloud_data.py` inside `.src` folder: Obtaining relevant OSM POI locations
-4. [Data Preprocessing](#Step-2:-Data-Cleaning): Run command `python preprocess_results.py` inside `.src` folder: Preprocessing of API results and spatial matching with OSM data
-5. [Data Modelling and ETL](#Step-3:-Data-Modelling-and-Ingestion): Run command `python etl.py` inside `.src` folder: Creating data model and ingesting data into redshift
+    - Run command `python get_chargecloud_data.py` inside `./src` folder: Calling chargecloud API in regular time intervals
+    - Run command `python get_chargecloud_data.py` inside `./src` folder: Obtaining relevant OSM POI locations
+4. [Data Preprocessing](#Step-2:-Data-Cleaning): 
+    - Run command `python preprocess_results.py` inside `./src` folder: Preprocessing of API results and spatial matching with OSM data
+5. [Data Modelling and ETL](#Step-3:-Data-Modelling-and-Ingestion): 
+    - Run command `python etl.py` inside `./src` folder: Creating data model and ingesting data into redshift
 
 
-Each script can be run independently of each other, as a sample dataset is included in the repository. 
+Each script can be run independently of each other, as sample datasets are included in `data` folder. 
 
-The S3-bucket specified in the config-file contains data which was collected over the last months, preprocessed and then manually uploaded to S3. 
+The S3-bucket specified in the `config.cfg` contains data which was collected from October 2021 to January 2021, preprocessed and then manually uploaded to S3. 
 
-If you would like to run the ETL process with a different data set, please upload data to S3-bucket and change URLs in the `config.cfg` file.
+If you would like to run the ETL process with a different data set, please upload the preprocessed data generated by `preprocess_results.py` to an S3-bucket and change the corresponding S3-URLs in the `config.cfg` file.
 
 
 # Contact
 
-Please feel free to contact me if you have any questions: 
+Please feel free to contact me if you have any questions or feedback: 
 - [linkedin](https://www.linkedin.com/in/nick-losacker/)
 - [email](mailto:nick.losacker@eon.com)
 
@@ -59,6 +59,8 @@ Each charging station consists of one or more *charging points (abbrev. cp)* (bl
 
 Each charging point has one or more *connectors (abbrev. conn)* (green boxes) in order to satisfy different charging standards (e.g. Chademo, CCS, Type 2) or varying charging power levels (e.g. normal charging, fast-charging, ultra-fast charging). 
 
+Charging Station
+
 <img src="chargingstation.png" alt="Charging Station" width="400"/>
 
 ---
@@ -66,19 +68,17 @@ Each charging station with its charging points and connectors has static/semi-st
 
 
 Each charging point and connector also has dynamic occupancy or status data, e.g. if the charging point is occupied, reserved, 
-free or out-of-order. 
+free or out-of-order.
 
 The combination of static and dynamic data is used by car infotainment systems and apps to navigate the user to the nearest  
 free and functional charging station. 
 
 # Step 1: Data Acquisition
-Script `data_acquisition.py`
-
-1. Call chargecloud API in regular time intervals and save raw results
+Script `get_chargecloud_data.py`: Call chargecloud API in regular time intervals and save raw results
 - Obtain charging stations in each city by making http request to `https://new-poi.chargecloud.de/<city>`. Each API result contains dynamic occupancy data and static master data
 - Save raw results 
 
-2. Retrieve OSM POI data in charging stations' vicinity
+Script `get_chargecloud_data.py`: Retrieve OSM POI data in charging stations' vicinity
 - Download POI data in charging stations cities with [osmnx](https://github.com/gboeing/osmnx) library. The POIs are specified with the `TAGS` dictionary containing OSM [tags](https://wiki.openstreetmap.org/wiki/Tags) as key-value pairs. 
 - Save results as shapefiles
 
@@ -100,18 +100,27 @@ Data Modeling: `sql.py`
     - `table_name`: name of database table 
     - `drop_table`: SQL statement for dropping table
     - `create_table`: SQL statement for creating table 
-    - `populate_table`: SQL statement for populating table with records (e.g. copy or insert) 
+    - `populate_table`: SQL statement for populating table with records (e.g. `COPY` or `INSERT`) 
     - `drop_constraints`: SQL statement for dropping constraints
     - `data_test_cases`: list of SQL data quality checks that are run after table creation 
 
 2. Data Ingestion: `etl.py` 
-- Executing sequence of data ingestion tasks 
+- Executing specified sequence of data ingestion tasks 
 
 
 # Data Model 
 
-The data model consists of two fact tables (status information of charging points and connectors) and 
-six dimension tables. Four dimension tables contain master data of the charging stations and its equipment (charging stations, charging points, connectors and time metadata) and two contain POI location information (POI table and mapping table between charging stations and poi)
+The data model consists of two fact tables
+- status information of charging points 
+- status information of connectors
+
+and six dimension tables
+- charging station master data
+- charging point master data 
+- connector master data 
+- time meta data 
+- POI locations 
+- mapping table connecting POIs to charging stations
 
 ![Data Model](er_diagram.png)
 
@@ -226,34 +235,32 @@ six dimension tables. Four dimension tables contain master data of the charging 
 
 # Design Choices 
 Data Lake vs. Data Warehouse
- - For this project data is modelled a data warehouse in combination with a traditional ETL process. As the data is (mostly) structured
-and both data volume and data variety in big data terms are on the lower end (see next section) this design was chosen. 
+ - For this project data is ingested into a data warehouse with a traditional ETL process. This design was chosen instead of a more flexible Data Lake with ELT process, as the data is (mostly) structured
+and both data volume and data variety in big data terms are on the lower end.
 
 
 Redshift is used as a Data Warehouse technology due to the following reasons: 
 - advanced PostGres features like JSON support or advanced spatial database features (PostGIS) are not essential 
-- due to data volume easily scalable and managed data warehouse was required. 
+- due to data volume easily scalable and managed data warehouse was required
  
-- Batch Processing vs. Streaming. 
-Possible use cases for this data are analyzing trends in user behavior or occupancy with 
-descriptive statistics or as a basis for a machine learning model for predicting optimal charging station locations. Thus, daily batch updates
-suffice and the use case does not justify extra complexity of a streaming service like Kafka.
+Batch Processing vs. Streaming. 
+- Possible use cases for this data are analyzing trends in user behavior or occupancy with 
+descriptive statistics or as a basis for a machine learning model for predicting optimal charging station locations. Thus, data is ingested in daily batch updates instead of streaming data, as the occupancy data is not as time critical 
 
 
-- ingesting raw data into Redshift allows for flexible refactoring of data model
+Ingesting raw data into Redshift allows for flexible extension or refactoring of data model
 
-- separation each step of ETL process (Data Acquisition, Data Cleaning, Data Modelling and Loading) allows some or all 
-of those steps can be moved to Airflow or AWS
+Separation each step of in ETL process (Data Acquisition, Data Cleaning, Data Modelling and Data Ingestion) allows for some or all 
+of those steps to be transfered to Airflow or AWS
 
 
 # Next Steps 
 
 Here are the next steps which would improve the project, but were out of scope of the capstone project 
-- create charging events table for computing number of charging events, charging station availability or approximate energy transfer
+- create charging events table from occupancy data for computing number of charging events, charging station availability or approximate energy transfer
 - deal with additional columns not yet implemented in the data model (e.g. charging stations' `opening_hours` or charging points' `capabilities`)
 - deal with slowly changing dimension tables (SCD)
 - implement data acquisition, batch processing and ETL in Airflow or AWS
-- consider advantages and disadvantages of streaming data instead of batch processing
 - develop a dashboard based on data model 
 - expand the number of POI categories considered
 - add visualization of charging station utilization data
@@ -261,9 +268,8 @@ Here are the next steps which would improve the project, but were out of scope o
 
 # Addressing other scenarios 
 
-- Currently the the data gathered results in roughly 275 million rows a year or about 750k rows per day. 
-If the data volume was to be increased by 100x (28 billion rows per year or 75 million rows per day) Redshift would still be a viable option. Batch ingestion once or twice a day would still be a viable option as this data volume. However, it could be advisable to 
-either ingest data more than once a day or split ingestion into smaller chunks.
+- Currently the gathered data results in ingesting roughly 275 million rows a year or about 750k rows per day if API is called in regular 10 minutes intervals.
+If the data volume was to be increased by 100x (e.g by calling the API every 6 seconds instead of 10 minutes) it would result in 28 billion rows per year or 75 million rows per day. Due to its flexible horizontal or vertical scaling Redshift would still be a viable option. Data could be ingested every 2-3 hours instead of once or twice a day to avoid writing a huge amount of data at once.
 
 - If the pipeline would be run on a daily basis I would consider Airflow as an orchestration tool. 
 There could be different DAGs for ingestion jobs on different scheduling intervals: 
@@ -273,7 +279,7 @@ There could be different DAGs for ingestion jobs on different scheduling interva
 
     AWS services like AWS step and lambda functions could be a viable alternative. 
 
-- If the database needed to accessed by 100+ people, Redshift allows for sufficient horizontal and vertical scaling with low latency and high concurrency. It could be beneficial to use the API query time as a distribution key, since recent data (last week or last month) is probably more business relevant than historic data. To allow for batch downloading of historic data (last years) building a separate self-service API take load off the main Data Warehouse.    
+- If the database needed to accessed by 100+ people, Redshift allows for sufficient horizontal and vertical scaling with low latency and high concurrency. It could be beneficial to use the API query time as a distribution key, since recent data (last week or last month) is probably more business relevant than historic data. To allow for batch downloading of historic data (last years) building a separate self-service API take load off the Data Warehouse.    
  
 
 # Data Visualization
