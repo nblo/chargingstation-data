@@ -73,7 +73,6 @@ def _run_data_unit_test(data_test_cases: typing.List[DataTestCase],
         if _how(records.iloc[:, 0].to_list()):
             logger.info(f"Data quality check '{dtc.name}' passed.")
         else: 
-            breakpoint()
             err_msg = f"Data quality check '{dtc.name}' failed. SQL statement '{query}' evaluated to False."
             logger.error(err_msg)
             raise ValueError(err_msg)
